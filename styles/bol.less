@@ -1,11 +1,11 @@
 @import "global/typography";
-@import 'global/foundry-overrides';
-@import 'global/mixins';
+@import "global/foundry-overrides";
+@import "global/mixins";
 @import "global/flex";
 @import "global/forms";
 @import "global/item-list";
 @import "global/colors";
-@import 'global/chat';
+@import "global/chat";
 
 @logo-width: 190px;
 @logo-height: 115px;
@@ -17,34 +17,34 @@
 @sidebar-width: 250px;
 
 body.system-bol {
-  img#logo{
-    content: url("/systems/bol/ui/logo2.webp");
+  img#logo {
+    content: url("/systems/hi-fvtt/ui/logo2.webp");
   }
 }
 .bol {
   //&.app {
-    //border:none;
-    //background: transparent;
-    //box-shadow: none;
+  //border:none;
+  //background: transparent;
+  //box-shadow: none;
   //}
 
   &.sheet {
-    @import 'components/common';
+    @import "components/common";
     &.actor {
-      @import 'components/actor';
+      @import "components/actor";
       min-width: 820px;
       min-height: 700px;
       height: 700px;
     }
     &.item {
-      @import 'components/item';
+      @import "components/item";
       //background-color: white;
       min-width: 460px;
       min-height: 400px;
     }
   }
   &.dialog {
-    .sheet-header{
+    .sheet-header {
       h3 {
         font-family: @font-tertiary;
         font-size: 24px;
@@ -54,7 +54,8 @@ body.system-bol {
   }
 }
 
-.editor, .editor-content {
+.editor,
+.editor-content {
   height: 100%;
 }
 
@@ -64,13 +65,11 @@ body.system-bol {
 }
 
 .chat-message .chat-icon {
-  float:right;
-  border:1px outset lightgray;
+  float: right;
+  border: 1px outset lightgray;
   box-shadow: 3px 3px 3px black;
   margin: 3px;
   //flex : 0 0 64px;
   width: 64px;
   height: 64px;
 }
-
-

@@ -1,4 +1,3 @@
-import { BoLUtility } from "../system/bol-utility.js";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -10,7 +9,7 @@ export class BoLItemSheet extends ItemSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["bol", "sheet", "item"],
-      template: "systems/bol/templates/item/item-sheet.hbs",
+      template: "systems/hi-fvtt/templates/item/item-sheet.hbs",
       width: 650,
       height: 780,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
@@ -27,23 +26,23 @@ export class BoLItemSheet extends ItemSheet {
     data.category = itemData.system.category
     data.isGM = game.user.isGM;
     data.itemProperties = this.item.itemProperties;
-    data.description = await TextEditor.enrichHTML(this.object.system.description, {async: true})
+    data.description = await TextEditor.enrichHTML(this.object.system.description, { async: true })
 
     // Dynamic default data fix/adapt
     if (itemData.type == "item") {
       if (!itemData.system.category) {
         itemData.system.category = "equipment"
       }
-      if ( itemData.system.category == "equipment" && itemData.system.properties.equipable) {
+      if (itemData.system.category == "equipment" && itemData.system.properties.equipable) {
         if (!itemData.system.properties.slot) {
           itemData.system.properties.slot = "-"
         }
       }
       if (itemData.system.category == 'spell') {
-        if(!itemData.system.properties.mandatoryconditions) {
+        if (!itemData.system.properties.mandatoryconditions) {
           itemData.system.properties.mandatoryconditions = []
         }
-        if(!itemData.system.properties.optionnalconditions) {
+        if (!itemData.system.properties.optionnalconditions) {
           itemData.system.properties.optionnalconditions = []
         }
         for (let i = 0; i < 4; i++) {

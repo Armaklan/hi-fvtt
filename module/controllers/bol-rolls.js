@@ -131,7 +131,7 @@ export class BoLRoll {
         rangeMsg = "BOL.chat.range6"
       }
       ChatMessage.create({
-        content: await renderTemplate('systems/bol/templates/chat/chat-info-range.hbs', {
+        content: await renderTemplate('systems/hi-fvtt/templates/chat/chat-info-range.hbs', {
           weapon: weapon,
           attackerName: _token.actor.name,
           defenderName: target.actor.name,
@@ -502,7 +502,7 @@ export class BoLRoll {
   static async displayRollDialog(rollData, onEnter = "submit") {
 
     // initialize default flags/values
-    const rollOptionTpl = `systems/bol/templates/dialogs/${rollData.mode}-roll-dialog.hbs`
+    const rollOptionTpl = `systems/hi-fvtt/templates/dialogs/${rollData.mode}-roll-dialog.hbs`
 
     let actor = BoLUtility.getActorFromRollData(rollData)
     let defender
@@ -781,13 +781,13 @@ export class BoLDefaultRoll {
 
   /* -------------------------------------------- */
   _buildDamageChatMessage(rollData) {
-    const rollMessageTpl = 'systems/bol/templates/chat/rolls/damage-roll-card.hbs';
+    const rollMessageTpl = 'systems/hi-fvtt/templates/chat/rolls/damage-roll-card.hbs';
     return renderTemplate(rollMessageTpl, rollData)
   }
 
   /* -------------------------------------------- */
   _buildChatMessage(rollData) {
-    const rollMessageTpl = 'systems/bol/templates/chat/rolls/default-roll-card.hbs'
+    const rollMessageTpl = 'systems/hi-fvtt/templates/chat/rolls/default-roll-card.hbs'
     return renderTemplate(rollMessageTpl, rollData)
   }
 

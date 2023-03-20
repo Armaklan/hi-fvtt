@@ -66,20 +66,20 @@
     {{/if}}
 
     {{#if (and isSuccess weapon)}}
-    {{> "systems/bol/templates/chat/rolls/attack-damage-card.hbs"}}
+    {{> "systems/hi-fvtt/templates/chat/rolls/attack-damage-card.hbs"}}
     {{/if}}
     {{#if (and isSuccess spell)}}
-    {{> "systems/bol/templates/chat/rolls/spell-roll-card.hbs"}}
+    {{> "systems/hi-fvtt/templates/chat/rolls/spell-roll-card.hbs"}}
     {{/if}}
     {{#if alchemy}}
-    {{> "systems/bol/templates/chat/rolls/alchemy-roll-card.hbs"}}
+    {{> "systems/hi-fvtt/templates/chat/rolls/alchemy-roll-card.hbs"}}
     {{/if}}
     {{#if (eq mode "horoscope")}}
-    {{> "systems/bol/templates/chat/rolls/horoscope-roll-card.hbs"}}
+    {{> "systems/hi-fvtt/templates/chat/rolls/horoscope-roll-card.hbs"}}
     {{/if}}
     
     {{#if (count selectedHoroscope)}}
-    {{> "systems/bol/templates/chat/rolls/selected-horoscope-roll-card.hbs"}}
+    {{> "systems/hi-fvtt/templates/chat/rolls/selected-horoscope-roll-card.hbs"}}
     {{/if}}
 
     {{#if reroll}}

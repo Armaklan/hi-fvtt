@@ -2,7 +2,7 @@ import { BoLDefaultRoll } from "../controllers/bol-rolls.js";
 
 // Spell circle to min PP cost
 const __circle2minpp = { 0: 0, 1: 2, 2: 6, 3: 11 }
-const __validDices = {"6": 1, "8": 1, "10": 1, "12": 1}
+const __validDices = { "6": 1, "8": 1, "10": 1, "12": 1 }
 export class BoLUtility {
 
 
@@ -33,8 +33,8 @@ export class BoLUtility {
       config: true,
       default: "2d6",
       type: String,
-      choices: {  "6": "2d6", "8":"2d8", "10":"2d10", "12":"2d12", "20":"2d20"},
-      onChange: value => { 
+      choices: { "6": "2d6", "8": "2d8", "10": "2d10", "12": "2d12", "20": "2d20" },
+      onChange: value => {
         BoLUtility.setDiceFormula(value)
       }
     })
@@ -50,7 +50,7 @@ export class BoLUtility {
         step: 1
       },
       type: Number,
-      onChange: value => { 
+      onChange: value => {
         BoLUtility.setSuccessValue(value)
       }
     })
@@ -66,7 +66,7 @@ export class BoLUtility {
         step: 1
       },
       type: Number,
-      onChange: value => { 
+      onChange: value => {
         BoLUtility.setCriticalSuccessValue(value)
       }
     })
@@ -82,7 +82,7 @@ export class BoLUtility {
         step: 1
       },
       type: Number,
-      onChange: value => { 
+      onChange: value => {
         BoLUtility.setCriticalFailureValue(value)
       }
     })
@@ -95,19 +95,19 @@ export class BoLUtility {
     })
     game.settings.register("bol", "logoActorSheet", {
       name: "Chemin du logo des fiches de perso",
-      hint: "Vous pouvez changer le logo BoL des fiches de perso, pour jouer dans un autre univers (idéalement 346 x 200, défaut : /systems/bol/ui/logo.webp)",
+      hint: "Vous pouvez changer le logo BoL des fiches de perso, pour jouer dans un autre univers (idéalement 346 x 200, défaut : /systems/hi-fvtt/ui/logo.webp)",
       scope: "world",
       config: true,
-      default: "/systems/bol/ui/logo.webp",
+      default: "/systems/hi-fvtt/ui/logo.webp",
       type: String,
       onChange: lang => window.location.reload()
     })
     game.settings.register("bol", "logoTopLeft", {
       name: "Chemin du logo haut gauche",
-      hint: "Vous pouvez changer le logo BoL en haut à gauche de chaque écran (idéalement 718 x 416, défaut : /systems/bol/ui/logo2.webp)",
+      hint: "Vous pouvez changer le logo BoL en haut à gauche de chaque écran (idéalement 718 x 416, défaut : /systems/hi-fvtt/ui/logo2.webp)",
       scope: "world",
       config: true,
-      default: "/systems/bol/ui/logo2.webp",
+      default: "/systems/hi-fvtt/ui/logo2.webp",
       type: String,
       onChange: lang => window.location.reload()
     })
@@ -121,8 +121,8 @@ export class BoLUtility {
 
     this.rollArmor = game.settings.get("bol", "rollArmor") // Roll armor or not
     this.useBougette = game.settings.get("bol", "useBougette") // Use optionnal bougette rules
-    this.actorSheetLogo = game.settings.get("bol", "logoActorSheet") || "/systems/bol/ui/logo.webp"
-    this.logoTopLeft = game.settings.get("bol", "logoTopLeft") || "/systems/bol/ui/logo2.webp"
+    this.actorSheetLogo = game.settings.get("bol", "logoActorSheet") || "/systems/hi-fvtt/ui/logo.webp"
+    this.logoTopLeft = game.settings.get("bol", "logoTopLeft") || "/systems/hi-fvtt/ui/logo2.webp"
 
     this.diceFormula = game.settings.get("bol", "dice-formula")
     this.successValue = Number(game.settings.get("bol", "dice-success-value"))
@@ -145,12 +145,12 @@ export class BoLUtility {
   }
   static getDiceData() {
     let df = this.diceFormula
-    if ( !__validDices[String(this.diceFormula)]) {
+    if (!__validDices[String(this.diceFormula)]) {
       df = "6"
     }
     return {
       diceFormula: this.diceFormula,
-      successValue : this.successValue,
+      successValue: this.successValue,
       criticalSuccessValue: this.criticalSuccessValue,
       criticalFailureValue: this.criticalFailureValue
     }
@@ -397,7 +397,7 @@ export class BoLUtility {
     })
 
     html.on("click", '.recup-vitalite', event => {
-      event.preventDefault()      
+      event.preventDefault()
       let actorId = event.currentTarget.attributes['data-actor-id'].value
       let recupHP = event.currentTarget.attributes['data-recup-hp'].value
       let actor = game.actors.get(actorId)
@@ -483,13 +483,13 @@ export class BoLUtility {
       ChatMessage.create({
         alias: defender.name,
         whisper: BoLUtility.getWhisperRecipientsAndGMs(defender.name),
-        content: await renderTemplate('systems/bol/templates/chat/rolls/defense-result-card.hbs', damageResults)
+        content: await renderTemplate('systems/hi-fvtt/templates/chat/rolls/defense-result-card.hbs', damageResults)
       })
       console.log("Defender data : ", defenderUser)
       ChatMessage.create({
         alias: defender.name,
         whisper: BoLUtility.getOtherWhisperRecipients(defenderUser?.name),
-        content: await renderTemplate('systems/bol/templates/chat/rolls/defense-summary-card.hbs', damageResults)
+        content: await renderTemplate('systems/hi-fvtt/templates/chat/rolls/defense-summary-card.hbs', damageResults)
       })
     }
   }
@@ -576,7 +576,7 @@ export class BoLUtility {
     let msg = await ChatMessage.create({
       alias: defender.name,
       whisper: BoLUtility.getWhisperRecipientsAndGMs(defender.name),
-      content: await renderTemplate('systems/bol/templates/chat/rolls/defense-request-card.hbs', {
+      content: await renderTemplate('systems/hi-fvtt/templates/chat/rolls/defense-request-card.hbs', {
         attackId: rollData.id,
         attacker: rollData.attacker,
         defender: defender,

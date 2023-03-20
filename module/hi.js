@@ -1,22 +1,22 @@
 /* -------------------------------------------- */
 // Import Modules
-import { BoLActor } from "./actor/actor.js"
 import { BoLActorSheet } from "./actor/actor-sheet.js"
+import { BoLActor } from "./actor/actor.js"
 import { BoLVehicleSheet } from "./actor/vehicle-sheet.js"
-import { BoLItem } from "./item/item.js"
 import { BoLItemSheet } from "./item/item-sheet.js"
-import { System, BOL } from "./system/config.js"
-import { preloadHandlebarsTemplates } from "./system/templates.js"
+import { BoLItem } from "./item/item.js"
+import { BoLTokenHud } from "./system/bol-action-hud.js"
+import { BoLAdventureGenerator } from "./system/bol-adventure-generator.js"
+import { BoLCharacterSummary } from "./system/bol-character-summary.js"
+import { BoLCombatManager } from "./system/bol-combat.js"
+import { BoLCommands } from "./system/bol-commands.js"
+import { BoLHotbar } from "./system/bol-hotbar.js"
+import { BoLUtility } from "./system/bol-utility.js"
+import { BOL } from "./system/config.js"
 import { registerHandlebarsHelpers } from "./system/helpers.js"
 import registerHooks from "./system/hooks.js"
 import { Macros } from "./system/macros.js"
-import { BoLUtility } from "./system/bol-utility.js"
-import { BoLCombatManager } from "./system/bol-combat.js"
-import { BoLTokenHud } from "./system/bol-action-hud.js"
-import { BoLHotbar } from "./system/bol-hotbar.js"
-import { BoLAdventureGenerator } from "./system/bol-adventure-generator.js"
-import { BoLCommands} from "./system/bol-commands.js"
-import { BoLCharacterSummary} from "./system/bol-character-summary.js"
+import { preloadHandlebarsTemplates } from "./system/templates.js"
 
 /* -------------------------------------------- */
 Hooks.once('init', async function () {
@@ -28,7 +28,7 @@ Hooks.once('init', async function () {
     macros: Macros,
     config: BOL
   };
-  
+
   // Game socket 
   game.socket.on("system.bol", sockmsg => {
     BoLUtility.onSocketMessage(sockmsg);
@@ -43,7 +43,7 @@ Hooks.once('init', async function () {
     formula: "2d6+@attributes.mind.value+@aptitudes.init.value",
     decimals: 2
   };
-  
+
   // Define custom Entity classes
   CONFIG.Actor.documentClass = BoLActor;
   CONFIG.Item.documentClass = BoLItem;
@@ -77,8 +77,8 @@ Hooks.once('init', async function () {
 
 /* -------------------------------------------- */
 // Register world usage statistics
-function registerUsageCount( registerKey ) {
-  if ( game.user.isGM ) {
+function registerUsageCount(registerKey) {
+  if (game.user.isGM) {
     game.settings.register(registerKey, "world-key", {
       name: "Unique world key",
       scope: "world",
@@ -88,16 +88,10 @@ function registerUsageCount( registerKey ) {
     });
 
     let worldKey = game.settings.get(registerKey, "world-key")
-    if ( worldKey == undefined || worldKey == "" ) {
+    if (worldKey == undefined || worldKey == "") {
       worldKey = randomID(32)
-      game.settings.set(registerKey, "world-key", worldKey )
+      game.settings.set(registerKey, "world-key", worldKey)
     }
-    // Simple API counter
-    let regURL = `https://www.uberwald.me/fvtt_appcount/count.php?name="${registerKey}"&worldKey="${worldKey}"&version="${game.release.generation}.${game.release.build}"&system="${game.system.id}"&systemversion="${game.system.version}"`
-    //$.ajaxSetup({
-      //headers: { 'Access-Control-Allow-Origin': '*' }
-    //})
-    $.ajax(regURL)
   }
 }
 
@@ -108,19 +102,19 @@ function welcomeMessage() {
     whisper: [game.user.id],
     content: `<div id="welcome-message-pegasus"><span class="rdd-roll-part">
     <strong>` + game.i18n.localize("BOL.chat.welcome1") + `</strong><p>` +
-    game.i18n.localize("BOL.chat.welcome2") + "<p>" +
-    game.i18n.localize("BOL.chat.welcome3") + "<p>" +
-    game.i18n.localize("BOL.chat.welcome4") + "</p>" +
-    game.i18n.localize("BOL.chat.welcome5") + "<br>" +
-    game.i18n.localize("BOL.chat.welcome6") 
-  } )
+      game.i18n.localize("BOL.chat.welcome2") + "<p>" +
+      game.i18n.localize("BOL.chat.welcome3") + "<p>" +
+      game.i18n.localize("BOL.chat.welcome4") + "</p>" +
+      game.i18n.localize("BOL.chat.welcome5") + "<br>" +
+      game.i18n.localize("BOL.chat.welcome6")
+  })
 }
 
 /* -------------------------------------------- */
 Hooks.once('ready', async function () {
 
   BoLUtility.ready()
-  BoLCharacterSummary.ready()  
+  BoLCharacterSummary.ready()
 
   registerUsageCount('bol')
 

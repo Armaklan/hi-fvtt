@@ -26,33 +26,33 @@ export class BoLTokenHud {
 
     const controlIconActions = html.find('.control-icon[data-action=combat]');
     // initiative
-    await BoLTokenHud._configureSubMenu(controlIconActions, 'systems/bol/templates/token/hud-actor-actions.hbs', hudData,
+    await BoLTokenHud._configureSubMenu(controlIconActions, 'systems/hi-fvtt/templates/token/hud-actor-actions.hbs', hudData,
       (event) => {
         let actionIndex = Number(event.currentTarget.attributes['data-action-index'].value)
         let action = hudData.actionsList[actionIndex]
-        const weapon = actor.items.get( action._id )
+        const weapon = actor.items.get(action._id)
         BoLRoll.weaponCheckWithWeapon(hudData.actor, duplicate(weapon))
         //console.log("Clicked", action)
-      } )
+      })
 
     const controlIconTarget = html.find('.control-icon[data-action=target]');
     // att+apt+career
-    await BoLTokenHud._configureSubMenu(controlIconTarget, 'systems/bol/templates/token/hud-actor-rolls.hbs', hudData,
+    await BoLTokenHud._configureSubMenu(controlIconTarget, 'systems/hi-fvtt/templates/token/hud-actor-rolls.hbs', hudData,
       (event) => {
         let rollIndex = Number(event.currentTarget.attributes['data-roll-index'].value)
         let roll = hudData.rollsList[rollIndex]
-        if ( roll.type == "aptitude") {
-          BoLRoll.aptitudeCheck(actor, roll.key ) 
-        } else if ( roll.type == "attribute") {
-          BoLRoll.attributeCheck(actor, roll.key ) 
+        if (roll.type == "aptitude") {
+          BoLRoll.aptitudeCheck(actor, roll.key)
+        } else if (roll.type == "attribute") {
+          BoLRoll.attributeCheck(actor, roll.key)
         }
       })
   }
 
   /* -------------------------------------------- */
   static async addTokenHudExtensions(app, html, tokenId) {
-    const controlIconCombat  = html.find('.control-icon[data-action=combat]')
-    if (controlIconCombat.length>0 ) {
+    const controlIconCombat = html.find('.control-icon[data-action=combat]')
+    if (controlIconCombat.length > 0) {
       BoLTokenHud.addExtensionHud(app, html, tokenId);
     }
   }
@@ -61,9 +61,9 @@ export class BoLTokenHud {
   static async _configureSubMenu(insertionPoint, template, hudData, onMenuItem) {
     const hud = $(await renderTemplate(template, hudData))
     const list = hud.find('div.bol-hud-list')
-    
+
     BoLTokenHud._toggleHudListActive(hud, list);
-    
+
     hud.find('img.bol-hud-togglebutton').click(event => BoLTokenHud._toggleHudListActive(hud, list));
     list.find('.bol-hud-menu').click(onMenuItem);
 

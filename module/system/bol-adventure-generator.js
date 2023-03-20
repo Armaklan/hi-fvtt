@@ -6,7 +6,7 @@ export class BoLAdventureGenerator {
 
   /* -------------------------------------------- */
   static async init() {
-    this.adventureData = await fetchJsonWithTimeout("systems/bol/module/system/adventure_data.json")
+    this.adventureData = await fetchJsonWithTimeout("systems/hi-fvtt/module/system/adventure_data.json")
   }
 
   /* -------------------------------------------- */
@@ -78,8 +78,8 @@ export class BoLAdventureGenerator {
     ChatMessage.create({
       alias: this.name,
       whisper: BoLUtility.getUsers(user => user.isGM),
-      content: await renderTemplate('systems/bol/templates/chat/chat-adventure-result.hbs', 
-      { name: "Aventure !", img: "icons/commodities/gems/gem-cluster-red.webp", story : story})
+      content: await renderTemplate('systems/hi-fvtt/templates/chat/chat-adventure-result.hbs',
+        { name: "Aventure !", img: "icons/commodities/gems/gem-cluster-red.webp", story: story })
     })
 
   }

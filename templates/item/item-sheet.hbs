@@ -1,7 +1,7 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="wrap flexrow">
         <div class="main flex1">
-            {{> "systems/bol/templates/item/parts/item-header.hbs"}}
+            {{> "systems/hi-fvtt/templates/item/parts/item-header.hbs"}}
             {{!-- Sheet Tab Navigation --}}
             <nav class="sheet-tabs tabs" data-group="primary">
                 <a class="item" data-tab="description">{{localize "BOL.ui.tab.description"}}</a>
@@ -24,10 +24,10 @@
                 </div>
                 <div class="tab properties" data-group="primary" data-tab="properties">
                 {{#if (eq item.type "item")}}
-                    {{> "systems/bol/templates/item/parts/properties/item-properties.hbs"}}
+                    {{> "systems/hi-fvtt/templates/item/parts/properties/item-properties.hbs"}}
                 {{/if}}
                 {{#if (eq item.type "feature")}}
-                    {{> "systems/bol/templates/item/parts/properties/feature-properties.hbs"}}
+                    {{> "systems/hi-fvtt/templates/item/parts/properties/feature-properties.hbs"}}
                 {{/if}}
                 </div>
             </section>

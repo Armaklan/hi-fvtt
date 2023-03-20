@@ -1,4 +1,4 @@
-import {BoLUtility} from "./bol-utility.js";
+import { BoLUtility } from "./bol-utility.js";
 
 export default function registerHooks() {
 
@@ -11,7 +11,7 @@ export default function registerHooks() {
     });
 
     Hooks.on("renderPause", ((_app, html) => {
-        html.find("img").attr("src", "systems/bol/ui/pause2.webp")
+        html.find("img").attr("src", "systems/hi-fvtt/ui/pause2.webp")
     }))
 
     Hooks.on('renderChatLog', (log, html, data) => BoLUtility.chatListeners(html))
@@ -53,7 +53,7 @@ export default function registerHooks() {
                     type: "script",
                     img: "icons/svg/dice-target.svg",
                     command: command
-                }, {displaySheet: false})
+                }, { displaySheet: false })
                 game.user.assignHotbarMacro(macro, slot);
             }
         }
@@ -69,7 +69,7 @@ export default function registerHooks() {
                     type: "script",
                     img: (journal.data.img) ? journal.data.img : "icons/svg/book.svg",
                     command: command
-                }, {displaySheet: false})
+                }, { displaySheet: false })
                 game.user.assignHotbarMacro(macro, slot);
             }
         }
@@ -78,15 +78,15 @@ export default function registerHooks() {
 
     /********************************************************************************** */
     Hooks.on("renderActorDirectory", (app, html, data) => {
-      if (game.user.isGM) {
-        const button = document.createElement('button');
-        button.style.width = '95%';
-        button.innerHTML = game.i18n.localize("BOL.ui.pclistbutton")
-        button.addEventListener('click', () => {
-          game.bol.charSummary.render(true)
-        })
-        html.find('.header-actions').after(button)
-      }
+        if (game.user.isGM) {
+            const button = document.createElement('button');
+            button.style.width = '95%';
+            button.innerHTML = game.i18n.localize("BOL.ui.pclistbutton")
+            button.addEventListener('click', () => {
+                game.bol.charSummary.render(true)
+            })
+            html.find('.header-actions').after(button)
+        }
     })
-    
+
 }

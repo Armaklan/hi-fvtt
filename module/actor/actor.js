@@ -1,6 +1,5 @@
-import { BoLDefaultRoll } from "../controllers/bol-rolls.js";
+import { BoLDefaultRoll, BoLRoll } from "../controllers/bol-rolls.js";
 import { BoLUtility } from "../system/bol-utility.js";
-import { BoLRoll } from "../controllers/bol-rolls.js";
 
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
@@ -221,7 +220,7 @@ export class BoLActor extends Actor {
       ChatMessage.create({
         alias: this.name,
         whisper: BoLUtility.getWhisperRecipientsAndGMs(this.name),
-        content: await renderTemplate('systems/bol/templates/chat/chat-activate-fight-option.hbs', { name: this.name, img: fightOption.img, foName: fightOption.name, state: state })
+        content: await renderTemplate('systems/hi-fvtt/templates/chat/chat-activate-fight-option.hbs', { name: this.name, img: fightOption.img, foName: fightOption.name, state: state })
       })
 
     }
@@ -734,7 +733,7 @@ export class BoLActor extends Actor {
         ChatMessage.create({
           alias: this.name,
           whisper: BoLUtility.getWhisperRecipientsAndGMs(this.name),
-          content: await renderTemplate('systems/bol/templates/chat/chat-vitality-zero.hbs', { name: this.name, img: this.img, hp: this.system.resources.hp.value })
+          content: await renderTemplate('systems/hi-fvtt/templates/chat/chat-vitality-zero.hbs', { name: this.name, img: this.img, hp: this.system.resources.hp.value })
         })
       } else {
         if (prone) {
@@ -766,7 +765,7 @@ export class BoLActor extends Actor {
       let msg = await ChatMessage.create({
         alias: this.name,
         whisper: BoLUtility.getWhisperRecipientsAndGMs(this.name),
-        content: await renderTemplate('systems/bol/templates/chat/chat-recup-information.hbs', {
+        content: await renderTemplate('systems/hi-fvtt/templates/chat/chat-recup-information.hbs', {
           name: this.name,
           actorId: this.id,
           lossHP: lossHP,
@@ -785,7 +784,7 @@ export class BoLActor extends Actor {
     let msg = await ChatMessage.create({
       alias: this.name,
       whisper: BoLUtility.getWhisperRecipientsAndGMs(this.name),
-      content: game.i18n.format( "BOL.chat.inforecup", {name: this.name, recupHP: recupHP} )
+      content: game.i18n.format("BOL.chat.inforecup", { name: this.name, recupHP: recupHP })
     })
   }
 
@@ -864,7 +863,7 @@ export class BoLActor extends Actor {
   /*-------------------------------------------- */
   incDecResources(target, value) {
     let newValue = this.system.resources[target].value + value
-    this.update({ [`system.resources.${target}.value`]: newValue })    
+    this.update({ [`system.resources.${target}.value`]: newValue })
   }
   /*-------------------------------------------- */
   async sufferDamage(damage) {

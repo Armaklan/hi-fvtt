@@ -11,7 +11,7 @@ export class BoLVehicleSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["bol", "sheet", "actor"],
-      template: "systems/bol/templates/actor/vehicle-sheet.hbs",
+      template: "systems/hi-fvtt/templates/actor/vehicle-sheet.hbs",
       width: 860,
       height: 600,
       dragDrop: [{ dragSelector: ".items-list .item", dropSelector: null }],
@@ -27,7 +27,7 @@ export class BoLVehicleSheet extends ActorSheet {
 
     function onLoad() {
       let logoSheet = BoLUtility.getLogoActorSheet()
-      $(".bol-actor-form").css("backgroundImage",`url(${logoSheet})`)
+      $(".bol-actor-form").css("backgroundImage", `url(${logoSheet})`)
     }
     // Setup everything onload
     $(function () { onLoad(); });
@@ -128,7 +128,7 @@ export class BoLVehicleSheet extends ActorSheet {
     formData.options = this.options
     formData.owner = this.document.isOwner
     formData.editScore = this.options.editScore
-    formData.description = await TextEditor.enrichHTML(this.actor.system.description, {async: true})
+    formData.description = await TextEditor.enrichHTML(this.actor.system.description, { async: true })
 
     formData.isGM = game.user.isGM
 
@@ -211,7 +211,7 @@ export class BoLVehicleSheet extends ActorSheet {
         this.actor.incAttributeXP(dataset.key)
         break;
       case "careerxp":
-        this.actor.incCareerXP( li.data("item-id"))
+        this.actor.incCareerXP(li.data("item-id"))
         break;
 
       default: break;

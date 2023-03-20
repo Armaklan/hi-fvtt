@@ -1,5 +1,5 @@
 {
-  "id": "hi",
+  "id": "hi-fvtt",
   "title": "Honor & Intrigue",
   "description": "Honor&Intrigue system for FoundryVTT! (fork from hi System)",
   "authors": [
@@ -49,7 +49,7 @@
     {
       "name": "boons",
       "label": "Avantages",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/boons.db",
       "type": "Item",
       "private": false,
@@ -58,7 +58,7 @@
     {
       "name": "boonsflawscreatures",
       "label": "Avantages/Désavantages de Créatures",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/boonsflawscreatures.db",
       "type": "Item",
       "private": false,
@@ -67,7 +67,7 @@
     {
       "name": "flaws",
       "label": "Désavantages",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/flaws.db",
       "type": "Item",
       "private": false,
@@ -76,7 +76,7 @@
     {
       "name": "careers",
       "label": "Carrières héroïques",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/careers.db",
       "type": "Item",
       "private": false,
@@ -85,7 +85,7 @@
     {
       "name": "origins",
       "label": "Origines",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/origins.db",
       "type": "Item",
       "private": false,
@@ -94,7 +94,7 @@
     {
       "name": "races",
       "label": "Races",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/races.db",
       "type": "Item",
       "private": false,
@@ -103,7 +103,7 @@
     {
       "name": "equipment",
       "label": "Equipement",
-      "system": "hi",
+      "system": "hi-fvtt",
       "path": "packs/equipment.db",
       "type": "Item",
       "private": false,
@@ -114,7 +114,7 @@
       "type": "JournalEntry",
       "name": "aides-de-jeu",
       "path": "packs/aides-de-jeu.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -123,7 +123,7 @@
       "type": "Scene",
       "name": "cartes",
       "path": "packs/cartes.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -132,7 +132,7 @@
       "type": "Item",
       "name": "languages",
       "path": "packs/languages.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -141,7 +141,7 @@
       "type": "Item",
       "name": "spells",
       "path": "packs/spells.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -150,7 +150,7 @@
       "type": "Item",
       "name": "godsfaith",
       "path": "packs/godsfaith.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -159,7 +159,7 @@
       "type": "Item",
       "name": "fightoptions",
       "path": "packs/fightoptions.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -168,7 +168,7 @@
       "type": "Item",
       "name": "potions-alchimie",
       "path": "packs/potions-alchimie.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -177,7 +177,7 @@
       "type": "Item",
       "name": "objets-alchimie",
       "path": "packs/objets-alchimie.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -186,7 +186,7 @@
       "type": "Item",
       "name": "effets-exemples",
       "path": "packs/effets-exemples.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     },
@@ -195,7 +195,7 @@
       "type": "Actor",
       "name": "creatures",
       "path": "packs/creatures.db",
-      "system": "hi",
+      "system": "hi-fvtt",
       "private": false,
       "flags": {}
     }

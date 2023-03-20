@@ -11,7 +11,7 @@ export class BoLActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["bol", "sheet", "actor"],
-      template: "systems/bol/templates/actor/actor-sheet.hbs",
+      template: "systems/hi-fvtt/templates/actor/actor-sheet.hbs",
       width: 860,
       height: 600,
       dragDrop: [{ dragSelector: ".items-list .item", dropSelector: null }],
@@ -27,7 +27,7 @@ export class BoLActorSheet extends ActorSheet {
 
     function onLoad() {
       let logoSheet = BoLUtility.getLogoActorSheet()
-      $(".bol-actor-form").css("backgroundImage",`url(${logoSheet})`)
+      $(".bol-actor-form").css("backgroundImage", `url(${logoSheet})`)
     }
     // Setup everything onload
     $(function () { onLoad(); });
@@ -155,12 +155,12 @@ export class BoLActorSheet extends ActorSheet {
     formData.options = this.options
     formData.owner = this.document.isOwner
     formData.editScore = this.options.editScore
-    formData.useBougette = (this.actor.type == "character" && BoLUtility.getUseBougette()) || false    
+    formData.useBougette = (this.actor.type == "character" && BoLUtility.getUseBougette()) || false
     formData.bougette = this.actor.getBougette()
     formData.charType = this.actor.getCharType()
-    formData.villainy = this.actor.getVillainy()    
-    formData.biography = await TextEditor.enrichHTML(this.object.system.details?.biography || "", {async: true})
-    formData.notes = await TextEditor.enrichHTML(this.object.system.details.notes || "", {async: true})
+    formData.villainy = this.actor.getVillainy()
+    formData.biography = await TextEditor.enrichHTML(this.object.system.details?.biography || "", { async: true })
+    formData.notes = await TextEditor.enrichHTML(this.object.system.details.notes || "", { async: true })
     formData.isSorcerer = this.actor.isSorcerer()
     formData.isAlchemist = this.actor.isAlchemist()
     formData.isAstrologer = this.actor.isAstrologer()
@@ -248,22 +248,22 @@ export class BoLActorSheet extends ActorSheet {
       case "attributexp":
         this.actor.incAttributeXP(dataset.key)
         break;
-      case "bougette": 
+      case "bougette":
         this.actor.rollBougette()
         break;
       case "careerxp":
-        this.actor.incCareerXP( li.data("item-id"))
+        this.actor.incCareerXP(li.data("item-id"))
         break;
       case "horoscope-minor":
         BoLRoll.horoscopeCheck(this.actor, event, "minor")
         break
       case "horoscope-major":
         BoLRoll.horoscopeCheck(this.actor, event, "major")
-        break        
+        break
       case "horoscope-major-group":
         BoLRoll.horoscopeCheck(this.actor, event, "majorgroup")
-        break        
-    
+        break
+
       default: break;
     }
   }

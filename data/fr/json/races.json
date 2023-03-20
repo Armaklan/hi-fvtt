@@ -1,7 +1,7 @@
 [
   {
     "name": "Céruléens",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Grooth",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Hommes-oiseaux",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Kalukans",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Morgal",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Rois-Sorciers",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Slorth",
-    "img": "/systems/bol/ui/icons/race.webp",
+    "img": "/systems/hi-fvtt/ui/icons/race.webp",
     "type": "feature",
     "data": {
       "subtype": "race",

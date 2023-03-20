@@ -1,6 +1,4 @@
 /* -------------------------------------------- */
-import { BolCalendarEditor } from "./bol-calendar-editor.js";
-import { BoLUtility } from "./bol-utility.js";
 
 /* -------------------------------------------- */
 const monthDef = [
@@ -59,7 +57,7 @@ export class BoLCalendar extends Application {
   /* -------------------------------------------- */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      template: "systems/bol/templates/calendar-template.html",
+      template: "systems/hi-fvtt/templates/calendar-template.html",
       popOut: false,
       resizable: false
     })
@@ -90,7 +88,7 @@ export class BoLCalendar extends Application {
     if (this.calendar.minutes >= 60) {
       this.calendar.minutes -= 60
       this.calendar.hour += 1;
-      }
+    }
     if (this.calendar.hour >= 24) {
       this.calendar.hour -= 24
       await this.incrementDay()
@@ -208,7 +206,7 @@ export class BoLCalendar extends Application {
     return undefined;
   }
   /* -------------------------------------------- */
-  getHeureNumber( hNum) {
+  getHeureNumber(hNum) {
     let heure = Object.values(heuresDef).find(it => (it.heure) == hNum);
     return heure
   }
@@ -220,12 +218,16 @@ export class BoLCalendar extends Application {
     if (defHeure) {
       let hn = defHeure.heure;
       let chiffreAstral = this.getCurrentNombreAstral() ?? 0;
-      heuresChancesMalchances[0] = { value : "+4", heures: [this.getHeureNumber((hn + chiffreAstral) % RDD_HEURES_PAR_JOUR).label]};
-      heuresChancesMalchances[1] = { value : "+2", heures: [this.getHeureNumber((hn + chiffreAstral+4) % RDD_HEURES_PAR_JOUR).label, 
-        this.getHeureNumber((hn + chiffreAstral + 8) % RDD_HEURES_PAR_JOUR).label ] };
-      heuresChancesMalchances[2] = { value : "-4", heures: [this.getHeureNumber((hn + chiffreAstral+6) % RDD_HEURES_PAR_JOUR).label]};
-      heuresChancesMalchances[3] = { value : "-2", heures: [this.getHeureNumber((hn + chiffreAstral+3) % RDD_HEURES_PAR_JOUR).label, 
-          this.getHeureNumber((hn + chiffreAstral + 9) % RDD_HEURES_PAR_JOUR).label ]};
+      heuresChancesMalchances[0] = { value: "+4", heures: [this.getHeureNumber((hn + chiffreAstral) % RDD_HEURES_PAR_JOUR).label] };
+      heuresChancesMalchances[1] = {
+        value: "+2", heures: [this.getHeureNumber((hn + chiffreAstral + 4) % RDD_HEURES_PAR_JOUR).label,
+        this.getHeureNumber((hn + chiffreAstral + 8) % RDD_HEURES_PAR_JOUR).label]
+      };
+      heuresChancesMalchances[2] = { value: "-4", heures: [this.getHeureNumber((hn + chiffreAstral + 6) % RDD_HEURES_PAR_JOUR).label] };
+      heuresChancesMalchances[3] = {
+        value: "-2", heures: [this.getHeureNumber((hn + chiffreAstral + 3) % RDD_HEURES_PAR_JOUR).label,
+        this.getHeureNumber((hn + chiffreAstral + 9) % RDD_HEURES_PAR_JOUR).label]
+      };
     }
     return heuresChancesMalchances;
   }
@@ -358,9 +360,9 @@ export class BoLCalendar extends Application {
     let heuresParActeur = {};
     for (let actor of game.actors) {
       let heureNaissance = actor.getHeureNaissance();
-      if ( heureNaissance) {
+      if (heureNaissance) {
         heuresParActeur[actor.name] = this.getHeuresChanceMalchance(heureNaissance);
-      }      
+      }
     }
     //console.log("ASTRO", astrologieArray);
     calendrierData.astrologieData = astrologieArray;

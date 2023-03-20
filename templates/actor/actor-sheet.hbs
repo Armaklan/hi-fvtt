@@ -1,5 +1,5 @@
 <form class="{{cssClass}} flexcol bol-actor-form" autocomplete="off">
-    <!--<img class="system-img" src="/systems/bol/ui/logo.webp" height="115" width="190"/> -->
+    <!--<img class="system-img" src="/systems/hi-fvtt/ui/logo.webp" height="115" width="190"/> -->
     
   <div class="wrap flexrow">
 
@@ -28,7 +28,7 @@
 
     <div class="main flex1">
 
-      {{> "systems/bol/templates/actor/parts/actor-header.hbs"}}
+      {{> "systems/hi-fvtt/templates/actor/parts/actor-header.hbs"}}
 
       {{!-- Sheet Tab Navigation --}}
       <nav class="sheet-tabs tabs" data-group="primary">
@@ -48,37 +48,37 @@
       <section class="sheet-body">
         <div class="tab stats" data-group="primary" data-tab="stats">
           {{#if (eq charType "creature")}}
-            {{>"systems/bol/templates/actor/parts/tabs/creature-stats.hbs"}}
-            {{> "systems/bol/templates/actor/parts/tabs/creature-actions.hbs"}}
+            {{>"systems/hi-fvtt/templates/actor/parts/tabs/creature-stats.hbs"}}
+            {{> "systems/hi-fvtt/templates/actor/parts/tabs/creature-actions.hbs"}}
           {{else}}
-            {{>"systems/bol/templates/actor/parts/tabs/actor-stats.hbs"}}
+            {{>"systems/hi-fvtt/templates/actor/parts/tabs/actor-stats.hbs"}}
           {{/if}}
         </div>
         
         {{#if (ne charType "creature")}}
         <div class="tab actions" data-group="primary" data-tab="actions">
-            {{> "systems/bol/templates/actor/parts/tabs/actor-actions.hbs"}}
+            {{> "systems/hi-fvtt/templates/actor/parts/tabs/actor-actions.hbs"}}
         </div>
         {{/if}}
 
         {{#if (ne charType "creature")}}      
           <div class="tab features" data-group="primary" data-tab="features">
-            {{> "systems/bol/templates/actor/parts/tabs/actor-features.hbs"}}
+            {{> "systems/hi-fvtt/templates/actor/parts/tabs/actor-features.hbs"}}
           </div>
 
           {{#if isMysteries}}
           <div class="tab features" data-group="primary" data-tab="spellalchemy">
-            {{> "systems/bol/templates/actor/parts/tabs/actor-spellalchemy.hbs"}}
+            {{> "systems/hi-fvtt/templates/actor/parts/tabs/actor-spellalchemy.hbs"}}
           </div>
           {{/if}}
 
           <div class="tab equipment" data-group="primary" data-tab="equipment">
-            {{> "systems/bol/templates/actor/parts/tabs/actor-equipment.hbs"}}
+            {{> "systems/hi-fvtt/templates/actor/parts/tabs/actor-equipment.hbs"}}
           </div>
         {{/if}}
 
         <div class="tab description" data-group="primary" data-tab="description">
-          {{> "systems/bol/templates/actor/parts/tabs/actor-biodata.hbs"}}
+          {{> "systems/hi-fvtt/templates/actor/parts/tabs/actor-biodata.hbs"}}
         </div>
 
       </section>
@@ -86,11 +86,11 @@
   </div>
   <div class="bol-footer flexrow">
     <div class="footer-left flex1">
-      <img src="/systems/bol/ui/banner.webp" />
+      <img src="/systems/hi-fvtt/ui/banner.webp" />
     </div>
     <div class="footer-center flex1"></div>
     <div class="footer-right flex1">
-      <img src="/systems/bol/ui/banner.webp" />
+      <img src="/systems/hi-fvtt/ui/banner.webp" />
     </div>
   </div>
 </form>
