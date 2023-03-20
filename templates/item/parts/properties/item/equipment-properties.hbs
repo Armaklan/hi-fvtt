@@ -1,0 +1,99 @@
+<h3 class="form-header">{{localize "BOL.ui.equipmentProperties"}}</h3>
+
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.subtype"}}</label>
+    <div class="form-fields">
+        <select name="system.subtype" data-dtype="String">
+            {{#select item.system.subtype}}
+                {{#each config.itemSubtypes as |item id|}}
+                    <option value="{{id}}">{{localize item}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+<hr/>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.capacities"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.weapon" {{checked item.system.properties.weapon}}> {{localize "BOL.itemProperty.weapon"}}
+        </label>
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.protection" {{checked item.system.properties.protection}}> {{localize "BOL.itemProperty.protection"}}
+        </label>
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.magical" {{checked item.system.properties.magical}}> {{localize "BOL.itemProperty.magical"}}
+        </label>
+    </div>
+</div>
+<hr/>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.properties"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.equipable" {{checked item.system.properties.equipable}}> {{localize "BOL.itemProperty.equipable"}}
+        </label>
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.stackable" {{checked item.system.properties.stackable}}> {{localize "BOL.itemProperty.stackable"}}
+        </label>
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.consumable" {{checked item.system.properties.consumable}}> {{localize "BOL.itemProperty.consumable"}}
+        </label>
+    </div>
+</div>
+<hr/>
+{{#if item.system.properties.equipable}}
+<div class="form-group">
+    <label>{{localize "BOL.itemProperty.worn"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.worn" {{checked item.system.worn}}> {{localize "BOL.itemProperty.worn"}}
+        </label>
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "BOL.itemProperty.slot"}}</label>
+    <div class="form-fields center">
+        <select class="field-value" name="system.properties.slot" data-dtype="String">
+            {{#select item.system.properties.slot}}
+                {{#each config.equipmentSlots as |value id|}}
+                    <option value="{{id}}">{{localize value}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+{{/if}}
+
+{{#if item.system.properties.stackable}}
+    <div class="form-group">
+        <label class="property-label">{{localize "BOL.ui.quantity"}}</label>
+        <div class="form-fields">
+            <input class="field-value" type="text" name="system.quantity" value="{{item.system.quantity}}" data-dtype="Number"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="property-label">{{localize "BOL.ui.stacksize"}}</label>
+        <div class="form-fields">
+            <input class="field-value" type="text" name="system.properties.stacksize" value="{{item.system.properties.stacksize}}" data-dtype="Number"/>
+        </div>
+    </div>
+{{/if}}
+
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.price"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.price" value="{{item.system.price}}" data-dtype="Number"/>
+    </div>
+</div>
+
+{{#if item.system.properties.weapon}}
+    {{> "systems/bol/templates/item/parts/properties/item/weapon-properties.hbs"}}
+{{/if}}
+{{#if item.system.properties.protection}}
+    {{> "systems/bol/templates/item/parts/properties/item/protection-properties.hbs"}}
+{{/if}}
+{{#if item.system.properties.magical}}
+    {{> "systems/bol/templates/item/parts/properties/item/magical-properties.hbs"}}
+{{/if}}

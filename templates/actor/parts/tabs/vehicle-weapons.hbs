@@ -1,0 +1,30 @@
+<div class="item-name flex4 left">{{localize "BOL.ui.vehicleWeapons"}}</div>
+<ol class="items-list">
+  <li class="item flexrow item-header">
+    <div class="item-name flex4 left">{{localize "BOL.ui.weapons"}}</div>
+    <div class="item-field flex2 center">{{localize "BOL.ui.hullDamage"}}</div>
+    <div class="item-field flex1 center">{{localize "BOL.ui.crewDamage"}}</div>
+    <div class="item-field flex1 center">{{localize "BOL.ui.fireDamage"}}</div>
+    <div class="item-field flex1 right"></div>
+  </li>
+  {{#each weapons as |item id|}}
+  <li class="item flexrow" data-item-id="{{item._id}}">
+    <h4 class="item-name flex4 left">
+      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" /></div>
+      <a class="item-edit">{{item.name}}</a>
+    </h4>
+    <div class="item-field flex1 center">
+      <span class="item-field">{{item.system.properties.hulldamage}}</span>
+    </div>
+    <div class="item-field flex1 center">
+      <span class="item-field">{{item.system.properties.crewdamage}}</span>
+    </div>
+    <div class="item-field flex1 center">
+      <span class="item-field">{{#if item.system.properties.isfiredamage}}X{{else}}-{{/if}}</span>
+    </div>
+    <div class="item-field flex1 right">
+      <a class="item-control item-delete" title="{{localize " BOL.ui.delete"}}"><i class="fas fa-trash"></i></a>
+    </div>
+  </li>
+  {{/each}}
+</ol>

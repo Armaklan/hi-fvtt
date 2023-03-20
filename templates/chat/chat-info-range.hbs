@@ -1,0 +1,19 @@
+<div>
+  <img class="chat-icon" src="{{weapon.img}}" alt="{{weapon.name}}"/>
+  <h2 class="bad"><strong>{{localize "BOL.chat.rangetitle"}}</strong></h2> 
+</div>
+
+<div class="flexrow">
+
+  {{localize "BOL.chat.rangeinfo" attackerName=attackerName defenderName=defenderName}}
+  {{#if visible}}
+    <br>{{localize "BOL.chat.rangevisible"}}
+  {{else}}
+    <br>{{localize "BOL.chat.rangenotvisible"}}
+  {{/if}}
+  <br>{{localize "BOL.chat.rangeweaponinfo" weaponName=weapon.name weaponRange=weaponRange}} m.
+  <br>{{localize "BOL.chat.rangeprefix"}} {{distance}} m.
+  <br>{{localize rangeMsg}}
+
+</div>
+

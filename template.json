@@ -1,0 +1,273 @@
+{
+  "Actor": {
+    "types": [
+      "character",
+      "encounter",
+      "vehicle"
+    ],
+    "templates": {
+      "base": {
+        "details": {
+          "biography": "",
+          "notes": "",
+          "height": "",
+          "age": "",
+          "weight": "",
+          "hair": "",
+          "eyes": "",
+          "signs": "",
+          "size": "",
+          "languages": []
+        },
+        "combat": {
+          "lastinit": 0,
+          "iscritical": false,
+          "isfumble": false,
+          "islegendary": false          
+        },
+        "prot": {
+          "key": "prot",
+          "label": "BOL.aptitudes.prot",
+          "base": 0,
+          "value": 0,
+          "bonus": 0
+        },
+        "attributes": {
+          "vigor": {
+            "key": "vigor",
+            "label": "BOL.attributes.vigor",
+            "base": 0,
+            "value": 0,
+            "min": -1,
+            "max": 5,
+            "bonus": 0
+          },
+          "agility": {
+            "key": "agility",
+            "label": "BOL.attributes.agility",
+            "base": 0,
+            "value": 0,
+            "min": -1,
+            "max": 5,
+            "bonus": 0
+          },
+          "mind": {
+            "key": "mind",
+            "label": "BOL.attributes.mind",
+            "base": 0,
+            "value": 0,
+            "min": -1,
+            "max": 5,
+            "bonus": 0
+          },
+          "appeal": {
+            "key": "appeal",
+            "label": "BOL.attributes.appeal",
+            "base": 0,
+            "value": 0,
+            "bonus": 0
+          }
+        },
+        "aptitudes": {
+          "init": {
+            "key": "init",
+            "label": "BOL.aptitudes.init",
+            "base": 0,
+            "value": 0,
+            "bonus": 0
+          },
+          "melee": {
+            "key": "melee",
+            "label": "BOL.aptitudes.melee",
+            "base": 0,
+            "value": 0,
+            "bonus": 0
+          },
+          "ranged": {
+            "key": "ranged",
+            "label": "BOL.aptitudes.ranged",
+            "base": 0,
+            "value": 0,
+            "bonus": 0
+          },
+          "def": {
+            "key": "def",
+            "label": "BOL.aptitudes.def",
+            "base": 0,
+            "value": 0,
+            "bonus": 0
+          }
+        },
+        "resources": {
+          "hp": {
+            "key": "hp",
+            "label": "BOL.resources.hp",
+            "ismain": true,
+            "base": 1,
+            "value": 1,
+            "bonus": 0,
+            "max": 1
+          },
+          "hero": {
+            "key": "hero",
+            "label": "BOL.resources.hero",
+            "ismain": true,
+            "value": 5,
+            "max": 5
+          },
+          "faith": {
+            "key": "faith",
+            "label": "BOL.resources.faith",
+            "ismain": true,
+            "value": 0,
+            "max": 0
+          },
+          "power": {
+            "key": "power",
+            "label": "BOL.resources.power",
+            "ismain": true,
+            "value": 0,
+            "bonus": 0,
+            "max": 0
+          },
+          "alchemypoints": {
+            "key": "alchemypoints",
+            "label": "BOL.resources.alchemypoints",
+            "ismain": false,
+            "value": 0,
+            "bonus": 0,
+            "max": 0
+          },
+          "astrologypoints": {
+            "key": "astrologypoints",
+            "label": "BOL.resources.astrologypoints",
+            "ismain": false,
+            "value": 0,
+            "bonus": 0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": [ "base" ],
+      "chartype": "player",
+      "villainy": false,
+      "bougette": {
+        "state": "nomoney",
+        "value": 0
+      },
+      "xp": {
+        "key": "xp",
+        "label": "BOL.traits.xp",
+        "total": 0,
+        "spent": 0
+      },
+      "creation": {
+        "key": "creation",
+        "label": "BOL.resources.creation",
+        "value": 0,
+        "max": 0
+      }
+    },
+    "encounter": {
+      "templates": [ "base" ],
+      "chartype": "tough",
+      "villainy": false,
+      "size": "",
+      "environment": ""
+    },
+    "vehicle": {
+      "vehicletype": "boat",
+      "attributes": {
+        "hull": {
+          "key": "hull",
+          "label": "BOL.attributes.hull",
+          "value": 0,
+          "min": 0,
+          "max": 5
+        },
+        "crew": {
+          "key": "crew",
+          "label": "BOL.attributes.crew",
+          "value": 0,
+          "min": 0,
+          "max": 5
+        },
+        "resources": {
+          "key": "resources",
+          "label": "BOL.attributes.resources",
+          "value": 0,
+          "min": 0,
+          "max": 5
+        }
+      },
+      "row": {
+        "key": "row",
+        "label": "BOL.attributes.row",
+        "value": 0,
+        "min": 0,
+        "max": 5
+      },
+      "spur": {
+        "value": ""
+      },
+      "status": {
+
+      },
+      "description": ""
+    }
+  },
+  "Item": {
+    "types": [
+      "item",
+      "feature"
+    ],
+    "templates": {
+      "base": {
+        "category": null,
+        "subtype": "default",
+        "description": "",
+        "properties": {}
+      },
+      "equipment": {
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "worn": false,
+        "properties": {
+          "ranged": false,
+          "melee": false,
+          "spell": false,
+          "protection": false,
+          "weapon": false,
+          "armor": false,
+          "helm": false,
+          "shield": false,
+          "equipable": false,
+          "consumable": false,
+          "magical": false,
+          "2H": false,
+          "reloadable": false,
+          "bow": false,
+          "crossbow": false,
+          "throwing": false
+        }
+      }
+    },
+    "item": {
+      "templates": [
+        "base",
+        "equipment"
+      ]
+    },
+    "feature": {
+      "rank": 0,
+      "templates": [
+        "base"
+      ],
+      "properties": {}
+    }
+  }
+}
+

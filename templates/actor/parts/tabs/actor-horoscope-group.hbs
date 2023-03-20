@@ -1,0 +1,26 @@
+  <ol class="items-list">
+    <li class="item flexrow item-header">
+      <div class="item-name flex4 left">{{localize "BOL.ui.horoscopeGroup"}}</div>
+      <div class="item-field flex2 center">{{localize "BOL.ui.type"}}</div>
+      <div class="item-field flex2 center">{{localize "BOL.ui.horoscopeDiceRemaining"}}</div>
+      <div class="item-field flex2 center">{{localize "BOL.ui.horoscopeDiceMax"}}</div>
+      <div class="item-field flex1 right"></div>
+    </li>  
+    {{#each horoscopeGroupList as |horo id|}}
+      <li class="item flexrow" data-item-id="{{horo.id}}">
+          <h4 class="item-name flex4 left">
+            <div class="item-image"><img src="icons/magic/perception/eye-ringed-glow-angry-large-red.webp" /></div>{{horo.name}}
+          </h4>          
+          <div class="item-field flex2 center">
+              <span class="item-field">{{upperFirst horo.type}}</span>
+          </div>
+          <div class="item-field flex2 center">
+              <span class="item-field">{{horo.availableDice}}</span>
+          </div>
+          <div class="item-field flex2 center">
+              <span class="item-field">{{horo.maxDice}}</span>
+          </div>
+          <div class="item-field flex1 right"></div>
+    </li>
+    {{/each}}
+  </ol>

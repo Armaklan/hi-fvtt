@@ -1,0 +1,211 @@
+{
+  "id": "bol",
+  "title": "Barbarians of Lemuria",
+  "description": "The Barbarians of Lemuria system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "LeRatierBretonnien",
+      "flags": {}
+    },
+    {
+      "name": "Zigmund",
+      "flags": {}
+    }
+  ],
+  "url": "https://www.uberwald.me/gitea/public/bol",
+  "license": "LICENSE.txt",
+  "version": "10.5.10",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  },
+  "esmodules": [
+    "module/bol.js"
+  ],
+  "styles": [
+    "css/bol.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "Français (BoL)",
+      "path": "lang/fr.json",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json",
+      "flags": {}
+    }
+  ],
+  "packs": [
+    {
+      "name": "boons",
+      "label": "Avantages",
+      "system": "bol",
+      "path": "packs/boons.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "boonsflawscreatures",
+      "label": "Avantages/Désavantages de Créatures",
+      "system": "bol",
+      "path": "packs/boonsflawscreatures.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "flaws",
+      "label": "Désavantages",
+      "system": "bol",
+      "path": "packs/flaws.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "careers",
+      "label": "Carrières héroïques",
+      "system": "bol",
+      "path": "packs/careers.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "origins",
+      "label": "Origines",
+      "system": "bol",
+      "path": "packs/origins.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "races",
+      "label": "Races",
+      "system": "bol",
+      "path": "packs/races.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "equipment",
+      "label": "Equipement",
+      "system": "bol",
+      "path": "packs/equipment.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Aides de Jeu",
+      "type": "JournalEntry",
+      "name": "aides-de-jeu",
+      "path": "packs/aides-de-jeu.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Cartes",
+      "type": "Scene",
+      "name": "cartes",
+      "path": "packs/cartes.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Langues",
+      "type": "Item",
+      "name": "languages",
+      "path": "packs/languages.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Sorts",
+      "type": "Item",
+      "name": "spells",
+      "path": "packs/spells.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Dieux",
+      "type": "Item",
+      "name": "godsfaith",
+      "path": "packs/godsfaith.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Options de Combat",
+      "type": "Item",
+      "name": "fightoptions",
+      "path": "packs/fightoptions.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Alchimie - Potions",
+      "type": "Item",
+      "name": "potions-alchimie",
+      "path": "packs/potions-alchimie.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Alchimie - Objets",
+      "type": "Item",
+      "name": "objets-alchimie",
+      "path": "packs/objets-alchimie.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Effets - Exemples",
+      "type": "Item",
+      "name": "effets-exemples",
+      "path": "packs/effets-exemples.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "label": "Créatures",
+      "type": "Actor",
+      "name": "creatures",
+      "path": "packs/creatures.db",
+      "system": "bol",
+      "private": false,
+      "flags": {}
+    }
+  ],
+  "socket": true,
+  "manifest": "https://www.uberwald.me/gitea/public/bol/raw/v10/system.json",
+  "download": "https://www.uberwald.me/gitea/public/bol/archive/bol-v10.5.10.zip",
+  "background": "systems/bol/ui/page_accueil.webp",
+  "gridDistance": 1.5,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "resources.hp",
+  "secondaryTokenAttribute": "resources.hero"
+}

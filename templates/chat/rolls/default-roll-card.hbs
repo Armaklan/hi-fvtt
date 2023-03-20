@@ -1,0 +1,100 @@
+<div>
+  {{#if isSuccess}}
+      {{#if isLegendary}}
+          <h2 class="success critical"><i class="fas fa-check-double"></i>&nbsp;{{localize "BOL.ui.criticallegend"}}...
+      {{else}}
+        {{#if isCritical}}
+            <h2 class="success critical"><i class="fas fa-check-double"></i>&nbsp;{{localize "BOL.ui.critical"}}...
+        {{else}}
+            <h2 class="success"><i class="fas fa-check"></i>&nbsp;{{localize "BOL.ui.success"}}...
+        {{/if}}
+      {{/if}}
+  {{/if}}
+  {{#if isFailure}}
+      {{#if isFumble}}
+          <h2 class="failure fumble"><i class="fas fa-skull-crossbones"></i>&nbsp;{{localize "BOL.ui.fumble"}}...
+      {{else}}
+          <h2 class="failure"><i class="fas fa-times"></i>&nbsp;{{localize "BOL.ui.failure"}}...
+      {{/if}}
+  {{/if}}
+    <img class="chat-icon" src="{{img}}" alt="{{actor.name}}"/>
+  </h2>
+</div>
+
+<h3><strong>{{description}}</strong></h3> 
+
+<div class="actions-section">
+  {{#if isFumble}}
+    {{localize "BOL.chat.fumblemessage"}}
+  {{/if}}
+
+  {{#if fightOption}}
+  <div>
+    {{localize "BOL.chat.fightoption"}} : {{fightOption.name}}
+  </div>
+  {{/if}}
+
+  {{#if initiativeRank}}
+  <div>
+    {{localize "BOL.chat.initiative"}}: {{initiativeRank}}
+  </div>
+  {{/if}}
+
+  {{#if (eq mode "bougette")}}
+  <div>
+    {{localize "BOL.chat.rollbougette"}} : 
+    {{#if isSuccess}}
+      {{localize "BOL.chat.bougettesuccess"}}
+    {{else}}
+      {{localize "BOL.chat.bougettefailure"}}
+    {{/if}}
+  </div>
+  {{/if}}
+
+  <div id="{{optionsId}}">
+
+     
+
+    {{#if isCritical}}
+      <div>
+        {{localize "BOL.chat.criticalinfo"}}
+      </div>
+      <div class="bol-margin-tb-2">
+        <a class="content-link" draggable="true" data-uuid="Compendium.bol.aides-de-jeu.Yl1RKQb0BjVUtilk" data-id="Yl1RKQb0BjVUtilk" data-type="JournalEntry" data-pack="bol.aides-de-jeu" data-tooltip="un journal">
+          <i class="fas fa-book-open"></i>{{localize "BOL.chat.criticalbuttonjournal"}}</a>
+      </div>
+    {{/if}}
+
+    {{#if (and isSuccess weapon)}}
+    {{> "systems/bol/templates/chat/rolls/attack-damage-card.hbs"}}
+    {{/if}}
+    {{#if (and isSuccess spell)}}
+    {{> "systems/bol/templates/chat/rolls/spell-roll-card.hbs"}}
+    {{/if}}
+    {{#if alchemy}}
+    {{> "systems/bol/templates/chat/rolls/alchemy-roll-card.hbs"}}
+    {{/if}}
+    {{#if (eq mode "horoscope")}}
+    {{> "systems/bol/templates/chat/rolls/horoscope-roll-card.hbs"}}
+    {{/if}}
+    
+    {{#if (count selectedHoroscope)}}
+    {{> "systems/bol/templates/chat/rolls/selected-horoscope-roll-card.hbs"}}
+    {{/if}}
+
+    {{#if reroll}}
+      <button class="chat-button button hero-reroll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.reroll"}}</button>
+    {{/if}}
+    {{#if (and isSuccess (not isCritical))}}
+      <button class="chat-button button transform-heroic-roll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.toheroic"}}</button>
+    {{/if}}
+
+    {{#if isRealCritical}}
+      <button class="chat-button button transform-legendary-roll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.tolegend"}}</button>
+    {{/if}}
+
+    <br>
+  </div>
+</div>
+
+

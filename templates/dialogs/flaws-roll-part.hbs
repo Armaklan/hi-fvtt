@@ -1,0 +1,14 @@
+    {{#if (count flaws)}}
+    <div class="flexrow roll-box">
+        <div class="flex1 center bg-darkred" data-tooltip-direction="LEFT" data-tooltip="Click-gauche pour selectionner, CTRL+Click gauche pour déselectionner">
+            <label for="mod">{{localize 'BOL.ui.flaws'}}</label>
+        </div>
+        <div class="flex1 center cell">
+            <select class="flex1" name="flaw" id="flaw" data-type="String" multiple>
+                {{#each flaws as | flaw id|}}
+                    <option value="1">{{flaw.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+    {{/if}}

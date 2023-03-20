@@ -1,0 +1,23 @@
+<div>
+  <img class="chat-icon" src="{{img}}" alt="{{name}}"/>
+  <h2 class="bad"><strong>{{name}}</strong></h2> 
+</div>
+
+<div class="flexrow">
+  
+  {{#if (eq hp 0)}}
+  {{localize "BOL.chat.vitalityzero" name=name hp=hp}}
+    <br>{{localize "BOL.chat.vitalityheroism"}}
+    <br>{{localize "BOL.chat.vitalityheroismhint"}}
+  {{else}}
+    {{localize "BOL.chat.vitalitydying" name=name hp=hp}}
+    <br>{{localize "BOL.chat.vitalitydyingheroism"}}
+  {{/if}}
+
+  {{#if (lt hp -5)}}
+  <br><strong>{{localize "BOL.chat.isdead" name=name}}</strong>
+  <br>{{localize "BOL.chat.epitaph"}}
+  {{/if}} 
+
+</div>
+

@@ -1,0 +1,13 @@
+<div>
+  <img class="chat-icon" src="{{img}}" alt="{{name}}"/>
+  <h2 class="good"><strong>{{name}}</strong></h2> 
+</div>
+
+<div class="flexrow">
+  {{#if state}}
+    {{localize "BOL.chat.fightactive" name=name foName=foName}}
+  {{else}}
+    {{localize "BOL.chat.fightunactive" name=name foName=foName}}
+  {{/if}}
+</div>
+

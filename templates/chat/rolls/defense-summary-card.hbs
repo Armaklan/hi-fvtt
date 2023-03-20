@@ -1,0 +1,11 @@
+<img class="chat-icon" src="{{defender.img}}" alt="{{defender.name}}"/>
+<h3>{{localize "BOL.chat.damagesummary" name=name}}</h3>
+<ul>
+  <li>
+  {{#if (eq finalDamage 0)}}
+  {{localize "BOL.chat.nodamagesummary"}}
+  {{else}}
+  {{localize "BOL.chat.damageresume" name=name}}
+  {{/if}}
+  </li>
+</ul>

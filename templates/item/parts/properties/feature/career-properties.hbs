@@ -1,0 +1,21 @@
+<h3 class="form-header">{{localize 'BOL.featureSubtypes.career'}}</h3>
+<div class="property flexrow">
+    <label class="property-label">{{localize "BOL.ui.rank"}}</label>
+    <input type="text" name="system.rank" value="{{item.system.rank}}" data-dtype="Number"/>
+</div>
+<div class="property flexrow">
+    <label class="property-label">{{localize "BOL.ui.isSorcerer"}}</label>
+    <input class="field-value" type="checkbox" name="system.properties.sorcerer" {{checked item.system.properties.sorcerer}}>
+</div>
+<div class="property flexrow">
+    <label class="property-label">{{localize "BOL.ui.isAlchemist"}}</label>
+    <input class="field-value" type="checkbox" name="system.properties.alchemist" {{checked item.system.properties.alchemist}}>
+</div>
+<div class="property flexrow">
+    <label class="property-label">{{localize "BOL.ui.isPriest"}}</label>
+    <input class="field-value" type="checkbox" name="system.properties.priest" {{checked item.system.properties.priest}}>
+</div>
+<div class="property flexrow">
+    <label class="property-label">{{localize "BOL.ui.isAstrologer"}}</label>
+    <input class="field-value" type="checkbox" name="system.properties.astrologer" {{checked item.system.properties.astrologer}}>
+</div>

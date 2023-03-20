@@ -1,0 +1,66 @@
+<form class="{{cssClass}} flexcol bol-actor-form" autocomplete="off">
+    <!--<img class="system-img" src="/systems/bol/ui/logo.webp" height="115" width="190"/> -->
+    
+  <div class="wrap flexrow">
+
+    {{!-- Sidebar --}}
+    <div class="sidebar flex0 bol-actor-sidebar">
+      <img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" height="100" width="100"
+        style="border:1px outset lightgray; box-shadow: 5px 5px 5px gray" />
+    </div>
+
+    <div class="main flex1">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+      <div class="header-field flex1">
+        <div class="header-field-group flexrow">
+            <label class="header-field-label flex2">{{localize "BOL.ui.name"}}</label><br/>
+            <input class="charname  flex6" name="name" type="text" value="{{name}}" placeholder="Name"/>
+        </div>
+        <div class="header-field-group flexrow">
+          <label class="header-field-label flex2">Type : </label><br/>
+            <select class="field-value" name="system.vehicletype" data-dtype="String">
+              {{#select system.vehicletype}}
+              <option value="boat">Navire</option>
+              <option value="flyingboat">Nef Volante</option>
+              <option value="chariot">Chariot/Carriole</option>
+              <option value="other">Autre</option>
+              {{/select}}
+            </select>
+        </div>
+
+    </div>
+  </header>
+
+      {{!-- Sheet Tab Navigation --}}
+      <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">{{localize "BOL.ui.tab.stats"}}</a>
+        <a class="item" data-tab="description">{{localize "BOL.ui.tab.description"}}</a>
+      </nav>
+
+      {{!-- Sheet Body --}}
+      <section class="sheet-body">
+        <div class="tab stats" data-group="primary" data-tab="stats">
+          {{>"systems/bol/templates/actor/parts/tabs/vehicle-stats.hbs"}}
+          {{>"systems/bol/templates/actor/parts/tabs/vehicle-weapons.hbs"}}
+
+        </div>        
+
+        <div class="tab description" data-group="primary" data-tab="description">
+          {{> "systems/bol/templates/actor/parts/tabs/vehicle-description.hbs"}}
+        </div>
+
+      </section>
+    </div>
+  </div>
+  <div class="bol-footer flexrow">
+    <div class="footer-left flex1">
+      <img src="/systems/bol/ui/banner.webp" />
+    </div>
+    <div class="footer-center flex1"></div>
+    <div class="footer-right flex1">
+      <img src="/systems/bol/ui/banner.webp" />
+    </div>
+  </div>
+</form>

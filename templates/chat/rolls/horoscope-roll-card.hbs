@@ -1,0 +1,26 @@
+ <h4><strong>{{localize "BOL.chat.horoscope"}} {{localize horoscopeTypeLabel}}</strong></h4>
+<h4><strong>{{localize "BOL.chat.horoscopepoints" points=astrologyPointsCost}}</strong></h4>
+
+{{#if (eq horoscopeType "minor")}}
+  {{#if isSuccess}}
+    {{localize "BOL.chat.horoscopeminorsuccess"}}
+  {{else}}
+    {{localize "BOL.chat.horoscopeminorfailure"}}
+  {{/if}}
+{{/if}}
+
+{{#if (eq horoscopeType "major")}}
+  {{#if isSuccess}}
+    {{localize "BOL.chat.horoscopemajorsuccess"}}
+  {{else}}
+    {{localize "BOL.chat.horoscopemajorfailure"}}
+  {{/if}}
+{{/if}}
+
+{{#if (eq horoscopeType "majorgroup")}}
+  {{#if isSuccess}}
+    {{localize "BOL.chat.horoscopemajorgroupsuccess" careerBonus=careerBonus}}
+  {{else}}
+    {{localize "BOL.chat.horoscopemajorgroupfailure" careerBonus=careerBonus}}
+  {{/if}}
+{{/if}}

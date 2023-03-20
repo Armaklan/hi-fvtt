@@ -1,0 +1,7 @@
+
+  <button class="chat-damage-roll bol-margin-tb-2" data-damage-mode="normal-damage" data-attack-id="{{id}}">{{localize "BOL.chat.rolldamage"}}</button>
+  
+  {{#if isCritical}}    
+    <button class="chat-damage-roll bol-margin-tb-2 " data-damage-mode="damage-plus-6" data-attack-id="{{id}}">{{localize "BOL.chat.rolldamage6"}}</button>
+    <button class="chat-damage-roll bol-margin-tb-2" data-damage-mode="damage-plus-12" data-attack-id="{{id}}">{{localize "BOL.chat.rolldamage12"}}</button>
+  {{/if}}

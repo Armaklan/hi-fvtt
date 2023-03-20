@@ -1,0 +1,31 @@
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.category"}}</label>
+    <div class="form-fields">
+        <select class="field-value" name="system.category" value="{{item.system.category}}" data-dtype="String">
+            {{#select item.system.category}}
+                {{#each config.itemCategories as |item id|}}
+                    <option value="{{id}}">{{localize item}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+
+{{#if (eq item.system.category "equipment")}}
+    {{> "systems/bol/templates/item/parts/properties/item/equipment-properties.hbs"}}
+{{/if}}
+{{#if (eq item.system.category "capacity")}}
+    {{> "systems/bol/templates/item/parts/properties/item/capacity-properties.hbs"}}
+{{/if}}
+{{#if (eq item.system.category "vehicle")}}
+    {{> "systems/bol/templates/item/parts/properties/item/vehicle-properties.hbs"}}
+{{/if}}
+{{#if (eq item.system.category "spell")}}
+    {{> "systems/bol/templates/item/parts/properties/item/spell-properties.hbs"}}
+{{/if}}
+{{#if (eq item.system.category "alchemy")}}
+    {{> "systems/bol/templates/item/parts/properties/item/alchemy-properties.hbs"}}
+{{/if}}
+{{#if (eq item.system.category "vehicleweapon")}}
+    {{> "systems/bol/templates/item/parts/properties/item/weapon-vehicle-properties.hbs"}}
+{{/if}}

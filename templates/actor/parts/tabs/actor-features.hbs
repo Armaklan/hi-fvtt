@@ -1,0 +1,43 @@
+{{#each features as | features key|}}
+    {{#if (gt (count features.items) 0)}}
+        <ol class="items-list">
+            <li class="item flexrow item-header">
+                <div class="item-name flex4 left">{{localize features.label}}</div>
+                {{#if ranked}}
+                    <div class="item-field flex2 center">{{localize "BOL.ui.rank"}}</div>
+                {{/if}}
+                <div class="item-field flex1 right"></div>
+            </li>
+            {{#each features.items as |item id|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <h4 class="item-name flex4 left">
+                        <div class="item-image {{#if (equals key "careers")}}roll-career{{/if}}"><img src="{{item.img}}" title="{{item.name}}"/></div>
+                        <a class="item-edit">{{item.name}}</a>
+                    </h4>
+                    <div class="item-field group-btns center flex2">
+                    {{#if (equals key "careers")}}
+                        <a class="inc-dec-btns" data-operator="minus" data-target="system.rank" data-incr="1" data-min="0" data-max="5"><i class="fas fa-minus-square"></i></a>&nbsp;
+                        <span class="item-field">{{item.system.rank}}</span>&nbsp;
+                        <a class="inc-dec-btns" data-operator="plus" data-target="system.rank" data-incr="1" data-min="0" data-max="5"><i class="fas fa-plus-square"></i></a>
+                        <span class="item-field">&nbsp;&nbsp;</span>&nbsp;
+                        <span class="tooltip-container">
+                          <span  class="stat-roll rollable" title="XP" data-roll-type="careerxp"  data-key="{{key}}">
+                            <i class="xp-next fas fa-arrow-up"></i></span>
+                          <span class="tooltiptext">
+                            {{#if (eq system.rank 0)}}
+                            1 XP
+                            {{else}}
+                            {{add system.rank 1}} XP 
+                            {{/if}}
+                            </span>
+                        </span>
+                    {{/if}}
+                    </div>
+                    <div class="item-field flex1 right">
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+        </ol>
+    {{/if}}
+{{/each}}

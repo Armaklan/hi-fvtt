@@ -1,0 +1,61 @@
+{{#if isRanged}}
+<div class="flexrow roll-box">
+  <div class="flex1 center bg-darkred">
+    <label for="modRanged">{{localize 'BOL.ui.rangeModifiers'}}</label>
+  </div>
+  <div class="flex1 center cell">
+    <select name="modRanged" id="modRanged" value="{{mod}}">
+      {{#select modRanged}}
+      <option value="1">{{localize "BOL.dialog.pointblank"}}</option>
+      <option value="0">{{localize "BOL.dialog.close"}}</option>
+      <option value="-1">{{localize "BOL.dialog.medium"}}</option>
+      <option value="-2">{{localize "BOL.dialog.long"}}</option>
+      <option value="-4">{{localize "BOL.dialog.distant"}}</option>
+      <option value="-6">{{localize "BOL.dialog.extreme"}}</option>
+      <option value="-8">{{localize "BOL.dialog.utmost"}}</option>
+      {{/select}}
+    </select>
+  </div>
+</div>
+{{/if}}
+
+<div class="flexrow roll-box hide" id="armor-agi-malus">
+  <div class="flex1 center bg-darkred">
+    <label for="mod">{{localize 'BOL.ui.armorAgiMalus'}}</label>    
+  </div>
+  <div class="flex1 center cell">
+    <label>{{armorAgiMalus}}</label>
+  </div>
+</div>
+
+<div class="flexrow roll-box hide" id="armor-init-malus">
+  <div class="flex1 center bg-darkred">
+    <label for="mod">{{localize 'BOL.ui.armorInitMalus'}}</label>    
+  </div>
+  <div class="flex1 center cell">
+    <label>{{armorInitMalus}}</label>
+  </div>
+</div>
+
+<div class="flexrow roll-box" >
+  <div class="flex1 center bg-darkred">
+    <label for="mod">{{localize 'BOL.ui.modifiers'}}</label>
+  </div>
+  <div class="flex1 center cell">
+    <select name="mod" id="mod" value="{{mod}}">
+      {{#select mod}}
+      <option value="4">{{localize "BOL.dialog.soeasy"}}</option>
+      <option value="2">{{localize "BOL.dialog.veryeasy"}}</option>
+      <option value="1">{{localize "BOL.dialog.easy"}}</option>
+      <option value="0">{{localize "BOL.dialog.moderate"}}</option>
+      <option value="-1">{{localize "BOL.dialog.hard"}}</option>
+      <option value="-2">{{localize "BOL.dialog.tough"}}</option>
+      <option value="-4">{{localize "BOL.dialog.demanding"}}</option>
+      <option value="-6">{{localize "BOL.dialog.formidable"}}</option>
+      <option value="-8">{{localize "BOL.dialog.heroic"}}</option>
+      <option value="-10">{{localize "BOL.dialog.mythic"}}</option>
+      <option value="-12">{{localize "BOL.dialog.divine"}}</option>
+      {{/select}}
+    </select>
+  </div>
+</div>

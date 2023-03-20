@@ -1,0 +1,28 @@
+<h3 class="form-header">{{localize "BOL.ui.vehicleProperties"}}</h3>
+
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.subtype"}}</label>
+    <div class="form-fields">
+        <select name="system.subtype" data-dtype="String">
+            {{#select item.system.subtype}}
+                {{#each config.vehicleSubtypes as |item id|}}
+                    <option value="{{id}}">{{localize item}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+<hr/>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.speed"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.properties.speed" value="{{item.system.properties.speed}}" data-dtype="Number"/>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.ui.price"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.price" value="{{item.system.price}}" data-dtype="Number"/>
+    </div>
+</div>

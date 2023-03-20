@@ -1,0 +1,102 @@
+<h3 class="form-header">{{localize "BOL.ui.protectionProperties"}}</h3>
+<div class="form-group">
+    <label>{{localize "BOL.ui.subtype"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.armor" {{checked item.system.properties.armor}}> {{localize "BOL.itemProperty.armor"}}
+        </label>
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.shield" {{checked item.system.properties.shield}}> {{localize "BOL.itemProperty.shield"}}
+        </label>
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.helm" {{checked item.system.properties.helm}}> {{localize "BOL.itemProperty.helm"}}
+        </label>
+    </div>
+</div>
+<hr/>
+
+{{#if item.system.properties.armor}}
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemProperty.armorQuality"}}</label>
+    <div class="form-fields center">
+        <select class="field-value armorQuality" name="system.properties.armorQuality" data-dtype="String">
+            {{#select item.system.properties.armorQuality}}
+                {{#each config.armorQualities as |value id|}}
+                    <option value="{{id}}">{{localize value}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+</div>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemProperty.soakFormula"}}</label>
+    <div class="form-fields">
+        <input class="field-value soakFormula" type="text" name="system.properties.soak.formula" value="{{item.system.properties.soak.formula}}" data-dtype="String"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemProperty.soakValue"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.properties.soak.value" value="{{item.system.properties.soak.value}}" data-dtype="Number"/>
+    </div>
+</div>
+{{/if}}
+
+{{#if item.system.properties.helm}}
+    <div class="form-group">
+        <label class="property-label">{{localize "BOL.itemProperty.soakModifiers"}}</label>
+        <div class="form-fields">
+            <input class="field-value" type="text" name="system.properties.soak.modifier" value="{{item.system.properties.soak.modifier}}" data-dtype="Number"/>
+        </div>
+    </div>
+{{/if}}
+
+{{#if item.system.properties.shield}}
+    <div class="form-group">
+        <label class="property-label">{{localize "BOL.itemProperty.blockingMalus"}}</label>
+        <div class="form-fields">
+            <input class="field-value" type="text" name="system.properties.blocking.malus" value="{{item.system.properties.blocking.malus}}" data-dtype="Number"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="property-label">{{localize "BOL.itemProperty.blockingAttacksBlocked"}}</label>
+        <div class="form-fields">
+            <label class="checkbox">
+                <input class="field-value" type="checkbox" name="system.properties.blocking.blocking1" {{checked item.system.properties.blocking.blocking1}}> {{localize "BOL.itemProperty.blocking1Attack"}}
+            </label>
+            <label class="checkbox">
+                <input class="field-value" type="checkbox" name="system.properties.blocking.blockingAll" {{checked item.system.properties.blocking.blockingAll}}> {{localize "BOL.itemProperty.blockingAllAttacks"}}
+            </label>
+        </div>
+    </div>
+{{/if}}
+
+<hr/>
+
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemModifiers.init"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.properties.modifiers.init" value="{{item.system.properties.modifiers.c}}" data-dtype="Number"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemModifiers.agility"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.properties.modifiers.agility" value="{{item.system.properties.modifiers.agility}}" data-dtype="Number"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemModifiers.powercost"}}</label>
+    <div class="form-fields">
+        <input class="field-value" type="text" name="system.properties.modifiers.powercost" value="{{item.system.properties.modifiers.powercost}}" data-dtype="Number"/>
+    </div>
+</div>
+<div class="form-group">
+    <label class="property-label">{{localize "BOL.itemModifiers.social"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input class="field-value" type="checkbox" name="system.properties.modifiers.social" {{checked item.system.properties.modifiers.social}}>
+        </label>
+    </div>
+</div>
+

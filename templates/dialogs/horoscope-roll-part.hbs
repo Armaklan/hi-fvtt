@@ -1,0 +1,73 @@
+{{#if (count horoscopeBonusList)}}
+  <div class='flexrow roll-box'>
+    <div class='flex1 center bg-darkred'>
+      <label for='mod'>
+        {{localize 'BOL.ui.horoscopesBonus'}}
+      </label>
+    </div>
+    <div class='flex1 center cell'>
+      <select
+        class='flex1'
+        name='horoscope-bonus-applied'
+        id='horoscope-bonus-applied'
+        data-type='String'
+        multiple
+      >
+        {{#each horoscopeBonusList as |horoscope id|}}
+          <option value="{{id}}">
+            {{horoscope.name}}
+          </option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+{{/if}}
+
+{{#if (count horoscopeMalusList)}}
+  <div class='flexrow roll-box'>
+    <div class='flex1 center bg-darkred'>
+      <label for='mod'>
+        {{localize 'BOL.ui.horoscopesMalus'}}
+      </label>
+    </div>
+    <div class='flex1 center cell'>
+      <select
+        class='flex1'
+        name='horoscope-malus-applied'
+        id='horoscope-malus-applied'
+        data-type='String'
+        multiple
+      >
+        {{#each horoscopeMalusList as |horoscope id|}}
+          <option value="{{id}}">
+            {{horoscope.name}}
+          </option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+{{/if}}
+
+{{#if (countKeys horoscopeGroupList)}}
+  <div class='flexrow roll-box'>
+    <div class='flex1 center bg-darkred'>
+      <label for='mod'>
+        {{localize 'BOL.ui.horoscopeGroup'}}
+      </label>
+    </div>
+    <div class='flex1 center cell'>
+      <select
+        class='flex1'
+        name='horoscope-group-applied'
+        id='horoscope-group-applied'
+        data-type='String'
+      >
+        {{#each horoscopeGroupList as |horoscope index|}}
+          <option value="{{index}}">
+            {{horoscope.nbDice}}d{{upperFirstOnly horoscope.type}} - {{horoscope.name}} 
+          </option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+{{/if}}

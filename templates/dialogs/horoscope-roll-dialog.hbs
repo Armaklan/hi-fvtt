@@ -1,0 +1,39 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <div class="row flexrow table-header">
+            <div class="flex1 center">
+                <h3>{{localize 'BOL.ui.makeHoroscope'}} {{localize horoscopeTypeLabel}}</h3>
+            </div>
+        </div>
+    </header>
+
+    {{> "systems/bol/templates/dialogs/attribute-roll-part.hbs"}}
+
+    <div class="flexrow" style="margin-bottom: 1px;">
+        <div class="flex1 center bg-darkred">
+            <label for="mod">{{localize 'BOL.ui.astrologerRank'}}</label>
+        </div>
+        <div class="flex1 center cell">{{careerBonus}}</div>
+    </div>
+
+    <div class="flexrow" style="margin-bottom: 1px;">
+        <div class="flex1 center bg-darkred">
+            <label for="mod">{{localize 'BOL.ui.horoscopeCost'}}</label>
+        </div>
+        <div class="flex1 center cell" id="astrologyPointsCost">{{astrologyPointsCost}}</div>
+    </div>
+
+    {{> "systems/bol/templates/dialogs/boons-roll-part.hbs"}}
+
+    {{> "systems/bol/templates/dialogs/flaws-roll-part.hbs"}}
+
+    {{> "systems/bol/templates/dialogs/effect-roll-part.hbs"}}
+
+    {{> "systems/bol/templates/dialogs/adv-roll-part.hbs"}}
+
+    {{> "systems/bol/templates/dialogs/mod-roll-part.hbs"}}
+
+    {{> "systems/bol/templates/dialogs/total-roll-part.hbs"}}
+
+</form>

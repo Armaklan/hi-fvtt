@@ -1,0 +1,101 @@
+.window-header {
+  border:none;
+}
+.window-content {
+  height: 100%;
+  padding: 10px;
+  overflow-y: hidden;
+  background: transparent;
+
+  form {
+    border: 10px solid transparent;
+    border-image: url("/systems/bol/ui/box-border-large.webp") 108/3 repeat;
+    border-image-outset: 1;
+    background: white;
+    margin:0;
+    padding:0;
+    height: 100%;
+    .sheet-header {
+      //background-color: red;
+      background-image: url("/systems/bol/ui/banner.webp");
+      background-repeat: no-repeat;
+      background-size: @deco-width @deco-height;
+      background-position-y: -15px;
+      background-position-x: right;
+
+      height: @logo-height;
+      min-height: @logo-height;
+      max-height: @logo-height;
+
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding-bottom: 10px;
+
+      .header-field {
+        .header-field-group {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: baseline;
+
+          .header-field-label {
+            margin-right: 5px;
+          }
+
+          .charname,
+          .itemname,
+          .header-field-value {
+            color: @colorOlive;
+            font-family: @font-secondary;
+            font-size: 1.5rem;
+            background-color: #EEE;
+          }
+        }
+      }
+    }
+
+    .main {
+      /* Sheet Tabs */
+      .tabs {
+        flex: 0 0 30px;
+        background-color: black;
+
+        .item {
+          line-height: 30px;
+          font-weight: bold;
+          font-family: @font-handwrite;
+          color: white;
+          padding-top: 4px;
+          font-size: 0.8em;
+        }
+
+        .item.active {
+          text-decoration: underline;
+          text-shadow: none;
+        }
+      }
+
+      .sheet-body {
+        overflow: hidden;
+
+        .tab {
+          height: 95%;
+          border:none;
+          overflow-y: auto;
+          /* Items List */
+          &.description {
+            .editor, .editor-content {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

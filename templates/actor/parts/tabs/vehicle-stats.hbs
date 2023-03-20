@@ -1,0 +1,24 @@
+<hr />
+
+<div class="resources flexrow">
+  {{#each system.attributes as |attr key|}}
+  <div class="resource stat flex1 flex-group-center">
+    <label class="stat-label">{{localize attr.label}}</label><br />
+    <input class="stat-value resources-value" type="text" name="system.attributes.{{key}}.value"
+      value="{{numberFormat attr.value decimals=0 sign=false}}" data-dtype="Number" />
+    <input class="resources-value" type="text" name="system.attributes.{{key}}.max"
+      value="{{numberFormat attr.max decimals=0 sign=false}}" data-dtype="Number" />
+  </div>
+  {{/each}}
+
+  {{#if (eq system.vehicletype "boat")}}
+  <div class="resource stat flex1 flex-group-center">
+    <label class="stat-label">{{localize system.row.label}}</label><br />
+    <input class="stat-value resources-value" type="text" name="system.row.value"
+      value="{{numberFormat system.row.value decimals=0 sign=false}}" data-dtype="Number" />
+    <input class="resources-value" type="text" name="system.row.max"
+      value="{{numberFormat system.row.max decimals=0 sign=false}}" data-dtype="Number" />
+  </div>
+  {{/if}}
+
+</div>
