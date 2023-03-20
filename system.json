@@ -1,7 +1,7 @@
 {
-  "id": "bol",
-  "title": "Barbarians of Lemuria",
-  "description": "The Barbarians of Lemuria system for FoundryVTT!",
+  "id": "hi",
+  "title": "Honor & Intrigue",
+  "description": "Honor&Intrigue system for FoundryVTT! (fork from hi System)",
   "authors": [
     {
       "name": "LeRatierBretonnien",
@@ -10,21 +10,21 @@
     {
       "name": "Zigmund",
       "flags": {}
+    },
+    {
+      "name": "ZUBER Lionel",
+      "flags": {}
     }
   ],
-  "url": "https://www.uberwald.me/gitea/public/bol",
+  "url": "https://www.uberwald.me/gitea/public/hi",
   "license": "LICENSE.txt",
   "version": "10.5.10",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
   },
-  "esmodules": [
-    "module/bol.js"
-  ],
-  "styles": [
-    "css/bol.css"
-  ],
+  "esmodules": ["module/hi.js"],
+  "styles": ["css/hi.css"],
   "languages": [
     {
       "lang": "en",
@@ -34,7 +34,7 @@
     },
     {
       "lang": "fr",
-      "name": "Français (BoL)",
+      "name": "Français (hi)",
       "path": "lang/fr.json",
       "flags": {}
     },
@@ -49,7 +49,7 @@
     {
       "name": "boons",
       "label": "Avantages",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/boons.db",
       "type": "Item",
       "private": false,
@@ -58,7 +58,7 @@
     {
       "name": "boonsflawscreatures",
       "label": "Avantages/Désavantages de Créatures",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/boonsflawscreatures.db",
       "type": "Item",
       "private": false,
@@ -67,7 +67,7 @@
     {
       "name": "flaws",
       "label": "Désavantages",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/flaws.db",
       "type": "Item",
       "private": false,
@@ -76,7 +76,7 @@
     {
       "name": "careers",
       "label": "Carrières héroïques",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/careers.db",
       "type": "Item",
       "private": false,
@@ -85,7 +85,7 @@
     {
       "name": "origins",
       "label": "Origines",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/origins.db",
       "type": "Item",
       "private": false,
@@ -94,7 +94,7 @@
     {
       "name": "races",
       "label": "Races",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/races.db",
       "type": "Item",
       "private": false,
@@ -103,7 +103,7 @@
     {
       "name": "equipment",
       "label": "Equipement",
-      "system": "bol",
+      "system": "hi",
       "path": "packs/equipment.db",
       "type": "Item",
       "private": false,
@@ -114,7 +114,7 @@
       "type": "JournalEntry",
       "name": "aides-de-jeu",
       "path": "packs/aides-de-jeu.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -123,7 +123,7 @@
       "type": "Scene",
       "name": "cartes",
       "path": "packs/cartes.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -132,7 +132,7 @@
       "type": "Item",
       "name": "languages",
       "path": "packs/languages.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -141,7 +141,7 @@
       "type": "Item",
       "name": "spells",
       "path": "packs/spells.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -150,7 +150,7 @@
       "type": "Item",
       "name": "godsfaith",
       "path": "packs/godsfaith.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -159,7 +159,7 @@
       "type": "Item",
       "name": "fightoptions",
       "path": "packs/fightoptions.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -168,7 +168,7 @@
       "type": "Item",
       "name": "potions-alchimie",
       "path": "packs/potions-alchimie.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -177,7 +177,7 @@
       "type": "Item",
       "name": "objets-alchimie",
       "path": "packs/objets-alchimie.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -186,7 +186,7 @@
       "type": "Item",
       "name": "effets-exemples",
       "path": "packs/effets-exemples.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     },
@@ -195,15 +195,15 @@
       "type": "Actor",
       "name": "creatures",
       "path": "packs/creatures.db",
-      "system": "bol",
+      "system": "hi",
       "private": false,
       "flags": {}
     }
   ],
   "socket": true,
-  "manifest": "https://www.uberwald.me/gitea/public/bol/raw/v10/system.json",
-  "download": "https://www.uberwald.me/gitea/public/bol/archive/bol-v10.5.10.zip",
-  "background": "systems/bol/ui/page_accueil.webp",
+  "manifest": "https://www.uberwald.me/gitea/public/hi/raw/v10/system.json",
+  "download": "https://www.uberwald.me/gitea/public/hi/archive/hi-v10.5.10.zip",
+  "background": "systems/hi/ui/page_accueil.webp",
   "gridDistance": 1.5,
   "gridUnits": "m",
   "primaryTokenAttribute": "resources.hp",
