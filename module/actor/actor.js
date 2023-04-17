@@ -51,7 +51,7 @@ export class BoLActor extends Actor {
   /* -------------------------------------------- */
   async rollBougette() {
     if (this.type == "character") {
-      let attribute = duplicate(this.system.attributes.vigor)
+      let attribute = duplicate(this.system.attributes.might)
       let rollData = BoLRoll.getCommonRollData(this, "bougette", attribute, undefined)
       rollData.formula = game.bol.config.bougetteDice[String(this.system.bougette.value)]
       let r = new BoLDefaultRoll(rollData)
@@ -71,13 +71,23 @@ export class BoLActor extends Actor {
   /* -------------------------------------------- */
   updateResourcesData() {
     if (this.type == 'character') {
-      let newVitality = 10 + this.system.attributes.vigor.value + this.system.resources.hp.bonus
+      let newVitality = 10 + this.system.attributes.might.value + this.system.resources.hp.bonus
       if (this.system.resources.hp.max != newVitality) {
         this.update({ 'system.resources.hp.max': newVitality })
       }
-      let newPower = 10 + this.system.attributes.mind.value + this.system.resources.power.bonus
+      let newPower = 10 + this.system.attributes.savvy.value + this.system.resources.power.bonus
       if (this.system.resources.power.max != newPower) {
         this.update({ 'system.resources.power.max': newPower })
+      }
+
+      let newComposure = 3 + this.system.resources.composure.bonus
+      if (this.system.resources.composure.max != newComposure) {
+        this.update({ 'system.resources.composure.max': newComposure })
+      }
+
+      let newHero = 3 + this.system.attributes.flair.value + this.system.resources.hero.bonus
+      if (this.system.resources.hero.max != newHero) {
+        this.update({ 'system.resources.hero.max': newHero })
       }
     }
   }
@@ -381,14 +391,14 @@ export class BoLActor extends Actor {
   /*-------------------------------------------- */
   getDamageAttributeValue(attrDamage) {
     let attrDamageValue = 0
-    if (attrDamage.includes("vigor")) {
-      attrDamageValue = this.system.attributes.vigor.value
+    if (attrDamage.includes("might")) {
+      attrDamageValue = this.system.attributes.might.value
       if (attrDamage.includes("half")) {
         attrDamageValue = Math.floor(attrDamageValue / 2)
       }
-      // Apply vigor effects
+      // Apply might effects
       for (let i of this.items) {
-        if (i.type === "feature" && i.system.subtype === "boleffect" && i.system.properties.identifier.includes("vigor")) {
+        if (i.type === "feature" && i.system.subtype === "boleffect" && i.system.properties.identifier.includes("might")) {
           attrDamageValue += Number(i.system.properties.modifier)
         }
       }
@@ -400,7 +410,7 @@ export class BoLActor extends Actor {
     let malusAgi = 0
     for (let armor of this.protections) {
       if (armor.system.worn) {
-        malusAgi += Number(armor.system.properties.modifiers.agility) || 0
+        malusAgi += Number(armor.system.properties.modifiers.daring) || 0
       }
     }
     return malusAgi
@@ -565,9 +575,10 @@ export class BoLActor extends Actor {
   getResourcesFromType() {
     let resources = {};
     if (this.type == 'encounter') {
-      resources['hp'] = this.system.resources.hp;
+      resources['hp'] = this.system.resources.hp
+      resources['composure'] = this.system.resources.composure
+
       if (this.system.chartype != 'base') {
-        resources['faith'] = this.system.resources.faith
         resources['power'] = this.system.resources.power
       }
       if (this.system.chartype == 'adversary') {

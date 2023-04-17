@@ -13,7 +13,7 @@
         "concealable": true,
         "modifiers": {
           "social": true,
-          "agility": -1,
+          "daring": -1,
           "powercost": 1
         },
         "soak": {
@@ -36,7 +36,7 @@
         "armor": true,
         "modifiers": {
           "social": true,
-          "agility": -1,
+          "daring": -1,
           "powercost": 2
         },
         "soak": {
@@ -59,7 +59,7 @@
         "armor": true,
         "modifiers": {
           "social": true,
-          "agility": -2,
+          "daring": -2,
           "powercost": 3
         },
         "soak": {
@@ -120,7 +120,7 @@
         "protection": true,
         "shield": true,
         "modifiers": {
-          "agility": -1
+          "daring": -1
         },
         "blocking": {
           "malus": -1,

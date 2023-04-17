@@ -1,6 +1,6 @@
 <div class="attributes flexrow">
     {{#each attributes as |attribute id|}}
-      {{#if (ne id "appeal")}}
+      {{#if (ne id "flair")}}
         <div class="attribute stat flex1 flex-group-center {{key}}">
             <label class="stat-label"><a class="rollable" data-roll-type="attribute" data-roll="2d6+@attributes.{{key}}.value" data-adv="0" data-key="{{key}}">{{localize label}}</a></label><br/>
             <input class="stat-value rounded-border" type="text" name="system.attributes.{{key}}.value" value="{{numberFormat value decimals=0 sign=true}}" data-dtype="Number"/><br/>

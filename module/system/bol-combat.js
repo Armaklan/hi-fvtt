@@ -24,7 +24,7 @@ export class BoLCombatManager extends Combat {
     // calculate initiative
     for (let cId = 0; cId < ids.length; cId++) {
       const combatant = this.combatants.get(ids[cId])
-      const bonusInitiative = combatant.actor.data.data.attributes.mind.value;
+      const bonusInitiative = combatant.actor.data.data.attributes.savvy.value;
 
       const r = new Roll("2d6")
       await r.roll({ "async": false })

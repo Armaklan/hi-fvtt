@@ -97,10 +97,10 @@ BOL.soakFormulas = {
 }
 
 BOL.attackAttributes = {
-    "vigor": "BOL.attributes.vigor",
-    "agility": "BOL.attributes.agility",
-    "mind": "BOL.attributes.mind",
-    "appeal": "BOL.attributes.appeal"
+    "might": "BOL.attributes.might",
+    "daring": "BOL.attributes.daring",
+    "savvy": "BOL.attributes.savvy",
+    "flair": "BOL.attributes.flair"
 }
 
 BOL.attackAptitudes = {
@@ -118,7 +118,7 @@ BOL.aptitudes = {
 BOL.resources = {
     "hp": "BOL.resources.hp",
     "hero": "BOL.resources.hero",
-    "faith": "BOL.resources.faith",
+    "composure": "BOL.resources.composure",
     "power": "BOL.resources.power",
     "alchemypoints": "BOL.resources.alchemypoints"
 }
@@ -133,8 +133,8 @@ BOL.weaponSizes = {
 
 BOL.damageAttributes = {
     "zero": "0",
-    "vigor": "BOL.attributes.vigor",
-    "half-vigor": "BOL.attributes.halfvigor"
+    "might": "BOL.attributes.might",
+    "half-might": "BOL.attributes.halfmight"
 }
 
 BOL.itemCategories = {
@@ -246,7 +246,7 @@ BOL.itemStats = {
 BOL.itemModifiers = {
     "init": "BOL.itemModifiers.init",
     "social": "BOL.itemModifiers.social",
-    "agility": "BOL.itemModifiers.agility",
+    "daring": "BOL.itemModifiers.daring",
     "powercost": "BOL.itemModifiers.powercost"
 }
 

@@ -29,36 +29,36 @@
           "bonus": 0
         },
         "attributes": {
-          "vigor": {
-            "key": "vigor",
-            "label": "BOL.attributes.vigor",
+          "might": {
+            "key": "might",
+            "label": "BOL.attributes.might",
             "base": 0,
             "value": 0,
             "min": -1,
             "max": 5,
             "bonus": 0
           },
-          "agility": {
-            "key": "agility",
-            "label": "BOL.attributes.agility",
+          "daring": {
+            "key": "daring",
+            "label": "BOL.attributes.daring",
             "base": 0,
             "value": 0,
             "min": -1,
             "max": 5,
             "bonus": 0
           },
-          "mind": {
-            "key": "mind",
-            "label": "BOL.attributes.mind",
+          "savvy": {
+            "key": "savvy",
+            "label": "BOL.attributes.savvy",
             "base": 0,
             "value": 0,
             "min": -1,
             "max": 5,
             "bonus": 0
           },
-          "appeal": {
-            "key": "appeal",
-            "label": "BOL.attributes.appeal",
+          "flair": {
+            "key": "flair",
+            "label": "BOL.attributes.flair",
             "base": 0,
             "value": 0,
             "bonus": 0
@@ -109,14 +109,16 @@
             "label": "BOL.resources.hero",
             "ismain": true,
             "value": 5,
-            "max": 5
+            "max": 5,
+            "bonus": 0
           },
-          "faith": {
-            "key": "faith",
-            "label": "BOL.resources.faith",
+          "composure": {
+            "key": "composure",
+            "label": "BOL.resources.composure",
             "ismain": true,
             "value": 0,
-            "max": 0
+            "max": 0,
+            "bonus": 0
           },
           "power": {
             "key": "power",

@@ -1,6 +1,6 @@
 import { BoLUtility } from "../system/bol-utility.js";
 
-const _apt2attr = { brawl: "agility", melee: "agility", ranged: "agility", def: "vigor" }
+const _apt2attr = { brawl: "daring", melee: "daring", ranged: "daring", def: "might" }
 
 /* -------------------------------------------- */
 export class BoLRoll {
@@ -204,7 +204,7 @@ export class BoLRoll {
       return
     }
 
-    let rollData = this.getCommonRollData(actor, "alchemy", actor.system.attributes.mind)
+    let rollData = this.getCommonRollData(actor, "alchemy", actor.system.attributes.savvy)
 
     rollData.alchemy = alchemy
     rollData.careerBonus = actor.getAlchemistBonus()
@@ -225,7 +225,7 @@ export class BoLRoll {
       ui.notifications.warn(game.i18n.localize("BOL.ui.astrologyNoPoints"))
       return
     }
-    let rollData = this.getCommonRollData(actor, "horoscope", actor.system.attributes.mind)
+    let rollData = this.getCommonRollData(actor, "horoscope", actor.system.attributes.savvy)
 
     rollData.careerBonus = actor.getAstrologerBonus()
     rollData.horoscopeType = horoscopeType
@@ -240,7 +240,7 @@ export class BoLRoll {
 
   /* -------------------------------------------- */
   static spellCheckWithSpell(actor, spell) {
-    let rollData = this.getCommonRollData(actor, "spell", actor.system.attributes.mind)
+    let rollData = this.getCommonRollData(actor, "spell", actor.system.attributes.savvy)
 
     rollData.spell = spell
     rollData.ppCurrent = Number(actor.system.resources.power.value),
@@ -358,7 +358,7 @@ export class BoLRoll {
   /* -------------------------------------------- */
   static updateArmorMalus(rollData) {
     rollData.appliedArmorMalus = 0
-    if (rollData.attribute.key == "agility") {
+    if (rollData.attribute.key == "daring") {
       $("#armor-agi-malus").show()
       rollData.appliedArmorMalus += rollData.armorAgiMalus
     } else {
