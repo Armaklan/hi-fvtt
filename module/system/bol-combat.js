@@ -10,7 +10,6 @@ Init order =
   3 - Echec critique
 */
 
-import { BoLUtility } from "../system/bol-utility.js";
 
 
 export class BoLCombatManager extends Combat {
@@ -25,8 +24,12 @@ export class BoLCombatManager extends Combat {
     // calculate initiative
     for (let cId = 0; cId < ids.length; cId++) {
       const combatant = this.combatants.get(ids[cId])
-      let fvttInit = combatant.actor.getInitiativeRank(false, true, {combatId: this.id, combatantId: combatant.id } )
-      fvttInit += (cId / 100)
+      const bonusInitiative = combatant.actor.data.data.attributes.mind.value;
+
+      const r = new Roll("2d6")
+      await r.roll({ "async": false })
+
+      let fvttInit = r.total + bonusInitiative;
       await this.updateEmbeddedDocuments("Combatant", [{ _id: ids[cId], initiative: fvttInit }]);
     }
   }
@@ -35,7 +38,7 @@ export class BoLCombatManager extends Combat {
   nextRound() {
     let combatants = this.combatants.contents
     for (let c of combatants) {
-      let actor = game.actors.get( c.actorId )
+      let actor = game.actors.get(c.actorId)
       actor.clearRoundModifiers()
     }
     super.nextRound()
@@ -45,12 +48,12 @@ export class BoLCombatManager extends Combat {
   startCombat() {
     let combatants = this.combatants.contents
     for (let c of combatants) {
-      let actor = game.actors.get( c.actorId )
+      let actor = game.actors.get(c.actorId)
       actor.storeVitaliteCombat()
     }
     return super.startCombat()
   }
-  
+
   /************************************************************************************/
   _onDelete() {
     let combatants = this.combatants.contents
@@ -63,4 +66,4 @@ export class BoLCombatManager extends Combat {
   }
 
 }
-  
+

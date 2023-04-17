@@ -3,32 +3,31 @@
 /* ----------------------------------------- */
 @import "../node_modules/rpg-awesome/css/rpg-awesome.min.css";
 @font-face {
-  font-family: "Contrail One";
+  font-family: 'Contrail One';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/contrailone/v10/eLGbP-j_JA-kG0_Zo51noafdZQ.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/contrailone/v15/eLGbP-j_JA-kG0_Zo51noafdZQ.ttf) format('truetype');
 }
 @font-face {
   font-family: "CCMeanwhile";
-  src: url("../fonts/ccmeanwhile-regular.ttf");
+  src: url('../fonts/ccmeanwhile-regular.ttf');
 }
 @font-face {
   font-family: "Wolfsbane2";
-  src: url("../fonts/wolfsbane2.ttf");
+  src: url('../fonts/wolfsbane2.ttf');
 }
 @font-face {
   font-family: "Wolfsbane2Condensed";
-  src: url("../fonts/wolfsbane2cond.ttf");
+  src: url('../fonts/wolfsbane2cond.ttf');
 }
 @font-face {
   font-family: "Wolfsbane2Expanded";
-  src: url("../fonts/wolfsbane2expand.ttf");
+  src: url('../fonts/wolfsbane2expand.ttf');
 }
 @font-face {
   font-family: "IMFellDWPicaSC-Regular";
-  src: url("../fonts/IMFellDWPicaSC-Regular.ttf");
+  src: url('../fonts/IMFellDWPicaSC-Regular.ttf');
 }
 /* ----------------------------------------- */
 /*  TEXT STYLES                             */
@@ -60,6 +59,8 @@ a:hover {
   top: -50px;
   left: calc(50% - 100px);
   opacity: 0.7;
+  -webkit-animation: rotation 10s infinite linear;
+  animation: rotation 10s infinite linear;
 }
 #pause h3 {
   font-family: "IMFellDWPicaSC-Regular", serif;
@@ -100,9 +101,12 @@ a:hover {
   display: none;
 }
 ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margins */
 }
 .ellipsis {
   text-overflow: ellipsis;
@@ -276,10 +280,6 @@ ul.no-bullets {
 .bol button {
   background: rgba(0, 0, 0, 0.1);
 }
-.chat-button {
-  font-size: 0.8rem;
-}
-
 .bol select {
   box-shadow: none;
   font-size: 14px;
@@ -404,7 +404,7 @@ ul.no-bullets {
 .bol h4.form-header {
   font-size: 1em;
   font-weight: 500;
-  font-family: "Signika", sans-serif;
+  font-family: 'Signika', sans-serif;
   color: black;
   background-color: transparent;
   border-top: none;
@@ -443,19 +443,18 @@ ul.no-bullets {
 .bol .inc-dec-btns {
   color: #4b4a44;
 }
+/* Items List */
 .summmary-number {
   padding-left: 4rem;
 }
-/* Items List */
 .items-list {
   list-style: none;
   margin: 7px 0;
   padding: 0;
   overflow-y: hidden;
-  /*overflow-y: auto;*/
 }
 .items-list .item-header {
-  font-family: "Signika", sans-serif;
+  font-family: 'Signika', sans-serif;
   font-size: 1em;
   color: #4b4a44;
   background-color: lightgray;
@@ -535,7 +534,6 @@ ul.no-bullets {
 .bougette-dice-img {
   color: rgba(150, 44, 44, 0.7);
 }
-
 /* ----------------------------------------- */
 /*  Premade colors                           */
 /* ----------------------------------------- */
@@ -642,16 +640,16 @@ ul.no-bullets {
   color: darkred;
   font-weight: bold;
 }
+.message-header h2.roll {
+  color: darkslategrey;
+  font-weight: bold;
+}
 h2.good {
   color: darkgreen;
   font-weight: bold;
 }
 h2.bad {
   color: darkred;
-  font-weight: bold;
-}
-.message-header h2.roll {
-  color: darkslategrey;
   font-weight: bold;
 }
 .chat-message {
@@ -678,13 +676,7 @@ h2.bad {
   background-color: #282828;
   color: white;
 }
-.chat-message
-  .message-content
-  .dice-roll
-  .dice-result
-  .dice-tooltip
-  .tooltip-part
-  .part-total {
+.chat-message .message-content .dice-roll .dice-result .dice-tooltip .tooltip-part .part-total {
   border-radius: 0px;
   border: 1px inset lightgray;
   background-color: #2a2a2a;
@@ -697,7 +689,7 @@ h2.bad {
   color: white;
 }
 body.system-bol img#logo {
-  content: url("/systems/hi-fvtt/ui/logo2.webp");
+  content: url("/systems/hi-fvtt/ui/logo-hi.gif");
 }
 .bol.sheet .window-header {
   border: none;
@@ -718,14 +710,9 @@ body.system-bol img#logo {
   height: 100%;
 }
 .bol.sheet .window-content form .sheet-header {
-  background-image: url("/systems/hi-fvtt/ui/banner.webp");
-  background-repeat: no-repeat;
-  background-size: 330px 62px;
-  background-position-y: -15px;
-  background-position-x: right;
-  height: 115px;
-  min-height: 115px;
-  max-height: 115px;
+  height: 86px;
+  min-height: 86px;
+  max-height: 86px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -734,12 +721,7 @@ body.system-bol img#logo {
   align-items: flex-end;
   padding-bottom: 10px;
 }
-.bol.sheet
-  .window-content
-  form
-  .sheet-header
-  .header-field
-  .header-field-group {
+.bol.sheet .window-content form .sheet-header .header-field .header-field-group {
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -747,38 +729,14 @@ body.system-bol img#logo {
   justify-content: flex-start;
   align-items: baseline;
 }
-.bol.sheet
-  .window-content
-  form
-  .sheet-header
-  .header-field
-  .header-field-group
-  .header-field-label {
+.bol.sheet .window-content form .sheet-header .header-field .header-field-group .header-field-label {
   margin-right: 5px;
 }
-.bol.sheet
-  .window-content
-  form
-  .sheet-header
-  .header-field
-  .header-field-group
-  .charname,
-.bol.sheet
-  .window-content
-  form
-  .sheet-header
-  .header-field
-  .header-field-group
-  .itemname,
-.bol.sheet
-  .window-content
-  form
-  .sheet-header
-  .header-field
-  .header-field-group
-  .header-field-value {
+.bol.sheet .window-content form .sheet-header .header-field .header-field-group .charname,
+.bol.sheet .window-content form .sheet-header .header-field .header-field-group .itemname,
+.bol.sheet .window-content form .sheet-header .header-field .header-field-group .header-field-value {
   color: #4b4a44;
-  font-family: "Contrail One", cursive;
+  font-family: 'Contrail One', cursive;
   font-size: 1.5rem;
   background-color: #eee;
 }
@@ -811,13 +769,7 @@ body.system-bol img#logo {
   /* Items List */
 }
 .bol.sheet .window-content form .main .sheet-body .tab.description .editor,
-.bol.sheet
-  .window-content
-  form
-  .main
-  .sheet-body
-  .tab.description
-  .editor-content {
+.bol.sheet .window-content form .main .sheet-body .tab.description .editor-content {
   height: 100%;
 }
 .bol.sheet.actor {
@@ -825,13 +777,13 @@ body.system-bol img#logo {
   min-height: 700px;
   height: 700px;
 }
-.bol.sheet.actor .window-content .bol-actor-form {
-  background-image: url("/systems/hi-fvtt/ui/logo.webp");
+.bol.sheet.actor .window-content form {
+  background-image: url("/systems/hi-fvtt/ui/logo-hi.gif");
   background-repeat: no-repeat;
-  background-size: 190px 115px;
+  background-size: 240px 86px;
 }
 .bol.sheet.actor .window-content form .sidebar {
-  padding-top: 115px;
+  padding-top: 86px;
   min-width: 250px;
   width: 250px;
   max-width: 250px;
@@ -848,46 +800,6 @@ body.system-bol img#logo {
 }
 .bol.sheet.actor .window-content form .main .sheet-body {
   overflow: hidden;
-}
-.bol.sheet.actor .window-content form .main .sheet-body .tab .attribute.vigor {
-  background-image: url("/systems/hi-fvtt/ui/attributes/vigor.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 64px 64px;
-}
-.bol.sheet.actor
-  .window-content
-  form
-  .main
-  .sheet-body
-  .tab
-  .attribute.agility {
-  background-image: url("/systems/hi-fvtt/ui/attributes/agility.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 64px 64px;
-}
-.bol.sheet.actor .window-content form .main .sheet-body .tab .attribute.mind {
-  background-image: url("/systems/hi-fvtt/ui/attributes/mind.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 64px 64px;
-}
-.bol.sheet.actor .window-content form .main .sheet-body .tab .attribute.appeal {
-  background-image: url("/systems/hi-fvtt/ui/attributes/appeal.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 64px 64px;
-}
-.bol.sheet.actor
-  .window-content
-  form
-  .main
-  .sheet-body
-  .tab
-  .attribute
-  .stat-value {
-  margin-top: -10px;
 }
 .bol.sheet.actor .bol-footer {
   height: 62px;
@@ -988,6 +900,18 @@ body.system-bol img#logo {
   width: 4rem;
   height: 4rem;
 }
+.bol.sheet.actor .dialog-button {
+  max-height: 2rem;
+}
+.bol.sheet.actor .xp-next {
+  color: darkgrey;
+  font-size: 1rem;
+  border: 1px solid #4b4a44;
+  box-shadow: 1px 1px 1px gray;
+  border-radius: 100px;
+  width: 1.25rem;
+  height: 1.25rem;
+}
 .bol.sheet.item {
   min-width: 460px;
   min-height: 400px;
@@ -1026,6 +950,9 @@ body.system-bol img#logo {
   font-size: 24px;
   color: black;
 }
+.chat-button {
+  font-size: 0.8rem;
+}
 .editor,
 .editor-content {
   height: 100%;
@@ -1041,19 +968,6 @@ body.system-bol img#logo {
   width: 64px;
   height: 64px;
 }
-.dialog-button {
-  max-height: 2rem;
-}
-.xp-next {
-  color: darkgrey;
-  font-size: 1rem;
-  border: 1px solid #4b4a44;
-  box-shadow: 1px 1px 1px gray;
-  border-radius: 100px;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
 /** Tooltip section */
 .tooltip-container {
   position: relative;
@@ -1080,7 +994,6 @@ body.system-bol img#logo {
   visibility: visible;
   opacity: 1;
 }
-
 /** HUD SECTION */
 .tokenhudext {
   display: flex;
@@ -1125,7 +1038,7 @@ body.system-bol img#logo {
   margin-bottom: 2px;
 }
 .character-summary-container {
-    opacity: 0.95;
+  opacity: 0.95;
 }
 .character-summary-rollable {
   text-decoration: underline;

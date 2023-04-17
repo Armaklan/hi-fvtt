@@ -1,6 +1,6 @@
 import { BoLUtility } from "../system/bol-utility.js";
 
-const _apt2attr = { init: "mind", melee: "agility", ranged: "agility", def: "vigor" }
+const _apt2attr = { brawl: "agility", melee: "agility", ranged: "agility", def: "vigor" }
 
 /* -------------------------------------------- */
 export class BoLRoll {

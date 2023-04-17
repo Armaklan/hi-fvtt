@@ -85,13 +85,6 @@
     {{#if reroll}}
       <button class="chat-button button hero-reroll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.reroll"}}</button>
     {{/if}}
-    {{#if (and isSuccess (not isCritical))}}
-      <button class="chat-button button transform-heroic-roll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.toheroic"}}</button>
-    {{/if}}
-
-    {{#if isRealCritical}}
-      <button class="chat-button button transform-legendary-roll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.tolegend"}}</button>
-    {{/if}}
 
     <br>
   </div>

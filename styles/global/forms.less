@@ -1,5 +1,4 @@
 .bol {
-
   input[readonly="true"] {
     border: none;
     color: dimgray;
@@ -59,14 +58,15 @@
     border-radius: 0;
   }
 
-  select[multiple]{
+  select[multiple] {
     box-shadow: none;
     border: none;
     font-size: 14px;
     &:focus {
       option:checked {
-        background: @c-darkred linear-gradient(0deg, @c-darkred 0%, @c-darkred 100%);
-        color:white;
+        background: @c-darkred
+          linear-gradient(0deg, @c-darkred 0%, @c-darkred 100%);
+        color: white;
       }
     }
   }
@@ -81,7 +81,7 @@
   option[selected] {
     cursor: pointer;
     background: @c-darkred linear-gradient(0deg, @c-darkred 0%, @c-darkred 100%);
-    color:white;
+    color: white;
   }
   //option:not(:checked) {
   //  color: black;
@@ -189,19 +189,19 @@
   }
 
   h1.form-header {
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 700;
     //color : black;
   }
   h2.form-header {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 500;
     //color : black;
     //border-top: @borderGroove;
     border-bottom: @borderGroove;
   }
   h3.form-header {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 500;
     //color : black;
     //border-top: @borderGroove;
@@ -211,7 +211,7 @@
     font-size: 1em;
     font-weight: 500;
     font-family: @font-primary;
-    color : black;
+    color: black;
     background-color: transparent;
     border-top: none;
     border-bottom: @borderGroove;
@@ -232,16 +232,19 @@
    Placeholders
    */
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: lightgray;
     opacity: 1; /* Firefox */
   }
 
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: lightgray;
   }
 
-  ::-ms-input-placeholder { /* Microsoft Edge */
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: lightgray;
   }
 
@@ -254,6 +257,6 @@
   }
 
   .inc-dec-btns {
-    color:@colorOlive;
+    color: @colorOlive;
   }
 }

@@ -40,7 +40,7 @@ Hooks.once('init', async function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "2d6+@attributes.mind.value+@aptitudes.init.value",
+    formula: "2d6+@attributes.mind.value",
     decimals: 2
   };
 
@@ -95,20 +95,6 @@ function registerUsageCount(registerKey) {
   }
 }
 
-/* -------------------------------------------- */
-function welcomeMessage() {
-  ChatMessage.create({
-    user: game.user.id,
-    whisper: [game.user.id],
-    content: `<div id="welcome-message-pegasus"><span class="rdd-roll-part">
-    <strong>` + game.i18n.localize("BOL.chat.welcome1") + `</strong><p>` +
-      game.i18n.localize("BOL.chat.welcome2") + "<p>" +
-      game.i18n.localize("BOL.chat.welcome3") + "<p>" +
-      game.i18n.localize("BOL.chat.welcome4") + "</p>" +
-      game.i18n.localize("BOL.chat.welcome5") + "<br>" +
-      game.i18n.localize("BOL.chat.welcome6")
-  })
-}
 
 /* -------------------------------------------- */
 Hooks.once('ready', async function () {
@@ -118,8 +104,6 @@ Hooks.once('ready', async function () {
 
   registerUsageCount('bol')
 
-
-  welcomeMessage()
 })
 
 

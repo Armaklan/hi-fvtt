@@ -1,10 +1,6 @@
 {
   "Actor": {
-    "types": [
-      "character",
-      "encounter",
-      "vehicle"
-    ],
+    "types": ["character", "encounter", "vehicle"],
     "templates": {
       "base": {
         "details": {
@@ -23,7 +19,7 @@
           "lastinit": 0,
           "iscritical": false,
           "isfumble": false,
-          "islegendary": false          
+          "islegendary": false
         },
         "prot": {
           "key": "prot",
@@ -69,9 +65,9 @@
           }
         },
         "aptitudes": {
-          "init": {
-            "key": "init",
-            "label": "BOL.aptitudes.init",
+          "brawl": {
+            "key": "brawl",
+            "label": "BOL.aptitudes.brawl",
             "base": 0,
             "value": 0,
             "bonus": 0
@@ -150,7 +146,7 @@
       }
     },
     "character": {
-      "templates": [ "base" ],
+      "templates": ["base"],
       "chartype": "player",
       "villainy": false,
       "bougette": {
@@ -171,7 +167,7 @@
       }
     },
     "encounter": {
-      "templates": [ "base" ],
+      "templates": ["base"],
       "chartype": "tough",
       "villainy": false,
       "size": "",
@@ -212,17 +208,12 @@
       "spur": {
         "value": ""
       },
-      "status": {
-
-      },
+      "status": {},
       "description": ""
     }
   },
   "Item": {
-    "types": [
-      "item",
-      "feature"
-    ],
+    "types": ["item", "feature"],
     "templates": {
       "base": {
         "category": null,
@@ -256,18 +247,12 @@
       }
     },
     "item": {
-      "templates": [
-        "base",
-        "equipment"
-      ]
+      "templates": ["base", "equipment"]
     },
     "feature": {
       "rank": 0,
-      "templates": [
-        "base"
-      ],
+      "templates": ["base"],
       "properties": {}
     }
   }
 }
-

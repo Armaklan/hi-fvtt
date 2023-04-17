@@ -1,9 +1,13 @@
 /* Items List */
+.summmary-number {
+  padding-left: 4rem;
+}
+
 .items-list {
   list-style: none;
   margin: 7px 0;
   padding: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   .item-header {
     font-family: @font-primary;
@@ -21,26 +25,25 @@
     min-height: 30px;
     line-height: 24px;
     padding: 3px 0 3px 3px;
-    border-bottom: 1px solid #BBB;
+    border-bottom: 1px solid #bbb;
     align-items: stretch;
-
 
     .item-image {
       flex: 0 0 30px;
       padding: 0;
       margin: 0 5px 0 0;
-      height:30px;
-      width:30px;
-      min-height:30px;
-      min-width:30px;
+      height: 30px;
+      width: 30px;
+      min-height: 30px;
+      min-width: 30px;
       img {
         padding: 0;
         margin: 0;
         border: none;
-        height:30px;
-        width:30px;
-        min-height:30px;
-        min-width:30px;
+        height: 30px;
+        width: 30px;
+        min-height: 30px;
+        min-width: 30px;
       }
       &.roll-weapon,
       &.roll-career {
@@ -78,4 +81,18 @@
       color: @colorOlive;
     }
   }
+
+  .item-name-fixed-medium {
+    min-width: 8rem;
+    width: 8rem;
+  }
+  .item-field-fixed-short {
+    max-width: 3rem;
+    min-width: 3rem;
+    width: 3rem;
+  }
+}
+
+.bougette-dice-img {
+  color: rgba(150, 44, 44, 0.7);
 }

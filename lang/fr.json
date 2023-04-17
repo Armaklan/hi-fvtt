@@ -7,16 +7,16 @@
   "ITEM.TypeWeapon": "Arme",
   "ITEM.TypeArmor": "Armure",
 
-  "BOL.attributes.vigor": "Vigueur",
+  "BOL.attributes.vigor": "Puissance",
   "BOL.attributes.halfvigor": "Demi-vigueur",
-  "BOL.attributes.agility": "Agilité",
-  "BOL.attributes.mind": "Esprit",
-  "BOL.attributes.appeal": "Aura",
+  "BOL.attributes.agility": "Audace",
+  "BOL.attributes.mind": "Savoir",
+  "BOL.attributes.appeal": "Style",
   "BOL.attributes.hull": "Coque",
   "BOL.attributes.crew": "Equipage",
   "BOL.attributes.resources": "Resources",
   "BOL.attributes.row": "Rames",
-  "BOL.aptitudes.init": "Initiative",
+  "BOL.aptitudes.brawl": "Bagarre",
   "BOL.aptitudes.melee": "Mêlée",
   "BOL.aptitudes.ranged": "Tir",
   "BOL.aptitudes.def": "Défense",
@@ -43,7 +43,7 @@
   "BOL.ui.astrologerPoints": "Points d'Astrologie",
   "BOL.ui.astrologerPointsLabel": "Points d'Astrologie actuels",
   "BOL.ui.ishoroscopemajor": "Horoscope Majeur (ie de groupe) ?",
-  "BOL.ui.answer": "Réponse", 
+  "BOL.ui.answer": "Réponse",
   "BOL.ui.horoscopefavorable": "Favorable (1dB)",
   "BOL.ui.horoscopeunfavorable": "Défavorable (1dM)",
   "BOL.ui.horoscopes": "Horoscopes",
@@ -130,10 +130,10 @@
   "BOL.ui.duration": "Durée",
   "BOL.ui.spellkeep": "Prolongation possible ?",
   "BOL.ui.concentrate": "Concentration à maintenir ?",
-  "BOL.ui.aggressive": "Sort aggressif ?", 
+  "BOL.ui.aggressive": "Sort aggressif ?",
   "BOL.ui.registerInit": "Enregistrer comme Init. de combat",
   "BOL.ui.magicnewrules": "Règles supplémentaires (cf. supplément fan-made Sorcellerie!)",
-  
+
   "BOL.ui.isSorcerer": "Carrière de Sorcier ?",
   "BOL.ui.isAlchemist": "Carrière d'Alchimiste ?",
   "BOL.ui.isPriest": "Carrière de Prêtre/Druide ?",
@@ -217,7 +217,7 @@
   "BOL.ui.itemnotfound": "Impossible de trouver l'objet de cette macro",
   "BOL.ui.noinit": "Pas d'initiative trouvée, veuillez en enregistrer une.",
   "BOL.ui.warninitiative": "Votre initiative n'est pas disponible. Effectuez un jet d'Initiative pour ce combat.",
-  
+
   "BOL.featureCategory.origins": "Origines",
   "BOL.featureCategory.races": "Races",
   "BOL.featureCategory.careers": "Carrières",
@@ -230,7 +230,7 @@
   "BOL.bougette.easylife": "A l'aise",
   "BOL.bougette.luxury": "Luxe&Volupté",
   "BOL.bougette.rich": "Richissime",
-  
+
   "BOL.featureSubtypes.origin": "Origine",
   "BOL.featureSubtypes.race": "Race",
   "BOL.featureSubtypes.career": "Carrière",
@@ -362,7 +362,7 @@
   "BOL.itemProperty.crewDamageMultiplier": "Multiplicateur",
   "BOL.itemProperty.isboarding": "Abordage",
   "BOL.itemProperty.isspur": "Eperonnage",
-  "BOL.itemProperty.isbreakrow": "Briser les rames",  
+  "BOL.itemProperty.isbreakrow": "Briser les rames",
 
   "BOL.itemStat.quantity": "Quantité",
   "BOL.itemStat.weight": "Poids",
@@ -455,7 +455,7 @@
   "BOL.size.colossal": "Monstrueuse",
 
   "BOL.chat.fightactive": "{name} active son option de combat {foName} pour ce round !",
-  "BOL.chat.fightunactive": "{name} désactive son option de combat {foName} pour ce round !",  
+  "BOL.chat.fightunactive": "{name} désactive son option de combat {foName} pour ce round !",
   "BOL.chat.isdead": "{name} est mort !",
   "BOL.chat.epitaph": "Que son nom soit honoré sur les champs de batailles de Lémurie !",
   "BOL.chat.vitalityzero": "La Vitalité de {name} est {hp} : il va s'écrouler au sol et sombrer dans l'inconscience !",
@@ -534,7 +534,7 @@
   "BOL.chat.criticalup": "Transformer en Légendaire : En dépensant 1 point d'Héroisme, vous pouvez transformer ce Succès Héroïque en Légendaire, qui vous permet de prendre 2 options dans la liste ci-dessus (cf. bouton pour un +12 aux dommages par exemple).",
   "BOL.chat.criticalinfo": "C'est un succès Héroïque ou Légendaire ! Choisissez vos options et effets !",
   "BOL.chat.criticalbuttonjournal": "Succès Héroïque/Légendaire",
-  
+
   "BOL.chat.losshp": "{name}} a perdu {lossHP} points de Vitalité. Si il se repose quelques minutes, il peut récupérer {recupHP} points de Vitalité.",
   "BOL.chat.applyrecup": "Récupérer pendant quelques minutes (+{recupHP} Vitalité)",
   "BOL.chat.inforecup": "{name} vient de récupérer {recupHP} points de Vitalité après quelques minutes de repos.",
@@ -570,13 +570,5 @@
   "BOL.ui.bioeyes": "Yeux",
   "BOL.ui.biosigns": "Signes distinctifs",
   "BOL.ui.biodescription": "Description",
-  "BOL.ui.bionotes": "Notes",
-
-  "BOL.chat.welcome1": "Bienvenue dans Barbarians of Lemuria (Ludospherik version)",
-  "BOL.chat.welcome2": "Les livres nécessaires pour jouer sont disponibles sur le site de <a href='http://www.ludospherik.fr/content/14-barbarians-of-lemuria'>l'éditeur Ludospherik.</a>",
-  "BOL.chat.welcome3": "Les cartes intégrées au système le sont grace à l'aimable autorisation de leur auteur Guillaume Tavernier et des éditions Ludospherik. Merci à eux !.",
-  "BOL.chat.welcome4": "Tout le support et le suivi de ce système est disponible via le <a href='https://discord.gg/pPSDNJk'>Discord Foundry FR</a>.",
-  "BOL.chat.welcome5": "Consulter l'aide en ligne pour plus d'informations : @UUID[Compendium.bol.aides-de-jeu.97rugQOtiwt8zPfQ]{Aide du Jeu}.",
-  "BOL.chat.welcome6": "Bon jeu en Lemurie !"
-
-} 
+  "BOL.ui.bionotes": "Notes"
+}
