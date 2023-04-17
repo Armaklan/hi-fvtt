@@ -119,7 +119,7 @@ export class BoLVehicleSheet extends ActorSheet {
     const actorData = duplicate(data)
     let formData = duplicate(data)
 
-    formData.config = game.bol.config
+    formData.config = game.hi.config
     formData.name = this.actor.name
     formData.img = this.actor.img
     formData.system = duplicate(this.actor.system)

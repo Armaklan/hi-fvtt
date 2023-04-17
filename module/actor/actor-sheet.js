@@ -125,7 +125,7 @@ export class BoLActorSheet extends ActorSheet {
     const actorData = duplicate(data)
     let formData = duplicate(data)
 
-    formData.config = game.bol.config
+    formData.config = game.hi.config
     formData.data = actorData
     formData.details = this.actor.details
     formData.attributes = this.actor.attributes

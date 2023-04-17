@@ -41,8 +41,8 @@ export class BoLActor extends Actor {
   getBougette() {
     if (this.type == "character") {
       let b = duplicate(this.system.bougette)
-      b.label = game.i18n.localize(game.bol.config.bougetteState[String(this.system.bougette.value)])
-      b.diceImg = "icons/dice/" + game.bol.config.bougetteDice[String(this.system.bougette.value)] + "black.svg"
+      b.label = game.i18n.localize(game.hi.config.bougetteState[String(this.system.bougette.value)])
+      b.diceImg = "icons/dice/" + game.hi.config.bougetteDice[String(this.system.bougette.value)] + "black.svg"
       return b
     }
     return undefined
@@ -53,7 +53,7 @@ export class BoLActor extends Actor {
     if (this.type == "character") {
       let attribute = duplicate(this.system.attributes.might)
       let rollData = BoLRoll.getCommonRollData(this, "bougette", attribute, undefined)
-      rollData.formula = game.bol.config.bougetteDice[String(this.system.bougette.value)]
+      rollData.formula = game.hi.config.bougetteDice[String(this.system.bougette.value)]
       let r = new BoLDefaultRoll(rollData)
       r.roll()
     }
@@ -813,10 +813,10 @@ export class BoLActor extends Actor {
 
   /*-------------------------------------------- */
   getSize() {
-    if (this.system.details.size.length > 0 && game.bol.config.creatureSize[this.system.details.size]) {
-      return game.bol.config.creatureSize[this.system.details.size].order
+    if (this.system.details.size.length > 0 && game.hi.config.creatureSize[this.system.details.size]) {
+      return game.hi.config.creatureSize[this.system.details.size].order
     }
-    return game.bol.config.creatureSize["medium"].order // Medium size per default
+    return game.hi.config.creatureSize["medium"].order // Medium size per default
   }
 
   /*-------------------------------------------- */
@@ -853,8 +853,8 @@ export class BoLActor extends Actor {
     }
     if (this.getCharType() == 'creature') {
       let mySize = this.getSize()
-      let sizeSmall = game.bol.config.creatureSize["small"].order
-      let sizeMedium = game.bol.config.creatureSize["medium"].order
+      let sizeSmall = game.hi.config.creatureSize["small"].order
+      let sizeMedium = game.hi.config.creatureSize["medium"].order
       if (mySize >= sizeSmall && mySize <= sizeMedium) {
         fvttInit = 6
       }

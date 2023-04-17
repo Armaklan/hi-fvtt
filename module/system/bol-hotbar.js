@@ -4,7 +4,7 @@ export class BoLHotbar {
 
 
   static async assignToHotBar(item, slot) {
-    let command = `game.bol.BoLHotbar.rollMacro("${item.name}", "${item.type}");`
+    let command = `game.hi.BoLHotbar.rollMacro("${item.name}", "${item.type}");`
     let macro = game.macros.contents.find(m => (m.name === item.name) && (m.command === command))
     if (!macro) {
       macro = await Macro.create({

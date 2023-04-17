@@ -1,29 +1,29 @@
 /* -------------------------------------------- */
-import { BoLAdventureGenerator } from "./bol-adventure-generator.js"
-import { BoLCharacterSummary } from "./bol-character-summary.js"
+import { BoLAdventureGenerator } from "./bol-adventure-generator.js";
+import { BoLCharacterSummary } from "./bol-character-summary.js";
 
 /* -------------------------------------------- */
 export class BoLCommands {
 
   static init() {
-    if (!game.bol.commands) {
+    if (!game.hi.commands) {
       const bolCommands = new BoLCommands()
       bolCommands.registerCommand({ path: ["/adventure"], func: (content, msg, params) => BoLAdventureGenerator.createAdventure(), descr: "Nouvelle idée d'aventure!" });
       bolCommands.registerCommand({ path: ["/pcview"], func: (content, msg, params) => BoLCharacterSummary.displayPCSummary(), descr: "Affiche la liste des PJs!" });
-      game.bol.commands = bolCommands
+      game.hi.commands = bolCommands
     }
 
     Hooks.on("chatMessage", (html, content, msg) => {
       if (content[0] == '/') {
         let regExp = /(\S+)/g;
         let commands = content.match(regExp);
-        if (game.bol.commands.processChatCommand(commands, content, msg)) {
+        if (game.hi.commands.processChatCommand(commands, content, msg)) {
           return false;
         }
       }
       return true
     })
-    
+
   }
   constructor() {
     this.commandsTable = {}

@@ -21,7 +21,7 @@ export class BoLItemSheet extends ItemSheet {
   async getData(options) {
     const data = super.getData(options)
     let itemData = duplicate(data.document)
-    data.config = game.bol.config
+    data.config = game.hi.config
     data.item = itemData
     data.category = itemData.system.category
     data.isGM = game.user.isGM;
@@ -85,8 +85,8 @@ export class BoLItemSheet extends ItemSheet {
 
     html.find('.armorQuality').change(ev => {
       const li = $(ev.currentTarget);
-      console.log(game.bol.config.soakFormulas[li.val()]);
-      $('.soakFormula').val(game.bol.config.soakFormulas[li.val()]);
+      console.log(game.hi.config.soakFormulas[li.val()]);
+      $('.soakFormula').val(game.hi.config.soakFormulas[li.val()]);
     });
 
   }

@@ -12,7 +12,7 @@ import { BoLCombatManager } from "./system/bol-combat.js"
 import { BoLCommands } from "./system/bol-commands.js"
 import { BoLHotbar } from "./system/bol-hotbar.js"
 import { BoLUtility } from "./system/bol-utility.js"
-import { BOL } from "./system/config.js"
+import { HI } from "./system/config.js"
 import { registerHandlebarsHelpers } from "./system/helpers.js"
 import registerHooks from "./system/hooks.js"
 import { Macros } from "./system/macros.js"
@@ -21,16 +21,16 @@ import { preloadHandlebarsTemplates } from "./system/templates.js"
 /* -------------------------------------------- */
 Hooks.once('init', async function () {
 
-  game.bol = {
+  game.hi = {
     BoLActor,
     BoLItem,
     BoLHotbar,
     macros: Macros,
-    config: BOL
+    config: HI
   };
 
   // Game socket 
-  game.socket.on("system.bol", sockmsg => {
+  game.socket.on("system.hi-fvtt", sockmsg => {
     BoLUtility.onSocketMessage(sockmsg);
   })
 
@@ -51,11 +51,11 @@ Hooks.once('init', async function () {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("bol", BoLActorSheet, { types: ["character", "encounter"], makeDefault: true })
-  Actors.registerSheet("bol", BoLVehicleSheet, { types: ["vehicle"], makeDefault: true })
+  Actors.registerSheet("hi-fvtt", BoLActorSheet, { types: ["character", "encounter"], makeDefault: true })
+  Actors.registerSheet("hi-fvtt", BoLVehicleSheet, { types: ["vehicle"], makeDefault: true })
 
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("bol", BoLItemSheet, { makeDefault: true });
+  Items.registerSheet("hi-fvtt", BoLItemSheet, { makeDefault: true });
 
   // Inot useful stuff
   BoLUtility.init()
@@ -75,25 +75,6 @@ Hooks.once('init', async function () {
 
 });
 
-/* -------------------------------------------- */
-// Register world usage statistics
-function registerUsageCount(registerKey) {
-  if (game.user.isGM) {
-    game.settings.register(registerKey, "world-key", {
-      name: "Unique world key",
-      scope: "world",
-      config: false,
-      default: "",
-      type: String
-    });
-
-    let worldKey = game.settings.get(registerKey, "world-key")
-    if (worldKey == undefined || worldKey == "") {
-      worldKey = randomID(32)
-      game.settings.set(registerKey, "world-key", worldKey)
-    }
-  }
-}
 
 
 /* -------------------------------------------- */
@@ -101,9 +82,6 @@ Hooks.once('ready', async function () {
 
   BoLUtility.ready()
   BoLCharacterSummary.ready()
-
-  registerUsageCount('bol')
-
 })
 
 

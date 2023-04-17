@@ -7,7 +7,7 @@ export class BoLCharacterSummary extends Application {
 
   /* -------------------------------------------- */
   static displayPCSummary() {
-    game.bol.charSummary.render(true)
+    game.hi.charSummary.render(true)
   }
   /* -------------------------------------------- */
   updatePCSummary() {
@@ -27,7 +27,7 @@ export class BoLCharacterSummary extends Application {
       return
     }
     let charSummary = new BoLCharacterSummary()
-    game.bol.charSummary = charSummary
+    game.hi.charSummary = charSummary
   }
 
   /* -------------------------------------------- */
@@ -65,7 +65,7 @@ export class BoLCharacterSummary extends Application {
         toUpdate = true
       }
     }
-    formData.config = game.bol.config
+    formData.config = game.hi.config
     formData.horoscopeGroupList = game.settings.get("bol", "horoscope-group")
 
     if (toUpdate) {
@@ -79,9 +79,9 @@ export class BoLCharacterSummary extends Application {
 
   /* -------------------------------------------- */
   updateNPC() {
-    game.settings.set("world", "character-summary-data", game.bol.charSummary.settings)
-    game.bol.charSummary.close()
-    setTimeout(function () { game.bol.charSummary.render(true) }, 500)
+    game.settings.set("world", "character-summary-data", game.hi.charSummary.settings)
+    game.hi.charSummary.close()
+    setTimeout(function () { game.hi.charSummary.render(true) }, 500)
   }
 
   /* -------------------------------------------- */
@@ -91,8 +91,8 @@ export class BoLCharacterSummary extends Application {
     let dataItem = JSON.parse(data)
     let actor = fromUuidSync(dataItem.uuid)
     if (actor) {
-      game.bol.charSummary.settings.npcList.push(actor.id)
-      game.bol.charSummary.updateNPC()
+      game.hi.charSummary.settings.npcList.push(actor.id)
+      game.hi.charSummary.updateNPC()
 
     } else {
       ui.notifications.warn(game.i18n.localize("HI.ui.noactorfound"))
@@ -125,9 +125,9 @@ export class BoLCharacterSummary extends Application {
     html.find('.actor-delete').click(event => {
       const li = $(event.currentTarget).parents(".item");
       let actorId = li.data("actor-id")
-      let newList = game.bol.charSummary.settings.npcList.filter(id => id != actorId)
-      game.bol.charSummary.settings.npcList = newList
-      game.bol.charSummary.updateNPC()
+      let newList = game.hi.charSummary.settings.npcList.filter(id => id != actorId)
+      game.hi.charSummary.settings.npcList = newList
+      game.hi.charSummary.updateNPC()
     })
 
     html.find('#horoscope-group-edit-available').change(event => {

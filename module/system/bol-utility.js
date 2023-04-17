@@ -188,7 +188,7 @@ export class BoLUtility {
     //$("#logo").attr("src", this.getLogoTopLeft() )  
     $("#logo").css("content", `url(${this.getLogoTopLeft()})`)
 
-    CONFIG.statusEffects = duplicate(game.bol.config.statusEffects)
+    CONFIG.statusEffects = duplicate(game.hi.config.statusEffects)
   }
 
   /* -------------------------------------------- */
@@ -292,7 +292,7 @@ export class BoLUtility {
     chatGM.whisper = this.getUsers(user => user.isGM);
     chatGM.content = "Blind message of " + game.user.name + "<br>" + chatOptions.content;
     console.log("blindMessageToGM", chatGM);
-    game.socket.emit("system.bol", { name: "msg_gm_chat_message", data: chatGM });
+    game.socket.emit("system.hi-fvtt", { name: "msg_gm_chat_message", data: chatGM });
   }
 
   /* -------------------------------------------- */
@@ -300,7 +300,7 @@ export class BoLUtility {
     if (rollData.targetId) {
       // Broadcast to GM or process it directly in case of GM defense
       if (!game.user.isGM) {
-        game.socket.emit("system.bol", { name: "msg_attack_success", data: duplicate(rollData) })
+        game.socket.emit("system.hi-fvtt", { name: "msg_attack_success", data: duplicate(rollData) })
       } else {
         BoLUtility.processAttackSuccess(rollData)
       }
@@ -332,7 +332,7 @@ export class BoLUtility {
   /* -------------------------------------------- */
   static cleanupButtons(id) {
     $(`#${id}`).hide() // Hide the options roll buttons
-    game.socket.emit("system.bol", { name: "msg_cleanup_buttons", data: { id: id } })
+    game.socket.emit("system.hi-fvtt", { name: "msg_cleanup_buttons", data: { id: id } })
   }
 
   /* -------------------------------------------- */
@@ -392,7 +392,7 @@ export class BoLUtility {
       if (game.user.isGM) {
         BoLUtility.processDamageHandling(attackId, defenseMode, weaponId, msgId)
       } else {
-        game.socket.emit("system.bol", { name: "msg_damage_handling", data: { msgId: msgId, attackId: attackId, defenseMode: defenseMode, weaponId: weaponId } })
+        game.socket.emit("system.hi-fvtt", { name: "msg_damage_handling", data: { msgId: msgId, attackId: attackId, defenseMode: defenseMode, weaponId: weaponId } })
       }
     })
 
@@ -696,7 +696,7 @@ export class BoLUtility {
         actor.sheet.render()
       }
     }
-    game.bol.charSummary.updatePCSummary() // Refresh if needed
+    game.hi.charSummary.updatePCSummary() // Refresh if needed
   }
 
   /* -------------------------------------------- */

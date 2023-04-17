@@ -45,7 +45,7 @@ export default function registerHooks() {
         // Create a macro to open the actor sheet of the actor dropped on the hotbar
         else if (data.type == "Actor") {
             let actor = game.actors.get(data.id);
-            let command = `/*\nPersonnalisez la macro selon vos besoins en suivant les exemples suivants : \ngame.bol.macros.rollMacro('attribute', 'might|daring|savvy|flair', adv, mod);\ngame.bol.macros.rollMacro('aptitude', 'init|melee|ranged|def', adv, mod);\n*/\ngame.bol.macros.rollMacro('attribute', 'might', 0, 0);`;
+            let command = `/*\nPersonnalisez la macro selon vos besoins en suivant les exemples suivants : \ngame.hi.macros.rollMacro('attribute', 'might|daring|savvy|flair', adv, mod);\ngame.hi.macros.rollMacro('aptitude', 'init|melee|ranged|def', adv, mod);\n*/\ngame.hi.macros.rollMacro('attribute', 'might', 0, 0);`;
             let macro = game.macros.entities.find(m => (m.name === actor.name) && (m.command === command));
             if (!macro) {
                 macro = await Macro.create({
@@ -83,7 +83,7 @@ export default function registerHooks() {
             button.style.width = '95%';
             button.innerHTML = game.i18n.localize("HI.ui.pclistbutton")
             button.addEventListener('click', () => {
-                game.bol.charSummary.render(true)
+                game.hi.charSummary.render(true)
             })
             html.find('.header-actions').after(button)
         }

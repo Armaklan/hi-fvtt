@@ -1,13 +1,13 @@
 export const System = {};
 
-System.label = "Barbarians of Lemuria";
-System.name = "bol";
-System.rootPath = "/systems/" + System.name;
+System.label = "Honor+Intrigue";
+System.name = "hi-fvtt";
+System.rootPath = "systems/" + System.name;
 System.dataPath = System.rootPath + "/data";
 System.templatesPath = System.rootPath + "/templates";
 System.debugMode = true;
 
-export const BOL = {};
+export const HI = {};
 
 HI.damageValues = {
     "1": "1",
