@@ -1,7 +1,7 @@
 {
-  "name": "bol",
-  "version": "1.0.0",
-  "description": "CSS compiler for the Barbarians of Lemuria system",
+  "name": "hi-fvtt",
+  "version": "0.0.1",
+  "description": "Honor & Intrigue system",
   "scripts": {
     "css": "gulp css",
     "watch": "gulp",
@@ -10,7 +10,7 @@
   "browserslist": [
     "last 3 versions"
   ],
-  "author": "Zigmund",
+  "author": "Armaklan",
   "license": "MIT",
   "private": true,
   "dependencies": {

@@ -1,7 +1,7 @@
 {
   "id": "hi-fvtt",
   "title": "Honor & Intrigue",
-  "description": "Honor&Intrigue system for FoundryVTT! (fork from hi System)",
+  "description": "Honor&Intrigue system for FoundryVTT! (fork from BOL System)",
   "authors": [
     {
       "name": "LeRatierBretonnien",
@@ -13,10 +13,11 @@
     },
     {
       "name": "ZUBER Lionel",
+      "email": "lionel.zuber@armaklan.org",
       "flags": {}
     }
   ],
-  "url": "https://www.uberwald.me/gitea/public/hi",
+  "url": "https://github.com/Armaklan/hi-fvtt",
   "license": "LICENSE.txt",
   "version": "10.5.10",
   "compatibility": {
@@ -60,8 +61,8 @@
     }
   ],
   "socket": true,
-  "manifest": "https://www.uberwald.me/gitea/public/hi/raw/v10/system.json",
-  "download": "https://www.uberwald.me/gitea/public/hi/archive/hi-v10.5.10.zip",
+  "manifest": "https://raw.githubusercontent.com/Armaklan/hi-fvtt/master/system.json",
+  "download": "https://github.com/Armaklan/hi-fvtt/archive/0.0.1.zip",
   "background": "systems/hi/ui/page_accueil.webp",
   "gridDistance": 1.5,
   "gridUnits": "m",
