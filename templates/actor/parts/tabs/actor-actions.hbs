@@ -2,11 +2,11 @@
         <ol class="items-list">
             <li class="item flexrow item-header">
                 <div class="item-name flex2">{{localize combatType.label}}</div>
-                {{#if protection}}<div class="item-field">{{localize "BOL.ui.protection"}}</div>{{/if}}
-                {{#if blocking}}<div class="item-field">{{localize "BOL.ui.blocking"}}</div>{{/if}}
-                {{#if weapon}}<div class="item-field">{{localize "BOL.ui.damages"}}</div>{{/if}}
-                {{#if ranged}}<div class="item-field">{{localize "BOL.ui.range"}}</div>{{else}}<div class="item-field"></div>{{/if}}
-                {{#if options}}<div class="item-field">{{localize "BOL.ui.status"}}</div>{{else}}<div class="item-field"></div>{{/if}}
+                {{#if protection}}<div class="item-field">{{localize "HI.ui.protection"}}</div>{{/if}}
+                {{#if blocking}}<div class="item-field">{{localize "HI.ui.blocking"}}</div>{{/if}}
+                {{#if weapon}}<div class="item-field">{{localize "HI.ui.damages"}}</div>{{/if}}
+                {{#if ranged}}<div class="item-field">{{localize "HI.ui.range"}}</div>{{else}}<div class="item-field"></div>{{/if}}
+                {{#if options}}<div class="item-field">{{localize "HI.ui.status"}}</div>{{else}}<div class="item-field"></div>{{/if}}
             </li>
             {{#each combatType.items as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
@@ -20,9 +20,9 @@
                     {{#if ../ranged}}<div class="item-field">{{item.system.properties.range}}</div>{{else}}<div class="item-field"></div>{{/if}}
                     {{#if ../options}}<div class="item-field">
                       {{#if item.system.properties.activated}}
-                        <a class="toggle-fight-option">{{localize "BOL.ui.toactivated"}}</a>
+                        <a class="toggle-fight-option">{{localize "HI.ui.toactivated"}}</a>
                       {{else}}
-                        <a class="toggle-fight-option">{{localize "BOL.ui.todeactivated"}}</a>
+                        <a class="toggle-fight-option">{{localize "HI.ui.todeactivated"}}</a>
                       {{/if}}
                       </div>{{else}}
                       <div class="item-field"></div>

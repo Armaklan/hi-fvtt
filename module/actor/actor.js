@@ -500,7 +500,7 @@ export class BoLActor extends Actor {
       let horoscopes = duplicate(game.settings.get("bol", "horoscope-group"))
       horoscopes[rID] = {
         id: rID,
-        name: game.i18n.localize("BOL.ui.groupHoroscope") + this.name,
+        name: game.i18n.localize("HI.ui.groupHoroscope") + this.name,
         maxDice: rollData.careerBonus,
         availableDice: rollData.careerBonus,
         type: (rollData.isSuccess) ? "bonus" : "malus"
@@ -537,7 +537,7 @@ export class BoLActor extends Actor {
         newPC = alchemy.system.properties.pccurrent + pcCost
         await this.updateEmbeddedDocuments('Item', [{ _id: alchemy.id, 'system.properties.pccurrent': newPC }])
       } else {
-        ui.notifications.warn(game.i18n.localize("BOL.ui.nomorealchemypoints"))
+        ui.notifications.warn(game.i18n.localize("HI.ui.nomorealchemypoints"))
       }
     }
   }
@@ -590,7 +590,7 @@ export class BoLActor extends Actor {
       }
       if (this.system.chartype == 'adversary') {
         resources['hero'] = duplicate(this.system.resources.hero)
-        resources['hero'].label = "BOL.resources.villainy"
+        resources['hero'].label = "HI.resources.villainy"
       }
     } else {
       resources = this.system.resources;
@@ -601,47 +601,47 @@ export class BoLActor extends Actor {
   buildFeatures() {
     return {
       "careers": {
-        "label": "BOL.featureCategory.careers",
+        "label": "HI.featureCategory.careers",
         "ranked": true,
         "items": this.careers
       },
       "origins": {
-        "label": "BOL.featureCategory.origins",
+        "label": "HI.featureCategory.origins",
         "ranked": false,
         "items": this.origins
       },
       "races": {
-        "label": "BOL.featureCategory.races",
+        "label": "HI.featureCategory.races",
         "ranked": false,
         "items": this.races
       },
       "boons": {
-        "label": "BOL.featureCategory.boons",
+        "label": "HI.featureCategory.boons",
         "ranked": false,
         "items": this.boons
       },
       "flaws": {
-        "label": "BOL.featureCategory.flaws",
+        "label": "HI.featureCategory.flaws",
         "ranked": false,
         "items": this.flaws
       },
       "languages": {
-        "label": "BOL.featureCategory.languages",
+        "label": "HI.featureCategory.languages",
         "ranked": false,
         "items": this.languages
       },
       "fightoptions": {
-        "label": "BOL.featureCategory.fightoptions",
+        "label": "HI.featureCategory.fightoptions",
         "ranked": false,
         "items": this.fightoptions
       },
       "godsfaith": {
-        "label": "BOL.featureSubtypes.gods",
+        "label": "HI.featureSubtypes.gods",
         "ranked": false,
         "items": this.godsfaith
       },
       "boleffects": {
-        "label": "BOL.featureSubtypes.effects",
+        "label": "HI.featureSubtypes.effects",
         "ranked": false,
         "items": this.boleffects
       }
@@ -651,7 +651,7 @@ export class BoLActor extends Actor {
   buildCombat() {
     return {
       "melee": {
-        "label": "BOL.combatCategory.melee",
+        "label": "HI.combatCategory.melee",
         "weapon": true,
         "protection": false,
         "blocking": false,
@@ -660,7 +660,7 @@ export class BoLActor extends Actor {
         "items": this.melee
       },
       "natural": {
-        "label": "BOL.combatCategory.natural",
+        "label": "HI.combatCategory.natural",
         "weapon": true,
         "protection": false,
         "blocking": false,
@@ -669,7 +669,7 @@ export class BoLActor extends Actor {
         "items": this.natural
       },
       "ranged": {
-        "label": "BOL.combatCategory.ranged",
+        "label": "HI.combatCategory.ranged",
         "weapon": true,
         "protection": false,
         "blocking": false,
@@ -678,7 +678,7 @@ export class BoLActor extends Actor {
         "items": this.ranged
       },
       "protections": {
-        "label": "BOL.combatCategory.protections",
+        "label": "HI.combatCategory.protections",
         "weapon": false,
         "protection": true,
         "blocking": false,
@@ -687,7 +687,7 @@ export class BoLActor extends Actor {
         "items": this.protections
       },
       "shields": {
-        "label": "BOL.combatCategory.shields",
+        "label": "HI.combatCategory.shields",
         "weapon": false,
         "protection": false,
         "blocking": true,
@@ -696,7 +696,7 @@ export class BoLActor extends Actor {
         "items": this.shields
       },
       "fightoptions": {
-        "label": "BOL.combatCategory.fightOptions",
+        "label": "HI.combatCategory.fightOptions",
         "weapon": false,
         "protection": false,
         "blocking": false,
@@ -802,7 +802,7 @@ export class BoLActor extends Actor {
     let msg = await ChatMessage.create({
       alias: this.name,
       whisper: BoLUtility.getWhisperRecipientsAndGMs(this.name),
-      content: game.i18n.format("BOL.chat.inforecup", { name: this.name, recupHP: recupHP })
+      content: game.i18n.format("HI.chat.inforecup", { name: this.name, recupHP: recupHP })
     })
   }
 
@@ -830,7 +830,7 @@ export class BoLActor extends Actor {
       if (!rollData) {
         fvttInit = -1
         if (isCombat) {
-          ui.notifications.info(game.i18n.localize("BOL.ui.warninitiative"))
+          ui.notifications.info(game.i18n.localize("HI.ui.warninitiative"))
           BoLRoll.aptitudeCheck(this, "init", undefined, combatData)
         }
       } else {
@@ -899,13 +899,13 @@ export class BoLActor extends Actor {
       } else if (protect.system.subtype == 'armor') {
         if (BoLUtility.getRollArmor()) {
           if (!protect.system.properties.soak.formula || protect.system.properties.soak.formula == "") {
-            ui.notifications.warn(game.i18n.localize("BOL.ui.armornoformula", protect.name))
+            ui.notifications.warn(game.i18n.localize("HI.ui.armornoformula", protect.name))
           } else {
             formula += "+" + " max(" + protect.system.properties.soak.formula + ",0)"
           }
         } else {
           if (protect.system.properties.soak.value == undefined) {
-            ui.notifications.warn(game.i18n.localize("BOL.ui.armornoformula", protect.name))
+            ui.notifications.warn(game.i18n.localize("HI.ui.armornoformula", protect.name))
           } else {
             formula += "+ " + protect.system.properties.soak.value
           }

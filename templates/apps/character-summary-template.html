@@ -3,7 +3,7 @@
   <ol class="items-list">
 
     <li class="item flexrow item-header">
-      <div class="item-field item-name item-name-fixed-medium">{{localize "BOL.ui.pcname"}}</div>
+      <div class="item-field item-name item-name-fixed-medium">{{localize "HI.ui.pcname"}}</div>
       {{#each config.attackAttributes as |attr key|}}
       <div class="item-field flex2  item-field-fixed-short">{{abbrev3 (localize attr)}}</div>
       {{/each}}
@@ -19,29 +19,29 @@
 
     {{#each pcs as |pc key|}}
     <li class="item flexrow" data-actor-id="{{pc.id}}">
-        <div class="item-field item-name item-name-fixed-medium">
-          <a class="actor-open character-summary-rollable">{{pc.name}}</a>
-        </div>
-        {{#each pc.system.attributes as |attr key|}}
-        <div class="item-field flex2 item-field-fixed-short">
-          <a class="summary-roll character-summary-rollable" data-type="attribute" data-key="{{key}}">{{attr.value}}</a>
-        </div>
-        {{/each}}
-        {{#each pc.system.aptitudes as |apt key|}}
-        <div class="item-field flex item-field-fixed-short">
-          <a class="summary-roll character-summary-rollable" data-type="aptitude" data-key="{{key}}">{{apt.value}}</a>
-        </div>
-        {{/each}}
-        {{#each pc.system.resources as |res key|}}
-        <div class="item-field flex2 item-field-fixed-short">{{res.value}}/{{res.max}}</div>
-        {{/each}}
-        <div class="item-field flex1 right">
-        </div>
-      </li>
+      <div class="item-field item-name item-name-fixed-medium">
+        <a class="actor-open character-summary-rollable">{{pc.name}}</a>
+      </div>
+      {{#each pc.system.attributes as |attr key|}}
+      <div class="item-field flex2 item-field-fixed-short">
+        <a class="summary-roll character-summary-rollable" data-type="attribute" data-key="{{key}}">{{attr.value}}</a>
+      </div>
+      {{/each}}
+      {{#each pc.system.aptitudes as |apt key|}}
+      <div class="item-field flex item-field-fixed-short">
+        <a class="summary-roll character-summary-rollable" data-type="aptitude" data-key="{{key}}">{{apt.value}}</a>
+      </div>
+      {{/each}}
+      {{#each pc.system.resources as |res key|}}
+      <div class="item-field flex2 item-field-fixed-short">{{res.value}}/{{res.max}}</div>
+      {{/each}}
+      <div class="item-field flex1 right">
+      </div>
+    </li>
     {{/each}}
 
     <li class="item flexrow item-header">
-      <div class="item-field item-name item-name-fixed-medium">{{localize "BOL.ui.npcname"}}</div>
+      <div class="item-field item-name item-name-fixed-medium">{{localize "HI.ui.npcname"}}</div>
       {{#each config.attackAttributes as |attr key|}}
       <div class="item-field flex2  item-field-fixed-short">{{abbrev3 (localize attr)}}</div>
       {{/each}}
@@ -53,58 +53,61 @@
       {{/each}}
       <div class="item-field flex1 right">
       </div>
-  </li>
+    </li>
 
     {{#each npcs as |pc key|}}
     <li class="item flexrow" data-actor-id="{{pc.id}}">
-        <div class="item-field item-name item-name-fixed-medium">
-          <a class="actor-open character-summary-rollable">{{pc.name}}</a>
-        </div>
-        {{#each pc.system.attributes as |attr key|}}
-        <div class="item-field flex2 item-field-fixed-short">
-          <a class="summary-roll character-summary-rollable" data-type="attribute" data-key="{{key}}">{{attr.value}}</a>
-        </div>
-        {{/each}}
-        {{#each pc.system.aptitudes as |apt key|}}
-        <div class="item-field flex item-field-fixed-short">
-          <a class="summary-roll character-summary-rollable" data-type="aptitude" data-key="{{key}}">{{apt.value}}</a>
-        </div>
-        {{/each}}
-        {{#each pc.system.resources as |res key|}}
-        <div class="item-field flex2 item-field-fixed-short">{{res.value}}/{{res.max}}</div>
-        {{/each}}
-        <div class="item-field flex1 right">
-          <a class="item-control actor-delete" title="{{localize "BOL.ui.delete"}}"><i class="fas fa-trash"></i></a>
-        </div>
-    
+      <div class="item-field item-name item-name-fixed-medium">
+        <a class="actor-open character-summary-rollable">{{pc.name}}</a>
+      </div>
+      {{#each pc.system.attributes as |attr key|}}
+      <div class="item-field flex2 item-field-fixed-short">
+        <a class="summary-roll character-summary-rollable" data-type="attribute" data-key="{{key}}">{{attr.value}}</a>
+      </div>
+      {{/each}}
+      {{#each pc.system.aptitudes as |apt key|}}
+      <div class="item-field flex item-field-fixed-short">
+        <a class="summary-roll character-summary-rollable" data-type="aptitude" data-key="{{key}}">{{apt.value}}</a>
+      </div>
+      {{/each}}
+      {{#each pc.system.resources as |res key|}}
+      <div class="item-field flex2 item-field-fixed-short">{{res.value}}/{{res.max}}</div>
+      {{/each}}
+      <div class="item-field flex1 right">
+        <a class="item-control actor-delete" title="{{localize " HI.ui.delete"}}"><i class="fas fa-trash"></i></a>
+      </div>
+
     </li>
     {{/each}}
-    
+
     {{#if (countKeys horoscopeGroupList)}}
-      <li class="item flexrow item-header">
-        <div class="item-name flex4 left">{{localize "BOL.ui.horoscopeGroup"}}</div>
-        <div class="item-field flex2 center">{{localize "BOL.ui.type"}}</div>
-        <div class="item-field flex2 center">{{localize "BOL.ui.horoscopeDiceRemaining"}}</div>
-        <div class="item-field flex2 center">{{localize "BOL.ui.horoscopeDiceMax"}}</div>
-        <div class="item-field flex1 right"></div>
-      </li>  
-      {{#each horoscopeGroupList as |horo id|}}
-        <li class="item flexrow" data-item-id="{{horo.id}}">
-            <h4 class="item-name flex4 left">
-              <div class="item-image"><img src="icons/magic/perception/eye-ringed-glow-angry-large-red.webp" /></div>{{horo.name}}
-            </h4>          
-            <div class="item-field flex2 center">
-              <span class="item-field">{{upperFirst horo.type}}</span>
-            </div>
-            <div class="item-field flex2 center">
-              <input class="field-value" type="text" id="horoscope-group-edit-available" value="{{horo.availableDice}}" data-horo-id="{{id}}" data-type="Number">
-            </div>
-            <div class="item-field flex2 center">
-              <input class="field-value" type="text" id="horoscope-group-edit-max" value="{{horo.maxDice}}" data-horo-id="{{id}}" data-type="Number">
-            </div>
-            <div class="item-field flex1 right"></div>
-      </li>
-      {{/each}}
+    <li class="item flexrow item-header">
+      <div class="item-name flex4 left">{{localize "HI.ui.horoscopeGroup"}}</div>
+      <div class="item-field flex2 center">{{localize "HI.ui.type"}}</div>
+      <div class="item-field flex2 center">{{localize "HI.ui.horoscopeDiceRemaining"}}</div>
+      <div class="item-field flex2 center">{{localize "HI.ui.horoscopeDiceMax"}}</div>
+      <div class="item-field flex1 right"></div>
+    </li>
+    {{#each horoscopeGroupList as |horo id|}}
+    <li class="item flexrow" data-item-id="{{horo.id}}">
+      <h4 class="item-name flex4 left">
+        <div class="item-image"><img src="icons/magic/perception/eye-ringed-glow-angry-large-red.webp" /></div>
+        {{horo.name}}
+      </h4>
+      <div class="item-field flex2 center">
+        <span class="item-field">{{upperFirst horo.type}}</span>
+      </div>
+      <div class="item-field flex2 center">
+        <input class="field-value" type="text" id="horoscope-group-edit-available" value="{{horo.availableDice}}"
+          data-horo-id="{{id}}" data-type="Number">
+      </div>
+      <div class="item-field flex2 center">
+        <input class="field-value" type="text" id="horoscope-group-edit-max" value="{{horo.maxDice}}"
+          data-horo-id="{{id}}" data-type="Number">
+      </div>
+      <div class="item-field flex1 right"></div>
+    </li>
+    {{/each}}
     {{/if}}
 
   </ol>

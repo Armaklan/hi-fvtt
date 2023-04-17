@@ -1,14 +1,18 @@
-    {{#if (count boons)}}
-    <div class="flexrow roll-box" >
-        <div class="flex1 center bg-darkred" data-tooltip-direction="LEFT" data-tooltip="Click-gauche pour sélectionner, CTRL+Click gauche pour déselectionner">
-            <label for="mod">{{localize 'BOL.ui.boons'}}</label>
-        </div>
-        <div class="flex1 center cell">
-            <select class="flex1" name="boon" id="boon" data-type="String" multiple>
-                {{#each boons as | boon id|}}
-                    <option value="1">{{boon.name}}</option>
-                {{/each}}
-            </select>
-        </div>
+{{#if (count boons)}}
+  <div class="flexrow roll-box">
+    <div
+      class="flex1 center bg-darkred"
+      data-tooltip-direction="LEFT"
+      data-tooltip="Click-gauche pour sélectionner, CTRL+Click gauche pour déselectionner"
+    >
+      <label for="mod">{{localize "HI.ui.boons"}}</label>
     </div>
-    {{/if}}
+    <div class="flex1 center cell">
+      <select class="flex1" name="boon" id="boon" data-type="String" multiple>
+        {{#each boons as |boon id|}}
+          <option value="1">{{boon.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+{{/if}}

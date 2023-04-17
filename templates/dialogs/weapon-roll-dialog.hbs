@@ -3,7 +3,7 @@
     <header class="sheet-header">
         <div class="row flexrow table-header">
             <div class="flex1 center">
-                <h3>{{localize 'BOL.ui.weaponCheck'}}</h3>
+                <h3>{{localize 'HI.ui.weaponCheck'}}</h3>
             </div>
         </div>
     </header>
@@ -16,21 +16,21 @@
     
     <div class="flexrow roll-box" >
         <div class="flex1 center bg-darkred">
-            <label for="mod">{{localize 'BOL.ui.attackValue'}}</label>
+            <label for="mod">{{localize 'HI.ui.attackValue'}}</label>
         </div>
         <div class="flex1 center cell">{{weapon.system.properties.attackModifiers}}</div>
     </div>
 
     <div class="flexrow roll-box" >
         <div class="flex1 center bg-darkred">
-            <label for="mod">{{localize 'BOL.ui.targetDefence'}}</label>
+            <label for="mod">{{localize 'HI.ui.targetDefence'}}</label>
         </div>
         <div class="flex1 center cell">{{defence}}</div>
     </div>
       {{#if (eq shieldBlock 'blockall')}}
       <div class="flexrow roll-box" >
           <div class="flex1 center bg-darkred">
-              <label for="mod">{{localize 'BOL.ui.shieldMalus'}}</label>
+              <label for="mod">{{localize 'HI.ui.shieldMalus'}}</label>
           </div>
           <div class="flex1 center cell">{{shieldAttackMalus}}</div>
       </div>
@@ -38,11 +38,11 @@
       {{#if (eq shieldBlock 'blockone')}}
       <div class="flexrow roll-box" >
           <div class="flex1 center bg-darkred">
-              <label for="mod">{{localize 'BOL.ui.shieldMalus'}}</label>
+              <label for="mod">{{localize 'HI.ui.shieldMalus'}}</label>
           </div>
           <div class="flex1 center cell">
             <label class="checkbox">
-              <input class="field-value" type="checkbox" id="applyShieldMalus" name="applyShieldMalus" {{checked applyShieldMalus}}> {{localize "BOL.ui.applyShieldMalus"}}
+              <input class="field-value" type="checkbox" id="applyShieldMalus" name="applyShieldMalus" {{checked applyShieldMalus}}> {{localize "HI.ui.applyShieldMalus"}}
             </label>
           </div>
       </div>

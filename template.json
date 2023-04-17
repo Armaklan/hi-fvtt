@@ -23,7 +23,7 @@
         },
         "prot": {
           "key": "prot",
-          "label": "BOL.aptitudes.prot",
+          "label": "HI.aptitudes.prot",
           "base": 0,
           "value": 0,
           "bonus": 0
@@ -31,7 +31,7 @@
         "attributes": {
           "might": {
             "key": "might",
-            "label": "BOL.attributes.might",
+            "label": "HI.attributes.might",
             "base": 0,
             "value": 0,
             "min": -1,
@@ -40,7 +40,7 @@
           },
           "daring": {
             "key": "daring",
-            "label": "BOL.attributes.daring",
+            "label": "HI.attributes.daring",
             "base": 0,
             "value": 0,
             "min": -1,
@@ -49,7 +49,7 @@
           },
           "savvy": {
             "key": "savvy",
-            "label": "BOL.attributes.savvy",
+            "label": "HI.attributes.savvy",
             "base": 0,
             "value": 0,
             "min": -1,
@@ -58,7 +58,7 @@
           },
           "flair": {
             "key": "flair",
-            "label": "BOL.attributes.flair",
+            "label": "HI.attributes.flair",
             "base": 0,
             "value": 0,
             "bonus": 0
@@ -67,28 +67,28 @@
         "aptitudes": {
           "brawl": {
             "key": "brawl",
-            "label": "BOL.aptitudes.brawl",
+            "label": "HI.aptitudes.brawl",
             "base": 0,
             "value": 0,
             "bonus": 0
           },
           "melee": {
             "key": "melee",
-            "label": "BOL.aptitudes.melee",
+            "label": "HI.aptitudes.melee",
             "base": 0,
             "value": 0,
             "bonus": 0
           },
           "ranged": {
             "key": "ranged",
-            "label": "BOL.aptitudes.ranged",
+            "label": "HI.aptitudes.ranged",
             "base": 0,
             "value": 0,
             "bonus": 0
           },
           "def": {
             "key": "def",
-            "label": "BOL.aptitudes.def",
+            "label": "HI.aptitudes.def",
             "base": 0,
             "value": 0,
             "bonus": 0
@@ -97,7 +97,7 @@
         "resources": {
           "hp": {
             "key": "hp",
-            "label": "BOL.resources.hp",
+            "label": "HI.resources.hp",
             "ismain": true,
             "base": 1,
             "value": 1,
@@ -106,7 +106,7 @@
           },
           "hero": {
             "key": "hero",
-            "label": "BOL.resources.hero",
+            "label": "HI.resources.hero",
             "ismain": true,
             "value": 5,
             "max": 5,
@@ -114,7 +114,7 @@
           },
           "composure": {
             "key": "composure",
-            "label": "BOL.resources.composure",
+            "label": "HI.resources.composure",
             "ismain": true,
             "value": 0,
             "max": 0,
@@ -122,7 +122,7 @@
           },
           "power": {
             "key": "power",
-            "label": "BOL.resources.power",
+            "label": "HI.resources.power",
             "ismain": true,
             "value": 0,
             "bonus": 0,
@@ -130,7 +130,7 @@
           },
           "alchemypoints": {
             "key": "alchemypoints",
-            "label": "BOL.resources.alchemypoints",
+            "label": "HI.resources.alchemypoints",
             "ismain": false,
             "value": 0,
             "bonus": 0,
@@ -138,7 +138,7 @@
           },
           "astrologypoints": {
             "key": "astrologypoints",
-            "label": "BOL.resources.astrologypoints",
+            "label": "HI.resources.astrologypoints",
             "ismain": false,
             "value": 0,
             "bonus": 0,
@@ -157,13 +157,13 @@
       },
       "xp": {
         "key": "xp",
-        "label": "BOL.traits.xp",
+        "label": "HI.traits.xp",
         "total": 0,
         "spent": 0
       },
       "creation": {
         "key": "creation",
-        "label": "BOL.resources.creation",
+        "label": "HI.resources.creation",
         "value": 0,
         "max": 0
       }
@@ -180,21 +180,21 @@
       "attributes": {
         "hull": {
           "key": "hull",
-          "label": "BOL.attributes.hull",
+          "label": "HI.attributes.hull",
           "value": 0,
           "min": 0,
           "max": 5
         },
         "crew": {
           "key": "crew",
-          "label": "BOL.attributes.crew",
+          "label": "HI.attributes.crew",
           "value": 0,
           "min": 0,
           "max": 5
         },
         "resources": {
           "key": "resources",
-          "label": "BOL.attributes.resources",
+          "label": "HI.attributes.resources",
           "value": 0,
           "min": 0,
           "max": 5
@@ -202,7 +202,7 @@
       },
       "row": {
         "key": "row",
-        "label": "BOL.attributes.row",
+        "label": "HI.attributes.row",
         "value": 0,
         "min": 0,
         "max": 5

@@ -1,7 +1,7 @@
-<h3 class="form-header">{{localize "BOL.ui.equipmentProperties"}}</h3>
+<h3 class="form-header">{{localize "HI.ui.equipmentProperties"}}</h3>
 
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.ui.subtype"}}</label>
+    <label class="property-label">{{localize "HI.ui.subtype"}}</label>
     <div class="form-fields">
         <select name="system.subtype" data-dtype="String">
             {{#select item.system.subtype}}
@@ -14,46 +14,46 @@
 </div>
 <hr/>
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.ui.capacities"}}</label>
+    <label class="property-label">{{localize "HI.ui.capacities"}}</label>
     <div class="form-fields">
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.weapon" {{checked item.system.properties.weapon}}> {{localize "BOL.itemProperty.weapon"}}
+            <input class="field-value" type="checkbox" name="system.properties.weapon" {{checked item.system.properties.weapon}}> {{localize "HI.itemProperty.weapon"}}
         </label>
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.protection" {{checked item.system.properties.protection}}> {{localize "BOL.itemProperty.protection"}}
+            <input class="field-value" type="checkbox" name="system.properties.protection" {{checked item.system.properties.protection}}> {{localize "HI.itemProperty.protection"}}
         </label>
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.magical" {{checked item.system.properties.magical}}> {{localize "BOL.itemProperty.magical"}}
+            <input class="field-value" type="checkbox" name="system.properties.magical" {{checked item.system.properties.magical}}> {{localize "HI.itemProperty.magical"}}
         </label>
     </div>
 </div>
 <hr/>
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.ui.properties"}}</label>
+    <label class="property-label">{{localize "HI.ui.properties"}}</label>
     <div class="form-fields">
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.equipable" {{checked item.system.properties.equipable}}> {{localize "BOL.itemProperty.equipable"}}
+            <input class="field-value" type="checkbox" name="system.properties.equipable" {{checked item.system.properties.equipable}}> {{localize "HI.itemProperty.equipable"}}
         </label>
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.stackable" {{checked item.system.properties.stackable}}> {{localize "BOL.itemProperty.stackable"}}
+            <input class="field-value" type="checkbox" name="system.properties.stackable" {{checked item.system.properties.stackable}}> {{localize "HI.itemProperty.stackable"}}
         </label>
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.consumable" {{checked item.system.properties.consumable}}> {{localize "BOL.itemProperty.consumable"}}
+            <input class="field-value" type="checkbox" name="system.properties.consumable" {{checked item.system.properties.consumable}}> {{localize "HI.itemProperty.consumable"}}
         </label>
     </div>
 </div>
 <hr/>
 {{#if item.system.properties.equipable}}
 <div class="form-group">
-    <label>{{localize "BOL.itemProperty.worn"}}</label>
+    <label>{{localize "HI.itemProperty.worn"}}</label>
     <div class="form-fields">
         <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.worn" {{checked item.system.worn}}> {{localize "BOL.itemProperty.worn"}}
+            <input class="field-value" type="checkbox" name="system.worn" {{checked item.system.worn}}> {{localize "HI.itemProperty.worn"}}
         </label>
     </div>
 </div>
 <div class="form-group">
-    <label>{{localize "BOL.itemProperty.slot"}}</label>
+    <label>{{localize "HI.itemProperty.slot"}}</label>
     <div class="form-fields center">
         <select class="field-value" name="system.properties.slot" data-dtype="String">
             {{#select item.system.properties.slot}}
@@ -68,13 +68,13 @@
 
 {{#if item.system.properties.stackable}}
     <div class="form-group">
-        <label class="property-label">{{localize "BOL.ui.quantity"}}</label>
+        <label class="property-label">{{localize "HI.ui.quantity"}}</label>
         <div class="form-fields">
             <input class="field-value" type="text" name="system.quantity" value="{{item.system.quantity}}" data-dtype="Number"/>
         </div>
     </div>
     <div class="form-group">
-        <label class="property-label">{{localize "BOL.ui.stacksize"}}</label>
+        <label class="property-label">{{localize "HI.ui.stacksize"}}</label>
         <div class="form-fields">
             <input class="field-value" type="text" name="system.properties.stacksize" value="{{item.system.properties.stacksize}}" data-dtype="Number"/>
         </div>
@@ -82,7 +82,7 @@
 {{/if}}
 
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.ui.price"}}</label>
+    <label class="property-label">{{localize "HI.ui.price"}}</label>
     <div class="form-fields">
         <input class="field-value" type="text" name="system.price" value="{{item.system.price}}" data-dtype="Number"/>
     </div>

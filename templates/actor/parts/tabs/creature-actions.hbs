@@ -4,11 +4,11 @@
             {{else}}
             <li class="item flexrow item-header">
                 <div class="item-name flex2">{{localize combatType.label}}</div>
-                {{#if protection}}<div class="item-field">{{localize "BOL.ui.protection"}}</div>{{/if}}
-                {{#if blocking}}<div class="item-field">{{localize "BOL.ui.blocking"}}</div>{{/if}}
-                {{#if weapon}}<div class="item-field">{{localize "BOL.ui.damages"}}</div>{{/if}}
-                {{#if ranged}}<div class="item-field">{{localize "BOL.ui.range"}}</div>{{else}}<div class="item-field"></div>{{/if}}
-                {{#if options}}<div class="item-field">{{localize "BOL.ui.status"}}</div>{{else}}<div class="item-field"></div>{{/if}}
+                {{#if protection}}<div class="item-field">{{localize "HI.ui.protection"}}</div>{{/if}}
+                {{#if blocking}}<div class="item-field">{{localize "HI.ui.blocking"}}</div>{{/if}}
+                {{#if weapon}}<div class="item-field">{{localize "HI.ui.damages"}}</div>{{/if}}
+                {{#if ranged}}<div class="item-field">{{localize "HI.ui.range"}}</div>{{else}}<div class="item-field"></div>{{/if}}
+                {{#if options}}<div class="item-field">{{localize "HI.ui.status"}}</div>{{else}}<div class="item-field"></div>{{/if}}
             </li>
             {{/if}}
             {{#each combatType.items as |item id|}}
@@ -21,15 +21,15 @@
                     {{#if ../ranged}}<div class="item-field">{{item.system.properties.range}}</div>{{else}}<div class="item-field"></div>{{/if}}
                     {{#if ../options}}<div class="item-field">
                       {{#if item.system.properties.activated}}
-                        <a class="toggle-fight-option">{{localize "BOL.ui.toactivated"}}</a>
+                        <a class="toggle-fight-option">{{localize "HI.ui.toactivated"}}</a>
                       {{else}}
-                        <a class="toggle-fight-option">{{localize "BOL.ui.todeactivated"}}</a>
+                        <a class="toggle-fight-option">{{localize "HI.ui.todeactivated"}}</a>
                       {{/if}}
                       </div>{{else}}
                       <div class="item-field"></div>
                       <div class="item-field flex1 right">
-                        <a class="item-control item-edit" title="{{localize "BOL.ui.edit"}}"><i class="fas fa-square"></i></a>
-                        <a class="item-control item-delete" title="{{localize "BOL.ui.delete"}}"><i class="fas fa-trash"></i></a>
+                        <a class="item-control item-edit" title="{{localize "HI.ui.edit"}}"><i class="fas fa-square"></i></a>
+                        <a class="item-control item-delete" title="{{localize "HI.ui.delete"}}"><i class="fas fa-trash"></i></a>
                       </div>
                       {{/if}}
                 </li>
@@ -44,7 +44,7 @@
             <li class="item flexrow item-header">
                 <div class="item-name flex4 left">{{localize features.label}}</div>
                 {{#if ranked}}
-                    <div class="item-field flex2 center">{{localize "BOL.ui.rank"}}</div>
+                    <div class="item-field flex2 center">{{localize "HI.ui.rank"}}</div>
                 {{/if}}
                 <div class="item-field flex1 right"></div>
             </li>

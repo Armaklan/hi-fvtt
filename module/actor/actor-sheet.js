@@ -100,8 +100,8 @@ export class BoLActorSheet extends ActorSheet {
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       Dialog.confirm({
-        title: game.i18n.localize("BOL.ui.deletetitle"),
-        content: game.i18n.localize("BOL.ui.confirmdelete"),
+        title: game.i18n.localize("HI.ui.deletetitle"),
+        content: game.i18n.localize("HI.ui.confirmdelete"),
         yes: () => {
           const li = $(ev.currentTarget).parents(".item");
           this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")])

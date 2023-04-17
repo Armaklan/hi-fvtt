@@ -81,7 +81,7 @@ export default function registerHooks() {
         if (game.user.isGM) {
             const button = document.createElement('button');
             button.style.width = '95%';
-            button.innerHTML = game.i18n.localize("BOL.ui.pclistbutton")
+            button.innerHTML = game.i18n.localize("HI.ui.pclistbutton")
             button.addEventListener('click', () => {
                 game.bol.charSummary.render(true)
             })

@@ -9,7 +9,7 @@ System.debugMode = true;
 
 export const BOL = {};
 
-BOL.damageValues = {
+HI.damageValues = {
     "1": "1",
     "2": "2",
     "3": "3",
@@ -20,7 +20,7 @@ BOL.damageValues = {
     "d6BB": "d6B + dé bonus",
 }
 
-BOL.damageMultiplier = {
+HI.damageMultiplier = {
     "1": "x1",
     "2": "x2",
     "3": "x3",
@@ -31,56 +31,56 @@ BOL.damageMultiplier = {
     "8": "x8"
 }
 
-BOL.spellType = {
-    "0": "BOL.spellItem.charm",
-    "1": "BOL.spellItem.circle1",
-    "2": "BOL.spellItem.circle2",
-    "3": "BOL.spellItem.circle3"
+HI.spellType = {
+    "0": "HI.spellItem.charm",
+    "1": "HI.spellItem.circle1",
+    "2": "HI.spellItem.circle2",
+    "3": "HI.spellItem.circle3"
 }
 
-BOL.alchemyType = {
-    "common": "BOL.alchemyItem.common",
-    "scarce": "BOL.alchemyItem.scarce",
-    "legend": "BOL.alchemyItem.legend",
-    "mythic": "BOL.alchemyItem.mythic",
+HI.alchemyType = {
+    "common": "HI.alchemyItem.common",
+    "scarce": "HI.alchemyItem.scarce",
+    "legend": "HI.alchemyItem.legend",
+    "mythic": "HI.alchemyItem.mythic",
 }
 
-BOL.equipmentSlots = {
-    "none": "BOL.equipmentSlots.none",
-    "head": "BOL.equipmentSlots.head",
-    "neck": "BOL.equipmentSlots.neck",
-    "shoulders": "BOL.equipmentSlots.shoulders",
-    "body": "BOL.equipmentSlots.body",
-    "rhand": "BOL.equipmentSlots.rhand",
-    "lhand": "BOL.equipmentSlots.lhand",
-    "2hands": "BOL.equipmentSlots.2hands",
-    "rarm": "BOL.equipmentSlots.rarm",
-    "larm": "BOL.equipmentSlots.larm",
-    "chest": "BOL.equipmentSlots.chest",
-    "belt": "BOL.equipmentSlots.belt",
-    "legs": "BOL.equipmentSlots.legs",
-    "feet": "BOL.equipmentSlots.feet",
-    "finder": "BOL.equipmentSlots.finder",
-    "ear": "BOL.equipmentSlots.ear"
+HI.equipmentSlots = {
+    "none": "HI.equipmentSlots.none",
+    "head": "HI.equipmentSlots.head",
+    "neck": "HI.equipmentSlots.neck",
+    "shoulders": "HI.equipmentSlots.shoulders",
+    "body": "HI.equipmentSlots.body",
+    "rhand": "HI.equipmentSlots.rhand",
+    "lhand": "HI.equipmentSlots.lhand",
+    "2hands": "HI.equipmentSlots.2hands",
+    "rarm": "HI.equipmentSlots.rarm",
+    "larm": "HI.equipmentSlots.larm",
+    "chest": "HI.equipmentSlots.chest",
+    "belt": "HI.equipmentSlots.belt",
+    "legs": "HI.equipmentSlots.legs",
+    "feet": "HI.equipmentSlots.feet",
+    "finder": "HI.equipmentSlots.finder",
+    "ear": "HI.equipmentSlots.ear"
 }
 
-BOL.armorQualities = {
-    "none": "BOL.armorQuality.none",
-    "light": "BOL.armorQuality.light",
-    "lightQ": "BOL.armorQuality.lightQ",
-    "lightSup": "BOL.armorQuality.lightSup",
-    "lightLeg": "BOL.armorQuality.lightLeg",
-    "medium": "BOL.armorQuality.medium",
-    "mediumQ": "BOL.armorQuality.mediumQ",
-    "mediumSup": "BOL.armorQuality.mediumSup",
-    "mediumLeg": "BOL.armorQuality.mediumLeg",
-    "heavy": "BOL.armorQuality.heavy",
-    "heavyQ": "BOL.armorQuality.heavyQ",
-    "heavySup": "BOL.armorQuality.heavySup",
-    "heavyLeg": "BOL.armorQuality.heavyLeg"
+HI.armorQualities = {
+    "none": "HI.armorQuality.none",
+    "light": "HI.armorQuality.light",
+    "lightQ": "HI.armorQuality.lightQ",
+    "lightSup": "HI.armorQuality.lightSup",
+    "lightLeg": "HI.armorQuality.lightLeg",
+    "medium": "HI.armorQuality.medium",
+    "mediumQ": "HI.armorQuality.mediumQ",
+    "mediumSup": "HI.armorQuality.mediumSup",
+    "mediumLeg": "HI.armorQuality.mediumLeg",
+    "heavy": "HI.armorQuality.heavy",
+    "heavyQ": "HI.armorQuality.heavyQ",
+    "heavySup": "HI.armorQuality.heavySup",
+    "heavyLeg": "HI.armorQuality.heavyLeg"
 }
 
-BOL.soakFormulas = {
+HI.soakFormulas = {
     "none": "0",
     "light": "1d6-3",
     "lightQ": "1d6r1-3",
@@ -96,194 +96,194 @@ BOL.soakFormulas = {
     "heavyLeg": "2d6kh1"
 }
 
-BOL.attackAttributes = {
-    "might": "BOL.attributes.might",
-    "daring": "BOL.attributes.daring",
-    "savvy": "BOL.attributes.savvy",
-    "flair": "BOL.attributes.flair"
+HI.attackAttributes = {
+    "might": "HI.attributes.might",
+    "daring": "HI.attributes.daring",
+    "savvy": "HI.attributes.savvy",
+    "flair": "HI.attributes.flair"
 }
 
-BOL.attackAptitudes = {
-    "melee": "BOL.aptitudes.melee",
-    "ranged": "BOL.aptitudes.ranged"
+HI.attackAptitudes = {
+    "melee": "HI.aptitudes.melee",
+    "ranged": "HI.aptitudes.ranged"
 }
 
-BOL.aptitudes = {
-    "melee": "BOL.aptitudes.melee",
-    "ranged": "BOL.aptitudes.ranged",
-    "brawl": "BOL.aptitudes.brawl",
-    "def": "BOL.aptitudes.def"
+HI.aptitudes = {
+    "melee": "HI.aptitudes.melee",
+    "ranged": "HI.aptitudes.ranged",
+    "brawl": "HI.aptitudes.brawl",
+    "def": "HI.aptitudes.def"
 }
 
-BOL.resources = {
-    "hp": "BOL.resources.hp",
-    "hero": "BOL.resources.hero",
-    "composure": "BOL.resources.composure",
-    "power": "BOL.resources.power",
-    "alchemypoints": "BOL.resources.alchemypoints"
+HI.resources = {
+    "hp": "HI.resources.hp",
+    "hero": "HI.resources.hero",
+    "composure": "HI.resources.composure",
+    "power": "HI.resources.power",
+    "alchemypoints": "HI.resources.alchemypoints"
 }
 
-BOL.weaponSizes = {
-    "unarmed": "BOL.weaponSize.unarmed",
-    "improvised": "BOL.weaponSize.improvised",
-    "light": "BOL.weaponSize.light",
-    "medium": "BOL.weaponSize.medium",
-    "heavy": "BOL.weaponSize.heavy"
+HI.weaponSizes = {
+    "unarmed": "HI.weaponSize.unarmed",
+    "improvised": "HI.weaponSize.improvised",
+    "light": "HI.weaponSize.light",
+    "medium": "HI.weaponSize.medium",
+    "heavy": "HI.weaponSize.heavy"
 }
 
-BOL.damageAttributes = {
+HI.damageAttributes = {
     "zero": "0",
-    "might": "BOL.attributes.might",
-    "half-might": "BOL.attributes.halfmight"
+    "might": "HI.attributes.might",
+    "half-might": "HI.attributes.halfmight"
 }
 
-BOL.itemCategories = {
-    "equipment": "BOL.itemCategory.equipment",
-    "capacity": "BOL.itemCategory.capacity",
-    "spell": "BOL.itemCategory.spell",
-    "alchemy": "BOL.itemCategory.alchemy",
-    "vehicle": "BOL.itemCategory.vehicle",
-    "vehicleweapon": "BOL.itemCategory.vehicleweapon",
-    "other": "BOL.itemCategory.other"
+HI.itemCategories = {
+    "equipment": "HI.itemCategory.equipment",
+    "capacity": "HI.itemCategory.capacity",
+    "spell": "HI.itemCategory.spell",
+    "alchemy": "HI.itemCategory.alchemy",
+    "vehicle": "HI.itemCategory.vehicle",
+    "vehicleweapon": "HI.itemCategory.vehicleweapon",
+    "other": "HI.itemCategory.other"
 }
 
-BOL.itemSubtypes = {
-    "armor": "BOL.equipmentCategory.armor",
-    "weapon": "BOL.equipmentCategory.weapon",
-    "shield": "BOL.equipmentCategory.shield",
-    "helm": "BOL.equipmentCategory.helm",
-    "jewel": "BOL.equipmentCategory.jewel",
-    "scroll": "BOL.equipmentCategory.scroll",
-    "container": "BOL.equipmentCategory.container",
-    "ammunition": "BOL.equipmentCategory.ammunition",
-    "currency": "BOL.equipmentCategory.currency",
-    "other": "BOL.equipmentCategory.other"
+HI.itemSubtypes = {
+    "armor": "HI.equipmentCategory.armor",
+    "weapon": "HI.equipmentCategory.weapon",
+    "shield": "HI.equipmentCategory.shield",
+    "helm": "HI.equipmentCategory.helm",
+    "jewel": "HI.equipmentCategory.jewel",
+    "scroll": "HI.equipmentCategory.scroll",
+    "container": "HI.equipmentCategory.container",
+    "ammunition": "HI.equipmentCategory.ammunition",
+    "currency": "HI.equipmentCategory.currency",
+    "other": "HI.equipmentCategory.other"
 }
 
-BOL.vehicleSubtypes = {
-    "mount": "BOL.vehicleCategory.mount",
-    "flying": "BOL.vehicleCategory.flying",
-    "boat": "BOL.vehicleCategory.boat",
-    "other": "BOL.vehicleCategory.other"
+HI.vehicleSubtypes = {
+    "mount": "HI.vehicleCategory.mount",
+    "flying": "HI.vehicleCategory.flying",
+    "boat": "HI.vehicleCategory.boat",
+    "other": "HI.vehicleCategory.other"
 }
 
-// BOL.equipmentCategories = {
-//     "armor" : "BOL.equipmentCategory.armor",
-//     "weapon" : "BOL.equipmentCategory.weapon",
-//     "shield" : "BOL.equipmentCategory.shield",
-//     "helm" : "BOL.equipmentCategory.helm",
-//     "jewel" : "BOL.equipmentCategory.jewel",
-//     "scroll" : "BOL.equipmentCategory.scroll",
-//     "container" : "BOL.equipmentCategory.container",
-//     "ammunition" : "BOL.equipmentCategory.ammunition",
-//     "currency" : "BOL.equipmentCategory.currency",
-//     "other" : "BOL.equipmentCategory.other"
+// HI.equipmentCategories = {
+//     "armor" : "HI.equipmentCategory.armor",
+//     "weapon" : "HI.equipmentCategory.weapon",
+//     "shield" : "HI.equipmentCategory.shield",
+//     "helm" : "HI.equipmentCategory.helm",
+//     "jewel" : "HI.equipmentCategory.jewel",
+//     "scroll" : "HI.equipmentCategory.scroll",
+//     "container" : "HI.equipmentCategory.container",
+//     "ammunition" : "HI.equipmentCategory.ammunition",
+//     "currency" : "HI.equipmentCategory.currency",
+//     "other" : "HI.equipmentCategory.other"
 // }
 
-BOL.protectionCategories = {
-    "armor": "BOL.protectionCategory.armor",
-    "shield": "BOL.protectionCategory.shield",
-    "helm": "BOL.protectionCategory.helm",
-    "other": "BOL.protectionCategory.other"
+HI.protectionCategories = {
+    "armor": "HI.protectionCategory.armor",
+    "shield": "HI.protectionCategory.shield",
+    "helm": "HI.protectionCategory.helm",
+    "other": "HI.protectionCategory.other"
 }
 
-BOL.weaponCategories = {
-    "melee": "BOL.weaponCategory.melee",
-    "ranged": "BOL.weaponCategory.ranged",
-    "other": "BOL.weaponCategory.other"
+HI.weaponCategories = {
+    "melee": "HI.weaponCategory.melee",
+    "ranged": "HI.weaponCategory.ranged",
+    "other": "HI.weaponCategory.other"
 }
 
-BOL.itemProperties1 = {
-    "equipable": "BOL.itemProperty.equipable",
-    "protection": "BOL.itemProperty.protection",
-    "magical": "BOL.itemProperty.magical",
-    "worn": "BOL.itemProperty.worn",
+HI.itemProperties1 = {
+    "equipable": "HI.itemProperty.equipable",
+    "protection": "HI.itemProperty.protection",
+    "magical": "HI.itemProperty.magical",
+    "worn": "HI.itemProperty.worn",
 }
 
-BOL.itemProperties2 = {
-    "equipable": "BOL.itemProperty.equipable",
-    "protection": "BOL.itemProperty.protection",
-    "blocking": "BOL.itemProperty.blocking",
-    "magical": "BOL.itemProperty.magical",
-    "concealable": "BOL.itemProperty.concealable",
-    "2H": "BOL.itemProperty.2H",
-    "helm": "BOL.itemProperty.helm",
-    "improvised": "BOL.itemProperty.improvised",
-    "shield": "BOL.itemProperty.shield",
-    "melee": "BOL.itemProperty.melee",
-    "throwable": "BOL.itemProperty.throwable",
-    "ignoreshield": "BOL.itemProperty.ignoreshield",
-    "bashing": "BOL.itemProperty.bashing",
-    "stackable": "BOL.itemProperty.stackable",
-    "ranged": "BOL.itemProperty.ranged",
-    "weapon": "BOL.itemProperty.weapon",
-    "reloadable": "BOL.itemProperty.reloadable",
-    "worn": "BOL.itemProperty.worn",
-    "spell": "BOL.itemProperty.spell",
-    "armor": "BOL.itemProperty.armor",
-    "consumable": "BOL.itemProperty.consumable",
-    "bow": "BOL.itemProperty.bow",
-    "crossbow": "BOL.itemProperty.crossbow",
-    "throwing": "BOL.itemProperty.throwing",
-    "activable": "BOL.itemProperty.activable",
-    "powder": "BOL.itemProperty.powder",
-    "damage": "BOL.itemProperty.damage",
-    "difficulty": "BOL.itemProperty.difficulty"
+HI.itemProperties2 = {
+    "equipable": "HI.itemProperty.equipable",
+    "protection": "HI.itemProperty.protection",
+    "blocking": "HI.itemProperty.blocking",
+    "magical": "HI.itemProperty.magical",
+    "concealable": "HI.itemProperty.concealable",
+    "2H": "HI.itemProperty.2H",
+    "helm": "HI.itemProperty.helm",
+    "improvised": "HI.itemProperty.improvised",
+    "shield": "HI.itemProperty.shield",
+    "melee": "HI.itemProperty.melee",
+    "throwable": "HI.itemProperty.throwable",
+    "ignoreshield": "HI.itemProperty.ignoreshield",
+    "bashing": "HI.itemProperty.bashing",
+    "stackable": "HI.itemProperty.stackable",
+    "ranged": "HI.itemProperty.ranged",
+    "weapon": "HI.itemProperty.weapon",
+    "reloadable": "HI.itemProperty.reloadable",
+    "worn": "HI.itemProperty.worn",
+    "spell": "HI.itemProperty.spell",
+    "armor": "HI.itemProperty.armor",
+    "consumable": "HI.itemProperty.consumable",
+    "bow": "HI.itemProperty.bow",
+    "crossbow": "HI.itemProperty.crossbow",
+    "throwing": "HI.itemProperty.throwing",
+    "activable": "HI.itemProperty.activable",
+    "powder": "HI.itemProperty.powder",
+    "damage": "HI.itemProperty.damage",
+    "difficulty": "HI.itemProperty.difficulty"
 }
 
-BOL.itemStats = {
-    "quantity": "BOL.itemStat.quantity",
-    "weight": "BOL.itemStat.weight",
-    "price": "BOL.itemStat.price",
-    "range": "BOL.itemStat.range",
-    "damage": "BOL.itemStat.damage",
-    "reload": "BOL.itemStat.reload",
-    "soak": "BOL.itemStat.soak",
-    "blocking": "BOL.itemStat.blocking",
-    "modifiers": "BOL.itemStat.modifiers"
+HI.itemStats = {
+    "quantity": "HI.itemStat.quantity",
+    "weight": "HI.itemStat.weight",
+    "price": "HI.itemStat.price",
+    "range": "HI.itemStat.range",
+    "damage": "HI.itemStat.damage",
+    "reload": "HI.itemStat.reload",
+    "soak": "HI.itemStat.soak",
+    "blocking": "HI.itemStat.blocking",
+    "modifiers": "HI.itemStat.modifiers"
 }
 
-BOL.itemModifiers = {
-    "init": "BOL.itemModifiers.init",
-    "social": "BOL.itemModifiers.social",
-    "daring": "BOL.itemModifiers.daring",
-    "powercost": "BOL.itemModifiers.powercost"
+HI.itemModifiers = {
+    "init": "HI.itemModifiers.init",
+    "social": "HI.itemModifiers.social",
+    "daring": "HI.itemModifiers.daring",
+    "powercost": "HI.itemModifiers.powercost"
 }
 
-BOL.itemBlocking = {
-    "malus": "BOL.itemBlocking.malus",
-    "nbAttacksPerRound": "BOL.itemBlocking.nbAttacksPerRound"
+HI.itemBlocking = {
+    "malus": "HI.itemBlocking.malus",
+    "nbAttacksPerRound": "HI.itemBlocking.nbAttacksPerRound"
 }
 
-BOL.itemSoak = {
-    "formula": "BOL.itemSoak.formula",
-    "value": "BOL.itemSoak.value"
+HI.itemSoak = {
+    "formula": "HI.itemSoak.formula",
+    "value": "HI.itemSoak.value"
 }
 
-BOL.featureSubtypes = {
-    "origin": "BOL.featureSubtypes.origin",
-    "race": "BOL.featureSubtypes.race",
-    "career": "BOL.featureSubtypes.career",
-    "boon": "BOL.featureSubtypes.boon",
-    "flaw": "BOL.featureSubtypes.flaw",
-    "language": "BOL.featureSubtypes.language",
-    "godsfaith": "BOL.featureSubtypes.gods",
-    "fightoption": "BOL.featureSubtypes.fightOption",
-    "boleffect": "BOL.featureSubtypes.effect",
-    "horoscope": "BOL.featureSubtypes.horoscope",
+HI.featureSubtypes = {
+    "origin": "HI.featureSubtypes.origin",
+    "race": "HI.featureSubtypes.race",
+    "career": "HI.featureSubtypes.career",
+    "boon": "HI.featureSubtypes.boon",
+    "flaw": "HI.featureSubtypes.flaw",
+    "language": "HI.featureSubtypes.language",
+    "godsfaith": "HI.featureSubtypes.gods",
+    "fightoption": "HI.featureSubtypes.fightOption",
+    "boleffect": "HI.featureSubtypes.effect",
+    "horoscope": "HI.featureSubtypes.horoscope",
 }
 
-BOL.fightOptionTypes = {
-    "armordefault": "BOL.fightOptionTypes.armor",
-    "intrepid": "BOL.fightOptionTypes.intrepid",
-    "twoweaponsdef": "BOL.fightOptionTypes.twoweaponsdef",
-    "twoweaponsatt": "BOL.fightOptionTypes.twoweaponsatt",
-    "fulldefense": "BOL.fightOptionTypes.fulldefense",
-    "defense": "BOL.fightOptionTypes.defense",
-    "attack": "BOL.fightOptionTypes.attack",
+HI.fightOptionTypes = {
+    "armordefault": "HI.fightOptionTypes.armor",
+    "intrepid": "HI.fightOptionTypes.intrepid",
+    "twoweaponsdef": "HI.fightOptionTypes.twoweaponsdef",
+    "twoweaponsatt": "HI.fightOptionTypes.twoweaponsatt",
+    "fulldefense": "HI.fightOptionTypes.fulldefense",
+    "defense": "HI.fightOptionTypes.defense",
+    "attack": "HI.fightOptionTypes.attack",
 }
 
-BOL.itemIcons = {
+HI.itemIcons = {
     "item": "icons/containers/chest/chest-worn-oak-tan.webp",
     "capacity": "icons/sundries/scrolls/scroll-plain-tan-red.webp",
     "species": "icons/environment/people/group.webp",
@@ -291,20 +291,20 @@ BOL.itemIcons = {
     "path": "icons/sundries/books/book-embossed-gold-red.webp"
 }
 
-BOL.actorIcons = {
+HI.actorIcons = {
     "npc": "icons/environment/people/commoner.webp",
     "encounter": "icons/svg/mystery-man-black.svg",
     "loot": "icons/containers/bags/sack-simple-leather-brown.webp"
 }
 
-BOL.bougetteState = {
-    "0": "BOL.bougette.nomoney",
-    "1": "BOL.bougette.tolive",
-    "2": "BOL.bougette.easylife",
-    "3": "BOL.bougette.luxury",
-    "4": "BOL.bougette.rich"
+HI.bougetteState = {
+    "0": "HI.bougette.nomoney",
+    "1": "HI.bougette.tolive",
+    "2": "HI.bougette.easylife",
+    "3": "HI.bougette.luxury",
+    "4": "HI.bougette.rich"
 }
-BOL.bougetteDice = {
+HI.bougetteDice = {
     "0": "0",
     "1": "2d6-1",
     "2": "2d6",
@@ -312,27 +312,27 @@ BOL.bougetteDice = {
     "4": "2d6+2"
 }
 
-BOL.creatureSize = {
-    "tiny": { order: 1, label: "BOL.size.tiny" },
-    "verysmall": { order: 2, label: "BOL.size.verysmall" },
-    "small": { order: 3, label: "BOL.size.small" },
-    "medium": { order: 4, label: "BOL.size.medium" },
-    "large": { order: 5, label: "BOL.size.large" },
-    "verylarge": { order: 6, label: "BOL.size.verylarge" },
-    "huge": { order: 7, label: "BOL.size.huge" },
-    "massive": { order: 8, label: "BOL.size.massive" },
-    "enormous": { order: 9, label: "BOL.size.enormous" },
-    "gigantic": { order: 10, label: "BOL.size.gigantic" },
-    "immense": { order: 11, label: "BOL.size.immense" },
-    "colossal": { order: 12, label: "BOL.size.colossal" }
+HI.creatureSize = {
+    "tiny": { order: 1, label: "HI.size.tiny" },
+    "verysmall": { order: 2, label: "HI.size.verysmall" },
+    "small": { order: 3, label: "HI.size.small" },
+    "medium": { order: 4, label: "HI.size.medium" },
+    "large": { order: 5, label: "HI.size.large" },
+    "verylarge": { order: 6, label: "HI.size.verylarge" },
+    "huge": { order: 7, label: "HI.size.huge" },
+    "massive": { order: 8, label: "HI.size.massive" },
+    "enormous": { order: 9, label: "HI.size.enormous" },
+    "gigantic": { order: 10, label: "HI.size.gigantic" },
+    "immense": { order: 11, label: "HI.size.immense" },
+    "colossal": { order: 12, label: "HI.size.colossal" }
 }
 
-BOL.horoscopeAnswer = {
-    "favorable": "BOL.ui.horoscopefavorable",
-    "unfavorable": "BOL.ui.horoscopeunfavorable",
+HI.horoscopeAnswer = {
+    "favorable": "HI.ui.horoscopefavorable",
+    "unfavorable": "HI.ui.horoscopeunfavorable",
 }
 
-BOL.bolEffectModifier = {
+HI.bolEffectModifier = {
     "-8": "-8",
     "-6": "-6",
     "-4": "-4",
@@ -349,7 +349,7 @@ BOL.bolEffectModifier = {
     "+8": "+8",
 }
 
-BOL.statusEffects = [
+HI.statusEffects = [
     {
         "id": "dead",
         "label": "EFFECT.StatusDead",
@@ -457,4 +457,4 @@ BOL.statusEffects = [
     }
 ]
 
-BOL.debug = false;
+HI.debug = false;

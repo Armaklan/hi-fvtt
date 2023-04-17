@@ -1,16 +1,16 @@
 {{#if (count horoscopeBonusList)}}
-  <div class='flexrow roll-box'>
-    <div class='flex1 center bg-darkred'>
-      <label for='mod'>
-        {{localize 'BOL.ui.horoscopesBonus'}}
+  <div class="flexrow roll-box">
+    <div class="flex1 center bg-darkred">
+      <label for="mod">
+        {{localize "HI.ui.horoscopesBonus"}}
       </label>
     </div>
-    <div class='flex1 center cell'>
+    <div class="flex1 center cell">
       <select
-        class='flex1'
-        name='horoscope-bonus-applied'
-        id='horoscope-bonus-applied'
-        data-type='String'
+        class="flex1"
+        name="horoscope-bonus-applied"
+        id="horoscope-bonus-applied"
+        data-type="String"
         multiple
       >
         {{#each horoscopeBonusList as |horoscope id|}}
@@ -24,18 +24,18 @@
 {{/if}}
 
 {{#if (count horoscopeMalusList)}}
-  <div class='flexrow roll-box'>
-    <div class='flex1 center bg-darkred'>
-      <label for='mod'>
-        {{localize 'BOL.ui.horoscopesMalus'}}
+  <div class="flexrow roll-box">
+    <div class="flex1 center bg-darkred">
+      <label for="mod">
+        {{localize "HI.ui.horoscopesMalus"}}
       </label>
     </div>
-    <div class='flex1 center cell'>
+    <div class="flex1 center cell">
       <select
-        class='flex1'
-        name='horoscope-malus-applied'
-        id='horoscope-malus-applied'
-        data-type='String'
+        class="flex1"
+        name="horoscope-malus-applied"
+        id="horoscope-malus-applied"
+        data-type="String"
         multiple
       >
         {{#each horoscopeMalusList as |horoscope id|}}
@@ -49,22 +49,24 @@
 {{/if}}
 
 {{#if (countKeys horoscopeGroupList)}}
-  <div class='flexrow roll-box'>
-    <div class='flex1 center bg-darkred'>
-      <label for='mod'>
-        {{localize 'BOL.ui.horoscopeGroup'}}
+  <div class="flexrow roll-box">
+    <div class="flex1 center bg-darkred">
+      <label for="mod">
+        {{localize "HI.ui.horoscopeGroup"}}
       </label>
     </div>
-    <div class='flex1 center cell'>
+    <div class="flex1 center cell">
       <select
-        class='flex1'
-        name='horoscope-group-applied'
-        id='horoscope-group-applied'
-        data-type='String'
+        class="flex1"
+        name="horoscope-group-applied"
+        id="horoscope-group-applied"
+        data-type="String"
       >
         {{#each horoscopeGroupList as |horoscope index|}}
           <option value="{{index}}">
-            {{horoscope.nbDice}}d{{upperFirstOnly horoscope.type}} - {{horoscope.name}} 
+            {{horoscope.nbDice}}d{{upperFirstOnly horoscope.type}}
+            -
+            {{horoscope.name}}
           </option>
         {{/each}}
       </select>

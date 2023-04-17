@@ -1,14 +1,25 @@
-    {{#if careers}}
-    <div class="flexrow roll-box">
-        <div class="flex1 center bg-darkred" data-tooltip-direction="LEFT" data-tooltip="Click-gauche pour selectionner, CTRL+Click gauche pour déselectionner">
-            <label for="mod">{{localize 'BOL.ui.careers'}}</label>
-        </div>
-        <div class="flex1 center cell">
-            <select class="flex1" name="career" id="career" data-type="String" multiple>
-                {{#each careers as | career id|}}
-                    <option value="{{career.system.rank}}">{{career.name}} ({{numberFormat career.system.rank decimals=0 sign=true}})</option>
-                {{/each}}
-            </select>
-        </div>
+{{#if careers}}
+  <div class="flexrow roll-box">
+    <div
+      class="flex1 center bg-darkred"
+      data-tooltip-direction="LEFT"
+      data-tooltip="Click-gauche pour selectionner, CTRL+Click gauche pour déselectionner"
+    >
+      <label for="mod">{{localize "HI.ui.careers"}}</label>
     </div>
-    {{/if}}
+    <div class="flex1 center cell">
+      <select
+        class="flex1"
+        name="career"
+        id="career"
+        data-type="String"
+        multiple
+      >
+        {{#each careers as |career id|}}
+          <option value="{{career.system.rank}}">{{career.name}}
+            ({{numberFormat career.system.rank decimals=0 sign=true}})</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+{{/if}}

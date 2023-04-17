@@ -1,26 +1,30 @@
- <h4><strong>{{localize "BOL.chat.horoscope"}} {{localize horoscopeTypeLabel}}</strong></h4>
-<h4><strong>{{localize "BOL.chat.horoscopepoints" points=astrologyPointsCost}}</strong></h4>
+<h4><strong>{{localize "HI.chat.horoscope"}}
+    {{localize horoscopeTypeLabel}}</strong></h4>
+<h4><strong>{{localize
+      "HI.chat.horoscopepoints"
+      points=astrologyPointsCost
+    }}</strong></h4>
 
 {{#if (eq horoscopeType "minor")}}
   {{#if isSuccess}}
-    {{localize "BOL.chat.horoscopeminorsuccess"}}
+    {{localize "HI.chat.horoscopeminorsuccess"}}
   {{else}}
-    {{localize "BOL.chat.horoscopeminorfailure"}}
+    {{localize "HI.chat.horoscopeminorfailure"}}
   {{/if}}
 {{/if}}
 
 {{#if (eq horoscopeType "major")}}
   {{#if isSuccess}}
-    {{localize "BOL.chat.horoscopemajorsuccess"}}
+    {{localize "HI.chat.horoscopemajorsuccess"}}
   {{else}}
-    {{localize "BOL.chat.horoscopemajorfailure"}}
+    {{localize "HI.chat.horoscopemajorfailure"}}
   {{/if}}
 {{/if}}
 
 {{#if (eq horoscopeType "majorgroup")}}
   {{#if isSuccess}}
-    {{localize "BOL.chat.horoscopemajorgroupsuccess" careerBonus=careerBonus}}
+    {{localize "HI.chat.horoscopemajorgroupsuccess" careerBonus=careerBonus}}
   {{else}}
-    {{localize "BOL.chat.horoscopemajorgroupfailure" careerBonus=careerBonus}}
+    {{localize "HI.chat.horoscopemajorgroupfailure" careerBonus=careerBonus}}
   {{/if}}
 {{/if}}

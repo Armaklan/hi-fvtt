@@ -2,9 +2,9 @@
 {{#if isSorcerer}}
   <ol class="items-list">
       <li class="item flexrow item-header">
-          <div class="item-name flex4 left">{{localize "BOL.ui.spells"}}</div>
-          <div class="item-field flex2 center">{{localize "BOL.ui.circle"}}</div>
-          <div class="item-field flex1 center">{{localize "BOL.ui.difficulty"}}</div>
+          <div class="item-name flex4 left">{{localize "HI.ui.spells"}}</div>
+          <div class="item-field flex2 center">{{localize "HI.ui.circle"}}</div>
+          <div class="item-field flex1 center">{{localize "HI.ui.difficulty"}}</div>
           <div class="item-field flex1 right"></div>
       </li>
   {{#each spells as |item id|}}
@@ -20,9 +20,9 @@
               <span class="item-field">{{item.system.properties.difficulty}}</span>
           </div>
           <div class="item-field flex1 right">
-              <a class="item-control item-edit" title="{{localize "BOL.ui.edit"}}"><i class="fas fa-square"></i></a>
+              <a class="item-control item-edit" title="{{localize "HI.ui.edit"}}"><i class="fas fa-square"></i></a>
               &nbsp;
-              <a class="item-control item-delete" title="{{localize "BOL.ui.delete"}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-delete" title="{{localize "HI.ui.delete"}}"><i class="fas fa-trash"></i></a>
           </div>
   </li>
   {{/each}}
@@ -32,10 +32,10 @@
 {{#if isAlchemist}}
   <ol class="items-list">
       <li class="item flexrow item-header">
-          <div class="item-name flex4 left">{{localize "BOL.ui.alchemy"}}</div>
-          <div class="item-field flex2 center">{{localize "BOL.ui.type"}}</div>
-          <div class="item-field flex1 center">{{localize "BOL.ui.difficulty"}}</div>
-          <div class="item-field flex1 center">{{localize "BOL.ui.advance"}}</div>
+          <div class="item-name flex4 left">{{localize "HI.ui.alchemy"}}</div>
+          <div class="item-field flex2 center">{{localize "HI.ui.type"}}</div>
+          <div class="item-field flex1 center">{{localize "HI.ui.difficulty"}}</div>
+          <div class="item-field flex1 center">{{localize "HI.ui.advance"}}</div>
           <div class="item-field flex1 right"></div>
       </li>
   {{#each alchemy as |item id|}}
@@ -45,7 +45,7 @@
               <a class="rollable" data-roll-type="alchemy">{{item.name}}</a>
           </h4>
           <div class="item-field flex1 center">
-              <span class="item-field">{{localize (concat "BOL.alchemyItem." item.system.properties.alchemytype)}}</span>
+              <span class="item-field">{{localize (concat "HI.alchemyItem." item.system.properties.alchemytype)}}</span>
           </div>
           <div class="item-field flex1 center">
               <span class="item-field">{{item.system.properties.difficulty}}</span>
@@ -57,9 +57,9 @@
             <a class="inc-dec-btns-alchemy"><i class="fas fa-plus-square"></i></a>
           </div>
           <div class="item-field flex1 right">
-              <a class="item-control item-edit" title="{{localize "BOL.ui.edit"}}"><i class="fas fa-square"></i></a>
+              <a class="item-control item-edit" title="{{localize "HI.ui.edit"}}"><i class="fas fa-square"></i></a>
               &nbsp;
-              <a class="item-control item-delete" title="{{localize "BOL.ui.delete"}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-delete" title="{{localize "HI.ui.delete"}}"><i class="fas fa-trash"></i></a>
           </div>
   </li>
   {{/each}}
@@ -70,39 +70,39 @@
 {{#if isAstrologer}}
   <ol class="items-list">
     <li class="item flexrow item-header">
-      <div class="item-name flex4 left">{{localize "BOL.ui.astrologerPoints"}}</div>
+      <div class="item-name flex4 left">{{localize "HI.ui.astrologerPoints"}}</div>
       <div class="item-name flex4 left">&nbsp;</div>
     </li>  
     <li class="item flexrow" data-item-id="{{item._id}}">
       <h4 class="item-name flex4 left">
         <div class="item-image"><img src="icons/magic/perception/hand-eye-fire-blue.webp" /></div>
-        {{localize "BOL.ui.astrologerPointsLabel"}}
+        {{localize "HI.ui.astrologerPointsLabel"}}
       </h4>
       <input class="field-value" type="text" name="system.resources.astrologypoints.value" value="{{resources.astrologypoints.value}}" data-dtype="Number"/>
     </li>
     <li class="item flexrow" data-item-id="{{item._id}}">
       <h4 class="item-name flex4 left">
         <div class="item-image"><img src="icons/magic/perception/eye-ringed-glow-angry-large-teal.webp" /></div>
-        <a class="rollable" data-roll-type="horoscope-minor">{{localize "BOL.ui.astrologyMinor"}} <i class="darkgreen fas fa-dice"></i></a>
+        <a class="rollable" data-roll-type="horoscope-minor">{{localize "HI.ui.astrologyMinor"}} <i class="darkgreen fas fa-dice"></i></a>
       </h4>
       <h4 class="item-name flex4 left">
         <div class="item-image"><img src="icons/magic/perception/eye-ringed-glow-angry-large-red.webp" /></div>
-        <a class="rollable" data-roll-type="horoscope-major">{{localize "BOL.ui.astrologyMajor"}} <i class="darkgreen fas fa-dice"></i></a>
+        <a class="rollable" data-roll-type="horoscope-major">{{localize "HI.ui.astrologyMajor"}} <i class="darkgreen fas fa-dice"></i></a>
       </h4>
     </li>
     <li class="item flexrow" data-item-id="{{item._id}}">
       <h4 class="item-name flex4 left">
         <div class="item-image"><img src="icons/magic/perception/eye-ringed-glow-angry-large-red.webp" /></div>
-        <a class="rollable" data-roll-type="horoscope-major-group">{{localize "BOL.ui.astrologyMajorGroup"}} <i class="darkgreen fas fa-dice"></i></a>
+        <a class="rollable" data-roll-type="horoscope-major-group">{{localize "HI.ui.astrologyMajorGroup"}} <i class="darkgreen fas fa-dice"></i></a>
       </h4>
     </li>
   </ol>
 
   <ol class="items-list">
       <li class="item flexrow item-header">
-          <div class="item-name flex4 left">{{localize "BOL.ui.astrology"}}</div>
-          <div class="item-field flex2 center">{{localize "BOL.ui.type"}}</div>
-          <div class="item-field flex2 center">{{localize "BOL.ui.answer"}}</div>
+          <div class="item-name flex4 left">{{localize "HI.ui.astrology"}}</div>
+          <div class="item-field flex2 center">{{localize "HI.ui.type"}}</div>
+          <div class="item-field flex2 center">{{localize "HI.ui.answer"}}</div>
           <div class="item-field flex1 right"></div>
       </li>
     {{#each horoscopes as |item id|}}
@@ -118,12 +118,12 @@
             {{/if}}
           </div>
           <div class="item-field flex2 center">
-            <span class="item-field">{{localize (concat 'BOL.ui.horoscope' item.system.properties.horoscopeanswer)}}</span>
+            <span class="item-field">{{localize (concat 'HI.ui.horoscope' item.system.properties.horoscopeanswer)}}</span>
           </div>
           <div class="item-field flex1 right">
-              <a class="item-control item-edit" title="{{localize "BOL.ui.edit"}}"><i class="fas fa-square"></i></a>
+              <a class="item-control item-edit" title="{{localize "HI.ui.edit"}}"><i class="fas fa-square"></i></a>
               &nbsp;
-              <a class="item-control item-delete" title="{{localize "BOL.ui.delete"}}"><i class="fas fa-trash"></i></a>
+              <a class="item-control item-delete" title="{{localize "HI.ui.delete"}}"><i class="fas fa-trash"></i></a>
           </div>
   </li>
   {{/each}}

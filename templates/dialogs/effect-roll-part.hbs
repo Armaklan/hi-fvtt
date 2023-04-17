@@ -1,14 +1,22 @@
-    {{#if (count bolEffects)}}
-    <div class="flexrow roll-box" >
-        <div class="flex1 center bg-darkred">
-            <label for="mod">{{localize 'BOL.ui.boleffects'}}</label>
-        </div>
-        <div class="flex1 center cell">
-          <select disabled class="flex1" name="applicable-effects" id="applicable-effects" data-type="String" multiple>
-            {{#each bolApplicableEffects as |effect id|}}
-              <option value="{{id}}" selected >{{effect.name}} ({{effect.system.properties.modifier}})</option>
-            {{/each}}
-          </select>
-        </div>
+{{#if (count bolEffects)}}
+  <div class="flexrow roll-box">
+    <div class="flex1 center bg-darkred">
+      <label for="mod">{{localize "HI.ui.boleffects"}}</label>
     </div>
-    {{/if}}
+    <div class="flex1 center cell">
+      <select
+        disabled
+        class="flex1"
+        name="applicable-effects"
+        id="applicable-effects"
+        data-type="String"
+        multiple
+      >
+        {{#each bolApplicableEffects as |effect id|}}
+          <option value="{{id}}" selected>{{effect.name}}
+            ({{effect.system.properties.modifier}})</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+{{/if}}

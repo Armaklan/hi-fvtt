@@ -1,4 +1,4 @@
-import {BoLRoll} from "../controllers/bol-rolls.js";
+import { BoLRoll } from "../controllers/bol-rolls.js";
 
 export class Macros {
     /**
@@ -7,14 +7,14 @@ export class Macros {
      * 
      * @returns 
      */
-    static getSpeakersActor = function(){
+    static getSpeakersActor = function () {
         // Vérifie qu'un seul token est sélectionné
         const tokens = canvas.tokens.controlled;
         if (tokens.length > 1) {
-            ui.notifications.warn(game.i18n.localize('BOL.notification.MacroMultipleTokensSelected'));
+            ui.notifications.warn(game.i18n.localize('HI.notification.MacroMultipleTokensSelected'));
             return null;
         }
-        
+
         const speaker = ChatMessage.getSpeaker();
         let actor;
         // Si un token est sélectionné, le prendre comme acteur cible
@@ -24,28 +24,28 @@ export class Macros {
         return actor;
     }
 
-    static rollMacro = async function (rollType, key, adv, mod){
+    static rollMacro = async function (rollType, key, adv, mod) {
         const actor = this.getSpeakersActor();
         // Several tokens selected
         if (actor === null) return;
         // No token selected
-        if (actor === undefined) return ui.notifications.error(game.i18n.localize("BOL.notification.MacroNoTokenSelected"));
+        if (actor === undefined) return ui.notifications.error(game.i18n.localize("HI.notification.MacroNoTokenSelected"));
 
         const actorData = {};
         actorData.data = {
-            features : actor.buildFeatures()
+            features: actor.buildFeatures()
         };
 
-        if(rollType === "attribute") {
+        if (rollType === "attribute") {
             let attribute = eval(`actor.data.data.attributes.${key}`);
             let rollLabel = (attribute.label) ? game.i18n.localize(attribute.label) : null;
-            let description = actor.name + " - " + game.i18n.localize('BOL.ui.attributeCheck') + " - " + game.i18n.localize(attribute.label) ;
+            let description = actor.name + " - " + game.i18n.localize('HI.ui.attributeCheck') + " - " + game.i18n.localize(attribute.label);
             BoLRoll.attributeRollDialog(actor, actorData, attribute, rollLabel, description, adv, mod);
         }
-        else if(rollType === "aptitude") {
+        else if (rollType === "aptitude") {
             let aptitude = eval(`actor.data.data.aptitudes.${key}`);
             let rollLabel = (aptitude.label) ? game.i18n.localize(aptitude.label) : null;
-            let description = actor.name + " - " + game.i18n.localize('BOL.ui.aptitudeCheck') + " - " + game.i18n.localize(aptitude.label) ;
+            let description = actor.name + " - " + game.i18n.localize('HI.ui.aptitudeCheck') + " - " + game.i18n.localize(aptitude.label);
             BoLRoll.aptitudeRollDialog(actor, actorData, aptitude, rollLabel, description, adv, mod);
         }
     }

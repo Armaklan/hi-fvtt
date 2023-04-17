@@ -1,93 +1,155 @@
-<h3 class="form-header">{{localize "BOL.ui.weaponProperties"}}</h3>
+<h3 class="form-header">{{localize "HI.ui.weaponProperties"}}</h3>
 
-<hr/>
+<hr />
 <div class="form-group">
-  <label class="property-label">{{localize "BOL.itemProperty.vehicleDamageType"}}</label>
+  <label class="property-label">{{localize
+      "HI.itemProperty.vehicleDamageType"
+    }}</label>
   <div class="form-fields">
-      <label class="checkbox">
-        <input class="field-value" type="checkbox" name="system.properties.isfiredamage" {{checked item.system.properties.isfiredamage}}> {{localize "BOL.itemProperty.isfiredamage"}}
-      </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.isfiredamage"
+        {{checked item.system.properties.isfiredamage}}
+      />
+      {{localize "HI.itemProperty.isfiredamage"}}
+    </label>
   </div>
   <div class="form-fields">
-      <label class="checkbox">
-        <input class="field-value" type="checkbox" name="system.properties.ishulldamage" {{checked item.system.properties.ishulldamage}}> {{localize "BOL.itemProperty.ishulldamage"}}
-      </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.ishulldamage"
+        {{checked item.system.properties.ishulldamage}}
+      />
+      {{localize "HI.itemProperty.ishulldamage"}}
+    </label>
   </div>
   <div class="form-fields">
-      <label class="checkbox">
-        <input class="field-value" type="checkbox" name="system.properties.iscrewdamage" {{checked item.system.properties.iscrewdamage}}> {{localize "BOL.itemProperty.iscrewdamage"}}
-      </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.iscrewdamage"
+        {{checked item.system.properties.iscrewdamage}}
+      />
+      {{localize "HI.itemProperty.iscrewdamage"}}
+    </label>
   </div>
   <div class="form-fields">
-      <label class="checkbox">
-        <input class="field-value" type="checkbox" name="system.properties.isboarding" {{checked item.system.properties.isboarding}}> {{localize "BOL.itemProperty.isboarding"}}
-      </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.isboarding"
+        {{checked item.system.properties.isboarding}}
+      />
+      {{localize "HI.itemProperty.isboarding"}}
+    </label>
   </div>
   <div class="form-fields">
-      <label class="checkbox">
-        <input class="field-value" type="checkbox" name="system.properties.isspur" {{checked item.system.properties.isspur}}> {{localize "BOL.itemProperty.isspur"}}
-      </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.isspur"
+        {{checked item.system.properties.isspur}}
+      />
+      {{localize "HI.itemProperty.isspur"}}
+    </label>
   </div>
   <div class="form-fields">
-      <label class="checkbox">
-        <input class="field-value" type="checkbox" name="system.properties.isbreakrow" {{checked item.system.properties.isbreakrow}}> {{localize "BOL.itemProperty.isbreakrow"}}
-      </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.isbreakrow"
+        {{checked item.system.properties.isbreakrow}}
+      />
+      {{localize "HI.itemProperty.isbreakrow"}}
+    </label>
   </div>
 </div>
 
 {{#if item.system.properties.ishulldamage}}
-<hr/>
-<h3 class="form-header">{{localize "BOL.itemProperty.hulldamage"}}</h3>
-<div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.hulldamage"}}</label>
+  <hr />
+  <h3 class="form-header">{{localize "HI.itemProperty.hulldamage"}}</h3>
+  <div class="form-group">
+    <label class="property-label">{{localize
+        "HI.itemProperty.hulldamage"
+      }}</label>
     <div class="form-fields">
-        <select class="field-value" name="system.properties.hulldamage" data-dtype="String">
-            {{#select item.system.properties.hulldamage}}
-                {{#each config.damageValues as |value id|}}
-                    <option value="{{id}}">{{value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
+      <select
+        class="field-value"
+        name="system.properties.hulldamage"
+        data-dtype="String"
+      >
+        {{#select item.system.properties.hulldamage}}
+          {{#each config.damageValues as |value id|}}
+            <option value="{{id}}">{{value}}</option>
+          {{/each}}
+        {{/select}}
+      </select>
     </div>
-</div>
-<div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.hullDamageMultiplier"}}</label>
+  </div>
+  <div class="form-group">
+    <label class="property-label">{{localize
+        "HI.itemProperty.hullDamageMultiplier"
+      }}</label>
     <div class="form-fields center">
-        <select class="field-value" name="system.properties.hullDamageMultiplier" data-dtype="String">
-            {{#select item.system.properties.hullDamageMultiplier}}
-                {{#each config.damageMultiplier as |value id|}}
-                    <option value="{{id}}">{{value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
+      <select
+        class="field-value"
+        name="system.properties.hullDamageMultiplier"
+        data-dtype="String"
+      >
+        {{#select item.system.properties.hullDamageMultiplier}}
+          {{#each config.damageMultiplier as |value id|}}
+            <option value="{{id}}">{{value}}</option>
+          {{/each}}
+        {{/select}}
+      </select>
     </div>
-</div>
+  </div>
 {{/if}}
 {{#if item.system.properties.iscrewdamage}}
-<hr/>
-<h3 class="form-header">{{localize "BOL.itemProperty.crewdamage"}}</h3>
-<div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.crewdamage"}}</label>
+  <hr />
+  <h3 class="form-header">{{localize "HI.itemProperty.crewdamage"}}</h3>
+  <div class="form-group">
+    <label class="property-label">{{localize
+        "HI.itemProperty.crewdamage"
+      }}</label>
     <div class="form-fields">
-        <select class="field-value" name="system.properties.crewdamage" data-dtype="String">
-            {{#select item.system.properties.crewdamage}}
-                {{#each config.damageValues as |value id|}}
-                    <option value="{{id}}">{{value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
+      <select
+        class="field-value"
+        name="system.properties.crewdamage"
+        data-dtype="String"
+      >
+        {{#select item.system.properties.crewdamage}}
+          {{#each config.damageValues as |value id|}}
+            <option value="{{id}}">{{value}}</option>
+          {{/each}}
+        {{/select}}
+      </select>
     </div>
-</div>
-<div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.crewDamageMultiplier"}}</label>
+  </div>
+  <div class="form-group">
+    <label class="property-label">{{localize
+        "HI.itemProperty.crewDamageMultiplier"
+      }}</label>
     <div class="form-fields center">
-        <select class="field-value" name="system.properties.crewDamageMultiplier" data-dtype="String">
-            {{#select item.system.properties.crewDamageMultiplier}}
-                {{#each config.damageMultiplier as |value id|}}
-                    <option value="{{id}}">{{value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
+      <select
+        class="field-value"
+        name="system.properties.crewDamageMultiplier"
+        data-dtype="String"
+      >
+        {{#select item.system.properties.crewDamageMultiplier}}
+          {{#each config.damageMultiplier as |value id|}}
+            <option value="{{id}}">{{value}}</option>
+          {{/each}}
+        {{/select}}
+      </select>
     </div>
-</div>
+  </div>
 {{/if}}

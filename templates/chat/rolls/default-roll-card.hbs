@@ -1,20 +1,20 @@
 <div>
   {{#if isSuccess}}
       {{#if isLegendary}}
-          <h2 class="success critical"><i class="fas fa-check-double"></i>&nbsp;{{localize "BOL.ui.criticallegend"}}...
+          <h2 class="success critical"><i class="fas fa-check-double"></i>&nbsp;{{localize "HI.ui.criticallegend"}}...
       {{else}}
         {{#if isCritical}}
-            <h2 class="success critical"><i class="fas fa-check-double"></i>&nbsp;{{localize "BOL.ui.critical"}}...
+            <h2 class="success critical"><i class="fas fa-check-double"></i>&nbsp;{{localize "HI.ui.critical"}}...
         {{else}}
-            <h2 class="success"><i class="fas fa-check"></i>&nbsp;{{localize "BOL.ui.success"}}...
+            <h2 class="success"><i class="fas fa-check"></i>&nbsp;{{localize "HI.ui.success"}}...
         {{/if}}
       {{/if}}
   {{/if}}
   {{#if isFailure}}
       {{#if isFumble}}
-          <h2 class="failure fumble"><i class="fas fa-skull-crossbones"></i>&nbsp;{{localize "BOL.ui.fumble"}}...
+          <h2 class="failure fumble"><i class="fas fa-skull-crossbones"></i>&nbsp;{{localize "HI.ui.fumble"}}...
       {{else}}
-          <h2 class="failure"><i class="fas fa-times"></i>&nbsp;{{localize "BOL.ui.failure"}}...
+          <h2 class="failure"><i class="fas fa-times"></i>&nbsp;{{localize "HI.ui.failure"}}...
       {{/if}}
   {{/if}}
     <img class="chat-icon" src="{{img}}" alt="{{actor.name}}"/>
@@ -25,28 +25,28 @@
 
 <div class="actions-section">
   {{#if isFumble}}
-    {{localize "BOL.chat.fumblemessage"}}
+    {{localize "HI.chat.fumblemessage"}}
   {{/if}}
 
   {{#if fightOption}}
   <div>
-    {{localize "BOL.chat.fightoption"}} : {{fightOption.name}}
+    {{localize "HI.chat.fightoption"}} : {{fightOption.name}}
   </div>
   {{/if}}
 
   {{#if initiativeRank}}
   <div>
-    {{localize "BOL.chat.initiative"}}: {{initiativeRank}}
+    {{localize "HI.chat.initiative"}}: {{initiativeRank}}
   </div>
   {{/if}}
 
   {{#if (eq mode "bougette")}}
   <div>
-    {{localize "BOL.chat.rollbougette"}} : 
+    {{localize "HI.chat.rollbougette"}} : 
     {{#if isSuccess}}
-      {{localize "BOL.chat.bougettesuccess"}}
+      {{localize "HI.chat.bougettesuccess"}}
     {{else}}
-      {{localize "BOL.chat.bougettefailure"}}
+      {{localize "HI.chat.bougettefailure"}}
     {{/if}}
   </div>
   {{/if}}
@@ -57,11 +57,11 @@
 
     {{#if isCritical}}
       <div>
-        {{localize "BOL.chat.criticalinfo"}}
+        {{localize "HI.chat.criticalinfo"}}
       </div>
       <div class="bol-margin-tb-2">
         <a class="content-link" draggable="true" data-uuid="Compendium.bol.aides-de-jeu.Yl1RKQb0BjVUtilk" data-id="Yl1RKQb0BjVUtilk" data-type="JournalEntry" data-pack="bol.aides-de-jeu" data-tooltip="un journal">
-          <i class="fas fa-book-open"></i>{{localize "BOL.chat.criticalbuttonjournal"}}</a>
+          <i class="fas fa-book-open"></i>{{localize "HI.chat.criticalbuttonjournal"}}</a>
       </div>
     {{/if}}
 
@@ -83,7 +83,7 @@
     {{/if}}
 
     {{#if reroll}}
-      <button class="chat-button button hero-reroll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "BOL.chat.reroll"}}</button>
+      <button class="chat-button button hero-reroll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "HI.chat.reroll"}}</button>
     {{/if}}
 
     <br>

@@ -95,7 +95,7 @@ export class BoLCharacterSummary extends Application {
       game.bol.charSummary.updateNPC()
 
     } else {
-      ui.notifications.warn(game.i18n.localize("BOL.ui.noactorfound"))
+      ui.notifications.warn(game.i18n.localize("HI.ui.noactorfound"))
     }
   }
 

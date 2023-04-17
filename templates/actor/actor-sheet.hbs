@@ -13,7 +13,7 @@
       {{#if (count boleffects)}}
         <ol class="items-list">
           <li class="item flexrow item-header">
-            <div class="item-name flex2">{{localize "BOL.ui.effects"}}</div>
+            <div class="item-name flex2">{{localize "HI.ui.effects"}}</div>
           </li>
           {{#each boleffects as |effect keyEffect|}}
             <li class="item flexrow" data-item-id="{{effect.id}}">
@@ -32,16 +32,16 @@
 
       {{!-- Sheet Tab Navigation --}}
       <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="stats">{{localize "BOL.ui.tab.stats"}}</a>
+        <a class="item" data-tab="stats">{{localize "HI.ui.tab.stats"}}</a>
         {{#if (ne charType "creature")}}      
-          <a class="item" data-tab="actions">{{localize "BOL.ui.tab.actions"}}</a>  
-          <a class="item" data-tab="features">{{localize "BOL.ui.tab.features"}}</a>
-          <a class="item" data-tab="equipment">{{localize "BOL.ui.tab.equipment"}}</a>
+          <a class="item" data-tab="actions">{{localize "HI.ui.tab.actions"}}</a>  
+          <a class="item" data-tab="features">{{localize "HI.ui.tab.features"}}</a>
+          <a class="item" data-tab="equipment">{{localize "HI.ui.tab.equipment"}}</a>
           {{#if isMysteries}}
-            <a class="item" data-tab="spellalchemy">{{localize "BOL.ui.tab.spellalchemy"}}</a>
+            <a class="item" data-tab="spellalchemy">{{localize "HI.ui.tab.spellalchemy"}}</a>
           {{/if}}
         {{/if}}
-        <a class="item" data-tab="description">{{localize "BOL.ui.tab.description"}}</a>
+        <a class="item" data-tab="description">{{localize "HI.ui.tab.description"}}</a>
       </nav>
 
       {{!-- Sheet Body --}}

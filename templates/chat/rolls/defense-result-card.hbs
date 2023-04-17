@@ -1,22 +1,26 @@
-<img class="chat-icon" src="{{defender.img}}" alt="{{defender.name}}"/>
-<h3>{{localize "BOL.chat.damagesummary" name=name}}</h3>
+<img class="chat-icon" src="{{defender.img}}" alt="{{defender.name}}" />
+<h3>{{localize "HI.chat.damagesummary" name=name}}</h3>
 <ul>
   <li>
-  {{#if (eq defenseMode "damage-with-armor")}}
-  {{localize "BOL.chat.protectvalue"}} : {{armorProtect}}.
-  {{/if}}
-  {{#if (eq defenseMode "damage-without-armor")}}
-  {{localize "BOL.chat.noprotectvalue"}}
-  {{/if}}
-  {{#if (eq defenseMode "hero-reduce-damage")}}
-  {{localize "BOL.chat.protectvalue"}} : {{armorProtect}}.
-  {{localize "BOL.chat.heroreducedamage" total=rollHero.total}}
-  {{/if}}
-  {{#if (eq defenseMode "hero-in-extremis")}}
-  {{localize "BOL.chat.herosplintered" name=weaponHero.name}}  
-  {{/if}}
-</li>
-<li>
-  {{localize "BOL.chat.finaldamage" finalDamage=finalDamage}}
-</li>
+    {{#if (eq defenseMode "damage-with-armor")}}
+      {{localize "HI.chat.protectvalue"}}
+      :
+      {{armorProtect}}.
+    {{/if}}
+    {{#if (eq defenseMode "damage-without-armor")}}
+      {{localize "HI.chat.noprotectvalue"}}
+    {{/if}}
+    {{#if (eq defenseMode "hero-reduce-damage")}}
+      {{localize "HI.chat.protectvalue"}}
+      :
+      {{armorProtect}}.
+      {{localize "HI.chat.heroreducedamage" total=rollHero.total}}
+    {{/if}}
+    {{#if (eq defenseMode "hero-in-extremis")}}
+      {{localize "HI.chat.herosplintered" name=weaponHero.name}}
+    {{/if}}
+  </li>
+  <li>
+    {{localize "HI.chat.finaldamage" finalDamage=finalDamage}}
+  </li>
 </ul>

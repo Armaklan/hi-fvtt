@@ -1,104 +1,165 @@
-<h3 class="form-header">{{localize "BOL.ui.spellProperties"}}</h3>
+<h3 class="form-header">{{localize "HI.ui.spellProperties"}}</h3>
 
-  <div class="property flexrow">
-      <label class="property-label">{{localize "BOL.ui.circle"}}</label>
-        <select class="field-value" name="system.properties.circle" data-dtype="Number">
-            {{#select item.system.properties.circle}}
-                {{#each config.spellType as |value id|}}
-                    <option value="{{id}}">{{localize value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
+<div class="property flexrow">
+  <label class="property-label">{{localize "HI.ui.circle"}}</label>
+  <select
+    class="field-value"
+    name="system.properties.circle"
+    data-dtype="Number"
+  >
+    {{#select item.system.properties.circle}}
+      {{#each config.spellType as |value id|}}
+        <option value="{{id}}">{{localize value}}</option>
+      {{/each}}
+    {{/select}}
+  </select>
+</div>
+
+<div class="property flexrow">
+  <label class="property-label">{{localize "HI.ui.difficulty"}}</label>
+  <select
+    name="system.properties.difficulty"
+    value="{{item.system.properties.difficulty}}"
+  >
+    {{#select item.system.properties.difficulty}}
+      <option value="2">{{localize "HI.dialog.veryeasy"}}</option>
+      <option value="1">{{localize "HI.dialog.easy"}}</option>
+      <option value="0">{{localize "HI.dialog.moderate"}}</option>
+      <option value="-1">{{localize "HI.dialog.hard"}}</option>
+      <option value="-2">{{localize "HI.dialog.tough"}}</option>
+      <option value="-4">{{localize "HI.dialog.demanding"}}</option>
+      <option value="-6">{{localize "HI.dialog.formidable"}}</option>
+      <option value="-8">{{localize "HI.dialog.heroic"}}</option>
+    {{/select}}
+  </select>
+</div>
+
+<div class="property flexrow">
+  <label class="property-label">{{localize "HI.ui.ppcost"}}</label>
+  <input
+    class="field-value"
+    type="text"
+    name="system.properties.ppcost"
+    value="{{item.system.properties.ppcost}}"
+    data-dtype="Number"
+  />
+</div>
+
+<div class="property flexrow">
+  <label class="property-label">{{localize "HI.ui.duration"}}</label>
+  <input
+    class="field-value"
+    type="text"
+    name="system.properties.duration"
+    value="{{item.system.properties.duration}}"
+    data-dtype="String"
+  />
+</div>
+
+<div class="property flexrow">
+  <label class="property-label">{{localize "HI.ui.mandatoryconditions"}}</label>
+  <select
+    class="field-value"
+    name="system.properties.nbmandatoryconditions"
+    data-dtype="Number"
+  >
+    {{#select item.system.properties.nbmandatoryconditions}}
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    {{/select}}
+  </select>
+</div>
+
+{{#each item.system.properties.mandatoryconditions as |cond idx|}}
+  {{#if (lt idx @root.item.system.properties.nbmandatoryconditions)}}
+    <div class="property flexrow">
+      <label class="property-label">{{localize "HI.ui.mandatoryconditions"}}
+        {{add idx 1}}</label>
+      <input
+        class="field-value"
+        type="text"
+        name="system.properties.mandatoryconditions.{{idx}}"
+        value="{{cond}}"
+        data-dtype="String"
+      />
+    </div>
+  {{/if}}
+{{/each}}
+
+<div class="property flexrow">
+  <label class="property-label">{{localize "HI.ui.optionnalconditions"}}</label>
+  <select
+    class="field-value"
+    name="system.properties.nboptionnalconditions"
+    data-dtype="Number"
+  >
+    {{#select item.system.properties.nboptionnalconditions}}
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    {{/select}}
+  </select>
+</div>
+
+{{#each item.system.properties.optionnalconditions as |cond idx|}}
+  {{#if (lt idx @root.item.system.properties.nboptionnalconditions)}}
+    <div class="property flexrow">
+      <label class="property-label">{{localize "HI.ui.optionnalconditions"}}
+        {{add idx 1}}</label>
+      <input
+        class="field-value"
+        type="text"
+        name="system.properties.optionnalconditions.{{idx}}"
+        value="{{cond}}"
+        data-dtype="String"
+      />
+    </div>
+  {{/if}}
+{{/each}}
+
+<h4><label class="property-label">{{localize "HI.ui.magicnewrules"}}
+    :
+  </label></h4>
+
+<div class="property flexrow">
+  <div class="form-fields center">
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.spellkeep"
+        {{checked item.system.properties.spellkeep}}
+      />
+      {{localize "HI.ui.spellkeep"}}
+    </label>
   </div>
-
-  <div class="property flexrow">
-      <label class="property-label">{{localize "BOL.ui.difficulty"}}</label>
-      <select name="system.properties.difficulty" value="{{item.system.properties.difficulty}}">
-            {{#select item.system.properties.difficulty}}
-              <option value="2">{{localize "BOL.dialog.veryeasy"}}</option>
-              <option value="1">{{localize "BOL.dialog.easy"}}</option>
-              <option value="0">{{localize "BOL.dialog.moderate"}}</option>
-              <option value="-1">{{localize "BOL.dialog.hard"}}</option>
-              <option value="-2">{{localize "BOL.dialog.tough"}}</option>
-              <option value="-4">{{localize "BOL.dialog.demanding"}}</option>
-              <option value="-6">{{localize "BOL.dialog.formidable"}}</option>
-              <option value="-8">{{localize "BOL.dialog.heroic"}}</option>
-            {{/select}}
-      </select>
+  <div class="form-fields center">
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.concentrate"
+        {{checked item.system.properties.concentrate}}
+      />
+      {{localize "HI.ui.concentrate"}}
+    </label>
   </div>
-
-  <div class="property flexrow">
-        <label class="property-label">{{localize "BOL.ui.ppcost"}}</label>
-        <input class="field-value" type="text" name="system.properties.ppcost" value="{{item.system.properties.ppcost}}" data-dtype="Number"/>
+  <div class="form-fields center">
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.aggressive"
+        {{checked item.system.properties.aggressive}}
+      />
+      {{localize "HI.ui.aggressive"}}
+    </label>
   </div>
-
-  <div class="property flexrow">
-        <label class="property-label">{{localize "BOL.ui.duration"}}</label>
-        <input class="field-value" type="text" name="system.properties.duration" value="{{item.system.properties.duration}}" data-dtype="String"/>
-  </div>
-
-  <div class="property flexrow">
-    <label class="property-label">{{localize "BOL.ui.mandatoryconditions"}}</label>
-      <select class="field-value" name="system.properties.nbmandatoryconditions" data-dtype="Number">
-          {{#select item.system.properties.nbmandatoryconditions}}
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          {{/select}}
-      </select>
-  </div>
-
-    {{#each item.system.properties.mandatoryconditions as |cond idx|}}
-      {{#if (lt idx @root.item.system.properties.nbmandatoryconditions)}}
-      <div class="property flexrow">
-        <label class="property-label">{{localize "BOL.ui.mandatoryconditions"}} {{add idx 1}}</label>
-        <input class="field-value" type="text" name="system.properties.mandatoryconditions.{{idx}}" value="{{cond}}" data-dtype="String"/>
-      </div>
-      {{/if}}
-    {{/each}}
-
-  <div class="property flexrow">
-    <label class="property-label">{{localize "BOL.ui.optionnalconditions"}}</label>
-      <select class="field-value" name="system.properties.nboptionnalconditions" data-dtype="Number">
-          {{#select item.system.properties.nboptionnalconditions}}
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          {{/select}}
-      </select>
-  </div>
-
-    {{#each item.system.properties.optionnalconditions as |cond idx|}}
-      {{#if (lt idx @root.item.system.properties.nboptionnalconditions)}}
-      <div class="property flexrow">
-        <label class="property-label">{{localize "BOL.ui.optionnalconditions"}} {{add idx 1}}</label>
-        <input class="field-value" type="text" name="system.properties.optionnalconditions.{{idx}}" value="{{cond}}" data-dtype="String"/>
-      </div>
-      {{/if}}
-    {{/each}}
-
-  <h4><label class="property-label">{{localize "BOL.ui.magicnewrules"}} : </label></h4>
-
-  <div class="property flexrow">
-    <div class="form-fields center">
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.spellkeep" {{checked item.system.properties.spellkeep}}> {{localize "BOL.ui.spellkeep"}}
-        </label>
-      </div>
-      <div class="form-fields center">
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.concentrate" {{checked item.system.properties.concentrate}}> {{localize "BOL.ui.concentrate"}}
-        </label>
-      </div>
-      <div class="form-fields center">
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.aggressive" {{checked item.system.properties.aggressive}}> {{localize "BOL.ui.aggressive"}}
-        </label>
-      </div>
-  </div>
+</div>

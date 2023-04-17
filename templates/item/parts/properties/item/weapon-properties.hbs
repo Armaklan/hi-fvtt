@@ -1,169 +1,314 @@
-<h3 class="form-header">{{localize "BOL.ui.weaponProperties"}}</h3>
+<h3 class="form-header">{{localize "HI.ui.weaponProperties"}}</h3>
 <div class="form-group">
-    <label>{{localize "BOL.ui.reach"}}</label>
-    <div class="form-fields">
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.melee" {{checked item.system.properties.melee}}> {{localize "BOL.itemProperty.melee"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.ranged" {{checked item.system.properties.ranged}}> {{localize "BOL.itemProperty.ranged"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.throwing" {{checked item.system.properties.throwing}}> {{localize "BOL.itemProperty.throwing"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.natural" {{checked item.system.properties.natural}}> {{localize "BOL.itemProperty.natural"}}
-        </label>
-    </div>
+  <label>{{localize "HI.ui.reach"}}</label>
+  <div class="form-fields">
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.melee"
+        {{checked item.system.properties.melee}}
+      />
+      {{localize "HI.itemProperty.melee"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.ranged"
+        {{checked item.system.properties.ranged}}
+      />
+      {{localize "HI.itemProperty.ranged"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.throwing"
+        {{checked item.system.properties.throwing}}
+      />
+      {{localize "HI.itemProperty.throwing"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.natural"
+        {{checked item.system.properties.natural}}
+      />
+      {{localize "HI.itemProperty.natural"}}
+    </label>
+  </div>
 </div>
-<hr/>
+<hr />
 <div class="form-group">
-    <label>{{localize "BOL.ui.properties"}}</label>
-    <div class="form-fields">
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.2H" {{checked item.system.properties.2H}}> {{localize "BOL.itemProperty.2H"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.concealable" {{checked item.system.properties.concealable}}> {{localize "BOL.itemProperty.concealable"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.ignoreshield" {{checked item.system.properties.ignoreshield}}> {{localize "BOL.itemProperty.ignoreshield"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.attackBonusDice" {{checked item.system.properties.attackBonusDice}}> {{localize "BOL.itemProperty.attackBonusDice"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.onlymodifier" {{checked item.system.properties.onlymodifier}}> {{localize "BOL.itemProperty.onlymodifier"}}
-        </label>
+  <label>{{localize "HI.ui.properties"}}</label>
+  <div class="form-fields">
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.2H"
+        {{checked item.system.properties.2H}}
+      />
+      {{localize "HI.itemProperty.2H"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.concealable"
+        {{checked item.system.properties.concealable}}
+      />
+      {{localize "HI.itemProperty.concealable"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.ignoreshield"
+        {{checked item.system.properties.ignoreshield}}
+      />
+      {{localize "HI.itemProperty.ignoreshield"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.attackBonusDice"
+        {{checked item.system.properties.attackBonusDice}}
+      />
+      {{localize "HI.itemProperty.attackBonusDice"}}
+    </label>
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.onlymodifier"
+        {{checked item.system.properties.onlymodifier}}
+      />
+      {{localize "HI.itemProperty.onlymodifier"}}
+    </label>
 
-        
     {{#if item.system.properties.ranged}}
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.reloadable" {{checked item.system.properties.reloadable}}> {{localize "BOL.itemProperty.reloadable"}}
-        </label>
+      <label class="checkbox">
+        <input
+          class="field-value"
+          type="checkbox"
+          name="system.properties.reloadable"
+          {{checked item.system.properties.reloadable}}
+        />
+        {{localize "HI.itemProperty.reloadable"}}
+      </label>
     {{/if}}
     {{#if item.system.properties.melee}}
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.bashing" {{checked item.system.properties.bashing}}> {{localize "BOL.itemProperty.bashing"}}
-        </label>
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.throwable" {{checked item.system.properties.throwable}}> {{localize "BOL.itemProperty.throwable"}}
-        </label>
+      <label class="checkbox">
+        <input
+          class="field-value"
+          type="checkbox"
+          name="system.properties.bashing"
+          {{checked item.system.properties.bashing}}
+        />
+        {{localize "HI.itemProperty.bashing"}}
+      </label>
+      <label class="checkbox">
+        <input
+          class="field-value"
+          type="checkbox"
+          name="system.properties.throwable"
+          {{checked item.system.properties.throwable}}
+        />
+        {{localize "HI.itemProperty.throwable"}}
+      </label>
     {{/if}}
-    </div>
+  </div>
 </div>
-<hr/>
+<hr />
 {{#if (not item.system.properties.onlymodifier)}}
   <div class="form-group">
-      <label class="property-label">{{localize "BOL.itemProperty.attackAttribute"}}</label>
-      <div class="form-fields center">
-          <select class="field-value" name="system.properties.attackAttribute" data-dtype="String">
-              {{#select item.system.properties.attackAttribute}}
-                  {{#each config.attackAttributes as |value id|}}
-                      <option value="{{id}}">{{localize value}}</option>
-                  {{/each}}
-              {{/select}}
-          </select>
-      </div>
+    <label class="property-label">{{localize
+        "HI.itemProperty.attackAttribute"
+      }}</label>
+    <div class="form-fields center">
+      <select
+        class="field-value"
+        name="system.properties.attackAttribute"
+        data-dtype="String"
+      >
+        {{#select item.system.properties.attackAttribute}}
+          {{#each config.attackAttributes as |value id|}}
+            <option value="{{id}}">{{localize value}}</option>
+          {{/each}}
+        {{/select}}
+      </select>
+    </div>
   </div>
   <div class="form-group">
-      <label class="property-label">{{localize "BOL.itemProperty.attackAptitude"}}</label>
-      <div class="form-fields center">
-          <select class="field-value" name="system.properties.attackAptitude" data-dtype="String">
-              {{#select item.system.properties.attackAptitude}}
-                  {{#each config.attackAptitudes as |value id|}}
-                      <option value="{{id}}">{{localize value}}</option>
-                  {{/each}}
-              {{/select}}
-          </select>
-      </div>
+    <label class="property-label">{{localize
+        "HI.itemProperty.attackAptitude"
+      }}</label>
+    <div class="form-fields center">
+      <select
+        class="field-value"
+        name="system.properties.attackAptitude"
+        data-dtype="String"
+      >
+        {{#select item.system.properties.attackAptitude}}
+          {{#each config.attackAptitudes as |value id|}}
+            <option value="{{id}}">{{localize value}}</option>
+          {{/each}}
+        {{/select}}
+      </select>
+    </div>
   </div>
 {{/if}}
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.attackModifiers"}}</label>
-    <div class="form-fields center">
-        <input class="field-value" type="text" name="system.properties.attackModifiers" value="{{item.system.properties.attackModifiers}}" data-dtype="Number"/>
-    </div>
+  <label class="property-label">{{localize
+      "HI.itemProperty.attackModifiers"
+    }}</label>
+  <div class="form-fields center">
+    <input
+      class="field-value"
+      type="text"
+      name="system.properties.attackModifiers"
+      value="{{item.system.properties.attackModifiers}}"
+      data-dtype="Number"
+    />
+  </div>
 </div>
-<hr/>
+<hr />
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.weaponSize"}}</label>
-    <div class="form-fields">
-        <select class="field-value" name="system.properties.weaponSize" data-dtype="String">
-            {{#select item.system.properties.weaponSize}}
-                {{#each config.weaponSizes as |value id|}}
-                    <option value="{{id}}">{{localize value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
-    </div>
-</div>
-<div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.damage"}}</label>
-    <div class="form-fields">
-        <select class="field-value" name="system.properties.damage" data-dtype="String">
-            {{#select item.system.properties.damage}}
-                {{#each config.damageValues as |value id|}}
-                    <option value="{{id}}">{{value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
-    </div>
-</div>
-<div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.damageAttribute"}}</label>
-    <div class="form-fields center">
-        <select class="field-value" name="system.properties.damageAttribute" data-dtype="String">
-            {{#select item.system.properties.damageAttribute}}
-                {{#each config.damageAttributes as |value id|}}
-                    <option value="{{id}}">{{localize value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
-    </div>
+  <label class="property-label">{{localize
+      "HI.itemProperty.weaponSize"
+    }}</label>
+  <div class="form-fields">
+    <select
+      class="field-value"
+      name="system.properties.weaponSize"
+      data-dtype="String"
+    >
+      {{#select item.system.properties.weaponSize}}
+        {{#each config.weaponSizes as |value id|}}
+          <option value="{{id}}">{{localize value}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
 </div>
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.damageModifiers"}}</label>
-    <div class="form-fields center">
-        <input class="field-value" type="text" name="system.properties.damageModifiers" value="{{item.system.properties.damageModifiers}}" data-dtype="Number"/>
-    </div>
+  <label class="property-label">{{localize "HI.itemProperty.damage"}}</label>
+  <div class="form-fields">
+    <select
+      class="field-value"
+      name="system.properties.damage"
+      data-dtype="String"
+    >
+      {{#select item.system.properties.damage}}
+        {{#each config.damageValues as |value id|}}
+          <option value="{{id}}">{{value}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
 </div>
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.damageMultiplier"}}</label>
-    <div class="form-fields center">
-        <select class="field-value" name="system.properties.damageMultiplier" data-dtype="String">
-            {{#select item.system.properties.damageMultiplier}}
-                {{#each config.damageMultiplier as |value id|}}
-                    <option value="{{id}}">{{value}}</option>
-                {{/each}}
-            {{/select}}
-        </select>
-    </div>
+  <label class="property-label">{{localize
+      "HI.itemProperty.damageAttribute"
+    }}</label>
+  <div class="form-fields center">
+    <select
+      class="field-value"
+      name="system.properties.damageAttribute"
+      data-dtype="String"
+    >
+      {{#select item.system.properties.damageAttribute}}
+        {{#each config.damageAttributes as |value id|}}
+          <option value="{{id}}">{{localize value}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
 </div>
 <div class="form-group">
-    <label class="property-label">{{localize "BOL.itemProperty.damageSpecial"}}</label>
-    <div class="form-fields center">
-        <label class="checkbox">
-            <input class="field-value" type="checkbox" name="system.properties.damageReroll1" {{checked item.system.properties.damageReroll1}}> {{localize "BOL.itemProperty.damageReroll1"}}
-        </label>
-    </div>
+  <label class="property-label">{{localize
+      "HI.itemProperty.damageModifiers"
+    }}</label>
+  <div class="form-fields center">
+    <input
+      class="field-value"
+      type="text"
+      name="system.properties.damageModifiers"
+      value="{{item.system.properties.damageModifiers}}"
+      data-dtype="Number"
+    />
+  </div>
+</div>
+<div class="form-group">
+  <label class="property-label">{{localize
+      "HI.itemProperty.damageMultiplier"
+    }}</label>
+  <div class="form-fields center">
+    <select
+      class="field-value"
+      name="system.properties.damageMultiplier"
+      data-dtype="String"
+    >
+      {{#select item.system.properties.damageMultiplier}}
+        {{#each config.damageMultiplier as |value id|}}
+          <option value="{{id}}">{{value}}</option>
+        {{/each}}
+      {{/select}}
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="property-label">{{localize
+      "HI.itemProperty.damageSpecial"
+    }}</label>
+  <div class="form-fields center">
+    <label class="checkbox">
+      <input
+        class="field-value"
+        type="checkbox"
+        name="system.properties.damageReroll1"
+        {{checked item.system.properties.damageReroll1}}
+      />
+      {{localize "HI.itemProperty.damageReroll1"}}
+    </label>
+  </div>
 </div>
 
-{{#if (or item.system.properties.throwing (or item.system.properties.ranged item.system.properties.throwable))}}
-    <hr/>
-    <div class="form-group">
-        <label class="property-label">{{localize "BOL.itemProperty.range"}}</label>
-        <div class="form-fields center">
-            <input class="field-value" type="text" name="system.properties.range" value="{{item.system.properties.range}}" data-dtype="Number"/>
-        </div>
+{{#if
+  (or
+    item.system.properties.throwing
+    (or item.system.properties.ranged item.system.properties.throwable)
+  )
+}}
+  <hr />
+  <div class="form-group">
+    <label class="property-label">{{localize "HI.itemProperty.range"}}</label>
+    <div class="form-fields center">
+      <input
+        class="field-value"
+        type="text"
+        name="system.properties.range"
+        value="{{item.system.properties.range}}"
+        data-dtype="Number"
+      />
     </div>
+  </div>
 {{/if}}
 {{#if data.properties.reloadable}}
-    <div class="form-group">
-        <label class="property-label">{{localize "BOL.itemProperty.reload"}}</label>
-        <div class="form-fields center">
-            <input class="field-value" type="text" name="system.properties.reload" value="{{item.system.properties.reload}}" data-dtype="Number"/>
-        </div>
+  <div class="form-group">
+    <label class="property-label">{{localize "HI.itemProperty.reload"}}</label>
+    <div class="form-fields center">
+      <input
+        class="field-value"
+        type="text"
+        name="system.properties.reload"
+        value="{{item.system.properties.reload}}"
+        data-dtype="Number"
+      />
     </div>
+  </div>
 {{/if}}
-

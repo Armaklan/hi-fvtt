@@ -83,7 +83,7 @@ export class BoLRoll {
     let attribute = eval(`actor.system.attributes.${key}`)
 
     let rollData = this.getCommonRollData(actor, "attribute", attribute)
-    rollData.description = game.i18n.localize('BOL.ui.attributeCheck') + " - " + game.i18n.localize(attribute.label)
+    rollData.description = game.i18n.localize('HI.ui.attributeCheck') + " - " + game.i18n.localize(attribute.label)
     rollData.label = (attribute.label) ? game.i18n.localize(attribute.label) : null
 
     console.log(">>>>>>>>>>", rollData, actor)
@@ -100,7 +100,7 @@ export class BoLRoll {
     let rollData = this.getCommonRollData(actor, "aptitude", attribute, aptitude)
 
     rollData.label = (aptitude.label) ? game.i18n.localize(aptitude.label) : null
-    rollData.description = game.i18n.localize('BOL.ui.aptitudeCheck') + " - " + game.i18n.localize(aptitude.label)
+    rollData.description = game.i18n.localize('HI.ui.aptitudeCheck') + " - " + game.i18n.localize(aptitude.label)
     rollData.combatData = combatData // For initiative mainly
 
     return this.displayRollDialog(rollData)
@@ -114,21 +114,21 @@ export class BoLRoll {
       visible = canvas.effects.visibility.testVisibility(target.center, { object: _token })
       dist = Number(canvas.grid.measureDistances([{ ray: new Ray(_token.center, target.center) }], { gridSpaces: false })).toFixed(2)
       let range = Number(weapon.system.properties.range)
-      let rangeMsg = "BOL.chat.rangeout"
+      let rangeMsg = "HI.chat.rangeout"
       if (dist <= range) {
-        rangeMsg = "BOL.chat.range0"
+        rangeMsg = "HI.chat.range0"
       } else if (dist < range * 2) {
-        rangeMsg = "BOL.chat.range1"
+        rangeMsg = "HI.chat.range1"
       } else if (dist < range * 3) {
-        rangeMsg = "BOL.chat.range2"
+        rangeMsg = "HI.chat.range2"
       } else if (dist < range * 4) {
-        rangeMsg = "BOL.chat.range3"
+        rangeMsg = "HI.chat.range3"
       } else if (dist < range * 5) {
-        rangeMsg = "BOL.chat.range4"
+        rangeMsg = "HI.chat.range4"
       } else if (dist < range * 6) {
-        rangeMsg = "BOL.chat.range5"
+        rangeMsg = "HI.chat.range5"
       } else if (dist < range * 7) {
-        rangeMsg = "BOL.chat.range6"
+        rangeMsg = "HI.chat.range6"
       }
       ChatMessage.create({
         content: await renderTemplate('systems/hi-fvtt/templates/chat/chat-info-range.hbs', {
@@ -171,8 +171,8 @@ export class BoLRoll {
     rollData.targetId = target?.id
     rollData.fightOption = fightOption
     rollData.defenderId = target?.actor.id
-    rollData.label = (weapon.name) ? weapon.name : game.i18n.localize('BOL.ui.noWeaponName')
-    rollData.description = game.i18n.localize('BOL.ui.weaponAttack') + " : " + weapon.name
+    rollData.label = (weapon.name) ? weapon.name : game.i18n.localize('HI.ui.noWeaponName')
+    rollData.description = game.i18n.localize('HI.ui.weaponAttack') + " : " + weapon.name
 
     return this.displayRollDialog(rollData)
   }
@@ -212,7 +212,7 @@ export class BoLRoll {
     rollData.pcCostCurrent = Number(alchemyData.properties.pccurrent)
     rollData.mod = Number(alchemyData.properties.difficulty)
     rollData.label = alchemy.name
-    rollData.description = game.i18n.localize('BOL.ui.makeAlchemy') + "+" + alchemy.name
+    rollData.description = game.i18n.localize('HI.ui.makeAlchemy') + "+" + alchemy.name
 
     console.log("ALCHEMY!", rollData);
     return this.displayRollDialog(rollData);
@@ -222,17 +222,17 @@ export class BoLRoll {
   static horoscopeCheck(actor, event, horoscopeType) {
     let cost = (horoscopeType == "minor") ? 1 : 2
     if (cost > actor.getAstrologyPoints()) {
-      ui.notifications.warn(game.i18n.localize("BOL.ui.astrologyNoPoints"))
+      ui.notifications.warn(game.i18n.localize("HI.ui.astrologyNoPoints"))
       return
     }
     let rollData = this.getCommonRollData(actor, "horoscope", actor.system.attributes.savvy)
 
     rollData.careerBonus = actor.getAstrologerBonus()
     rollData.horoscopeType = horoscopeType
-    rollData.horoscopeTypeLabel = "BOL.ui." + horoscopeType
+    rollData.horoscopeTypeLabel = "HI.ui." + horoscopeType
     rollData.astrologyPointsCost = cost
-    rollData.label = game.i18n.localize('BOL.ui.makeHoroscope')
-    rollData.description = game.i18n.localize('BOL.ui.makeHoroscope') + " " + game.i18n.localize(rollData.horoscopeTypeLabel)
+    rollData.label = game.i18n.localize('HI.ui.makeHoroscope')
+    rollData.description = game.i18n.localize('HI.ui.makeHoroscope') + " " + game.i18n.localize(rollData.horoscopeTypeLabel)
 
     console.log("HOROSCOPE!", rollData);
     return this.displayRollDialog(rollData);
@@ -249,7 +249,7 @@ export class BoLRoll {
       rollData.ppCost = Number(spell.system.properties.ppcost),
       rollData.mod = Number(spell.system.properties.difficulty),
       rollData.label = spell.name,
-      rollData.description = game.i18n.localize('BOL.ui.focusSpell') + " : " + spell.name
+      rollData.description = game.i18n.localize('HI.ui.focusSpell') + " : " + spell.name
 
     //console.log("SPELL!", spellDef)
     return this.displayRollDialog(rollData)
@@ -554,13 +554,13 @@ export class BoLRoll {
       buttons: {
         cancel: {
           icon: '<i class="fas fa-times"></i>',
-          label: game.i18n.localize("BOL.ui.cancel"),
+          label: game.i18n.localize("HI.ui.cancel"),
           callback: () => {
           }
         },
         submit: {
           icon: '<i class="fas fa-check"></i>',
-          label: game.i18n.localize("BOL.ui.submit"),
+          label: game.i18n.localize("HI.ui.submit"),
           callback: (html) => {
             if (rollData.mode == 'spell' && rollData.ppCurrent < rollData.ppCost) { // Check PP available
               ui.notifications.warn("Pas assez de Points de Pouvoir !")

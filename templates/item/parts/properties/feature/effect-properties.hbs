@@ -1,27 +1,33 @@
-<h3 class="form-header">{{localize 'BOL.featureSubtypes.effect'}}</h3>
+<h3 class="form-header">{{localize "HI.featureSubtypes.effect"}}</h3>
 
 <div class="property flexrow">
-    <label class="property-label">{{localize "BOL.ui.attributaptitude"}}</label>
-        <select name="system.properties.identifier" value="{{item.system.properties.identifier}}">
-          {{#select item.system.properties.identifier}}
-            <option value="always">{{localize "BOL.ui.always"}}</option>
-            {{#each config.attackAttributes as |value id|}}
-              <option value="system.attributes.{{id}}">{{localize value}}</option>
-            {{/each}}
-            {{#each config.aptitudes as |value id|}}
-              <option value="system.aptitudes.{{id}}">{{localize value}}</option>
-            {{/each}}
-          {{/select}}
-      </select>
+  <label class="property-label">{{localize "HI.ui.attributaptitude"}}</label>
+  <select
+    name="system.properties.identifier"
+    value="{{item.system.properties.identifier}}"
+  >
+    {{#select item.system.properties.identifier}}
+      <option value="always">{{localize "HI.ui.always"}}</option>
+      {{#each config.attackAttributes as |value id|}}
+        <option value="system.attributes.{{id}}">{{localize value}}</option>
+      {{/each}}
+      {{#each config.aptitudes as |value id|}}
+        <option value="system.aptitudes.{{id}}">{{localize value}}</option>
+      {{/each}}
+    {{/select}}
+  </select>
 </div>
 
 <div class="property flexrow">
-  <label class="property-label">{{localize "BOL.ui.modifier"}}</label>
-    <select name="system.properties.modifier" value="{{item.system.properties.modifier}}">
-      {{#select item.system.properties.modifier}}
-        {{#each config.bolEffectModifier as |modifier id|}}
-          <option value="{{id}}">{{localize modifier}}</option>
-        {{/each}}
-      {{/select}}
-    </select>
+  <label class="property-label">{{localize "HI.ui.modifier"}}</label>
+  <select
+    name="system.properties.modifier"
+    value="{{item.system.properties.modifier}}"
+  >
+    {{#select item.system.properties.modifier}}
+      {{#each config.bolEffectModifier as |modifier id|}}
+        <option value="{{id}}">{{localize modifier}}</option>
+      {{/each}}
+    {{/select}}
+  </select>
 </div>

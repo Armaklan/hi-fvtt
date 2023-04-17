@@ -1,6 +1,6 @@
 <ol class="items-list">
     <li class="item flexrow item-header">
-        <div class="item-name flex2">{{localize "BOL.ui.maneuvers"}}</div>
+        <div class="item-name flex2">{{localize "HI.ui.maneuvers"}}</div>
     </li>
     <li class="item flexrow">
         <div class="item-image roll-weapon"><img src="icons/skills/melee/unarmed-punch-fist.webp" title="Attaque à mains nues"/></div>
@@ -12,10 +12,10 @@
         <ol class="items-list">
             <li class="item flexrow item-header">
                 <div class="item-name flex2">{{localize combatType.label}}</div>
-                {{#if protection}}<div class="item-field">{{localize "BOL.ui.protection"}}</div>{{/if}}
-                {{#if blocking}}<div class="item-field">{{localize "BOL.ui.blocking"}}</div>{{/if}}
-                {{#if weapon}}<div class="item-field">{{localize "BOL.ui.damages"}}</div>{{/if}}
-                {{#if ranged}}<div class="item-field">{{localize "BOL.ui.range"}}</div>{{else}}<div class="item-field"></div>{{/if}}
+                {{#if protection}}<div class="item-field">{{localize "HI.ui.protection"}}</div>{{/if}}
+                {{#if blocking}}<div class="item-field">{{localize "HI.ui.blocking"}}</div>{{/if}}
+                {{#if weapon}}<div class="item-field">{{localize "HI.ui.damages"}}</div>{{/if}}
+                {{#if ranged}}<div class="item-field">{{localize "HI.ui.range"}}</div>{{else}}<div class="item-field"></div>{{/if}}
             </li>
             {{#each combatType.items as |item id|}}
                 <li class="item flexrow" data-item-id="{{item._id}}">
