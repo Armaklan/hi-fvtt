@@ -167,7 +167,14 @@ export class BoLActor extends Actor {
   incAttributeXP(key) {
     let attr = duplicate(this.system.attributes[key])
     if (attr) {
-      let nextXP = (attr.value == -1) ? 2 : attr.value + (attr.value + 1)
+      let nextXP = attr.value * 5 + 15
+
+      if (attr.value === 4) {
+        nextXP = 45
+      } else if (attr.value === 5) {
+        nextXP = 55
+      }
+
       let xp = duplicate(this.system.xp)
       if (xp.total - xp.spent >= nextXP) {
         attr.value += 1
@@ -183,7 +190,7 @@ export class BoLActor extends Actor {
   incAptitudeXP(key) {
     let apt = duplicate(this.system.aptitudes[key])
     if (apt) {
-      let nextXP = (apt.value == -1) ? 1 : apt.value + 2
+      let nextXP = attr.value * 5 + 10
       let xp = duplicate(this.system.xp)
       if (xp.total - xp.spent >= nextXP) {
         apt.value += 1
@@ -199,7 +206,7 @@ export class BoLActor extends Actor {
     let career = this.items.get(itemId)
     if (career) {
       career = duplicate(career)
-      let nextXP = career.system.rank + 1
+      let nextXP = (career.system.rank + 1) * 5
       let xp = duplicate(this.system.xp)
       if (xp.total - xp.spent >= nextXP) {
         xp.spent += nextXP

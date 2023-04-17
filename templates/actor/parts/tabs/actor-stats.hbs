@@ -34,12 +34,8 @@
         >
           <i class="xp-next fas fa-arrow-up"></i></span>
         <span class="tooltiptext">
-          {{#if (eq value -1)}}
-            2 XP
-          {{else}}
-            {{add value (add value 1)}}
-            XP
-          {{/if}}
+          {{attributeXp value}}
+          XP
         </span>
       </span>
     </div>
@@ -82,12 +78,8 @@
         >
           <i class="xp-next fas fa-arrow-up"></i></span>
         <span class="tooltiptext">
-          {{#if (eq value -1)}}
-            1 XP
-          {{else}}
-            {{add value 2}}
-            XP
-          {{/if}}
+          {{aptitudeXp value}}
+          XP
         </span>
       </span>
     </div>

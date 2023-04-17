@@ -79,7 +79,7 @@ export const registerHandlebarsHelpers = function () {
   Handlebars.registerHelper('countKeys', function (obj) {
     return Object.keys(obj).length;
   })
-  
+
   Handlebars.registerHelper('isEnabled', function (configKey) {
     return game.settings.get("bol", configKey);
   })
@@ -108,10 +108,10 @@ export const registerHandlebarsHelpers = function () {
     return parseInt(a) - parseInt(b);
   })
   Handlebars.registerHelper('abbrev2', function (a) {
-    return a.substring(0,2);
+    return a.substring(0, 2);
   })
   Handlebars.registerHelper('abbrev3', function (a) {
-    return a.substring(0,3);
+    return a.substring(0, 3);
   })
   Handlebars.registerHelper('valueAtIndex', function (arr, idx) {
     return arr[idx];
@@ -141,6 +141,25 @@ export const registerHandlebarsHelpers = function () {
     if (typeof text !== 'string') return text
     return text.charAt(0).toUpperCase()
   })
+  Handlebars.registerHelper('careerXp', function (career) {
+    return (parseInt(career) + 1) * 5;
+  });
+  Handlebars.registerHelper('aptitudeXp', function (aptitude) {
+    const apt = parseInt(aptitude);
+    return apt * 5 + 10;
+  });
+  Handlebars.registerHelper('attributeXp', function (attribute) {
+    const attr = parseInt(attribute);
+    let xp = attr * 5 + 15;
+
+    if (attr === 4) {
+      xp = 45
+    } else if (attr === 5) {
+      xp = 55
+    }
+
+    return xp;
+  });
 
 
 }

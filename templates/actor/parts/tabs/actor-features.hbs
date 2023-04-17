@@ -24,12 +24,8 @@
                           <span  class="stat-roll rollable" title="XP" data-roll-type="careerxp"  data-key="{{key}}">
                             <i class="xp-next fas fa-arrow-up"></i></span>
                           <span class="tooltiptext">
-                            {{#if (eq system.rank 0)}}
-                            1 XP
-                            {{else}}
-                            {{add system.rank 1}} XP 
-                            {{/if}}
-                            </span>
+                            {{careerXp system.rank}} XP 
+                          </span>
                         </span>
                     {{/if}}
                     </div>
