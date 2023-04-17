@@ -41,11 +41,20 @@
   ],
   "packs": [
     {
-      "label": "Aides de Jeu",
-      "type": "JournalEntry",
-      "name": "aides-de-jeu",
-      "path": "packs/aides-de-jeu.db",
+      "name": "careers",
+      "label": "Carrières héroïques",
       "system": "hi-fvtt",
+      "path": "packs/careers.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "equipment",
+      "label": "Equipement",
+      "system": "hi-fvtt",
+      "path": "packs/equipment.db",
+      "type": "Item",
       "private": false,
       "flags": {}
     }
