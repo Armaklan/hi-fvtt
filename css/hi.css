@@ -3,31 +3,32 @@
 /* ----------------------------------------- */
 @import "../node_modules/rpg-awesome/css/rpg-awesome.min.css";
 @font-face {
-  font-family: 'Contrail One';
+  font-family: "Contrail One";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/contrailone/v15/eLGbP-j_JA-kG0_Zo51noafdZQ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/contrailone/v15/eLGbP-j_JA-kG0_Zo51noafdZQ.ttf)
+    format("truetype");
 }
 @font-face {
   font-family: "CCMeanwhile";
-  src: url('../fonts/ccmeanwhile-regular.ttf');
+  src: url("../fonts/ccmeanwhile-regular.ttf");
 }
 @font-face {
   font-family: "Wolfsbane2";
-  src: url('../fonts/wolfsbane2.ttf');
+  src: url("../fonts/wolfsbane2.ttf");
 }
 @font-face {
   font-family: "Wolfsbane2Condensed";
-  src: url('../fonts/wolfsbane2cond.ttf');
+  src: url("../fonts/wolfsbane2cond.ttf");
 }
 @font-face {
   font-family: "Wolfsbane2Expanded";
-  src: url('../fonts/wolfsbane2expand.ttf');
+  src: url("../fonts/wolfsbane2expand.ttf");
 }
 @font-face {
   font-family: "IMFellDWPicaSC-Regular";
-  src: url('../fonts/IMFellDWPicaSC-Regular.ttf');
+  src: url("../fonts/IMFellDWPicaSC-Regular.ttf");
 }
 /* ----------------------------------------- */
 /*  TEXT STYLES                             */
@@ -404,7 +405,7 @@ ul.no-bullets {
 .bol h4.form-header {
   font-size: 1em;
   font-weight: 500;
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   color: black;
   background-color: transparent;
   border-top: none;
@@ -454,7 +455,7 @@ ul.no-bullets {
   overflow-y: hidden;
 }
 .items-list .item-header {
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   font-size: 1em;
   color: #4b4a44;
   background-color: lightgray;
@@ -658,7 +659,7 @@ h2.bad {
   font-size: 14px;
   border-radius: 0;
   background-color: white;
-  background-image: url("/systems/hi-fvtt/ui/box-border-large.webp");
+  background-image: url("systems/hi-fvtt/ui/box-border-large.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -676,7 +677,13 @@ h2.bad {
   background-color: #282828;
   color: white;
 }
-.chat-message .message-content .dice-roll .dice-result .dice-tooltip .tooltip-part .part-total {
+.chat-message
+  .message-content
+  .dice-roll
+  .dice-result
+  .dice-tooltip
+  .tooltip-part
+  .part-total {
   border-radius: 0px;
   border: 1px inset lightgray;
   background-color: #2a2a2a;
@@ -689,7 +696,7 @@ h2.bad {
   color: white;
 }
 body.system-bol img#logo {
-  content: url("/systems/hi-fvtt/ui/logo-hi.gif");
+  content: url("systems/hi-fvtt/ui/logo-hi.gif");
 }
 .bol.sheet .window-header {
   border: none;
@@ -702,7 +709,7 @@ body.system-bol img#logo {
 }
 .bol.sheet .window-content form {
   border: 10px solid transparent;
-  border-image: url("/systems/hi-fvtt/ui/box-border-large.webp") 36 repeat;
+  border-image: url("systems/hi-fvtt/ui/box-border-large.webp") 36 repeat;
   border-image-outset: 1;
   background: white;
   margin: 0;
@@ -721,7 +728,12 @@ body.system-bol img#logo {
   align-items: flex-end;
   padding-bottom: 10px;
 }
-.bol.sheet .window-content form .sheet-header .header-field .header-field-group {
+.bol.sheet
+  .window-content
+  form
+  .sheet-header
+  .header-field
+  .header-field-group {
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -729,14 +741,38 @@ body.system-bol img#logo {
   justify-content: flex-start;
   align-items: baseline;
 }
-.bol.sheet .window-content form .sheet-header .header-field .header-field-group .header-field-label {
+.bol.sheet
+  .window-content
+  form
+  .sheet-header
+  .header-field
+  .header-field-group
+  .header-field-label {
   margin-right: 5px;
 }
-.bol.sheet .window-content form .sheet-header .header-field .header-field-group .charname,
-.bol.sheet .window-content form .sheet-header .header-field .header-field-group .itemname,
-.bol.sheet .window-content form .sheet-header .header-field .header-field-group .header-field-value {
+.bol.sheet
+  .window-content
+  form
+  .sheet-header
+  .header-field
+  .header-field-group
+  .charname,
+.bol.sheet
+  .window-content
+  form
+  .sheet-header
+  .header-field
+  .header-field-group
+  .itemname,
+.bol.sheet
+  .window-content
+  form
+  .sheet-header
+  .header-field
+  .header-field-group
+  .header-field-value {
   color: #4b4a44;
-  font-family: 'Contrail One', cursive;
+  font-family: "Contrail One", cursive;
   font-size: 1.5rem;
   background-color: #eee;
 }
@@ -769,7 +805,13 @@ body.system-bol img#logo {
   /* Items List */
 }
 .bol.sheet .window-content form .main .sheet-body .tab.description .editor,
-.bol.sheet .window-content form .main .sheet-body .tab.description .editor-content {
+.bol.sheet
+  .window-content
+  form
+  .main
+  .sheet-body
+  .tab.description
+  .editor-content {
   height: 100%;
 }
 .bol.sheet.actor {
@@ -778,7 +820,7 @@ body.system-bol img#logo {
   height: 700px;
 }
 .bol.sheet.actor .window-content form {
-  background-image: url("/systems/hi-fvtt/ui/logo-hi.gif");
+  background-image: url("systems/hi-fvtt/ui/logo-hi.gif");
   background-repeat: no-repeat;
   background-size: 240px 86px;
 }

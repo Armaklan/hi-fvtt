@@ -3,7 +3,7 @@
   {
     "name": "Arbalète",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/crossbow.webp",
+    "img": "systems/hi-fvtt/ui/icons/crossbow.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Arbalète</h1><p>une arme de tir qui nécessite peu d’entraînement et offre beaucoup de puissance. Les lourds projectiles tirés par une arbalète portent le nom de carreaux. Il faut un round complet pour charger une arbalète.</p>",
@@ -22,7 +22,7 @@
   {
     "name": "Arbalète lourde",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/crossbow.webp",
+    "img": "systems/hi-fvtt/ui/icons/crossbow.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Arbalète lourde</h1><p>plus lourde et plus puissante qu’une arbalète normale, l’arbalète lourde est peu usitée en Lémurie, sauf comme arme de siège portative. Il faut 2 rounds complets pour charger une arbalète lourde.</p>",
@@ -41,7 +41,7 @@
   {
     "name": "Arc",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/bow.webp",
+    "img": "systems/hi-fvtt/ui/icons/bow.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Arc</h1><p>une longue tige flexible en bois dont les extrémités sont reliées par une corde et qui permet de tirer des flèches. Il existe différentes formes d’arcs.</p>",
@@ -60,7 +60,7 @@
   {
     "name": "Bâton-Fronde",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/sling.webp",
+    "img": "systems/hi-fvtt/ui/icons/sling.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Bâton-Fronde</h1><p>Version plus puissante de la fronde, montée au bout d’un bâton (ce qui en fait une arme à deux mains), qui permet des tirs à plus longue portée.</p>",
@@ -79,7 +79,7 @@
   {
     "name": "Fronde",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/sling.webp",
+    "img": "systems/hi-fvtt/ui/icons/sling.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Fronde</h1><p>simple pièce de cuir équipée de lanières, une fronde permet de projeter de petites pierres ou des billes de plomb avec une certaine force. C’est une arme peu coûteuse et facile à fabriquer. Il existe une version plus puissante, montée au bout d’un bâton (ce qui en fait une arme à deux mains), qui permet des tirs à plus longue portée.</p>",
@@ -97,7 +97,7 @@
   {
     "name": "Javelot",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/thrown.webp",
+    "img": "systems/hi-fvtt/ui/icons/thrown.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Javelot</h1><p>une arme de jet constituée d’une courte hampe surmontée d’une tête pointue. En général, un guerrier qui utilise le javelot en emporte deux ou trois avec lui. Cette arme a la faveur des hommes-oiseaux de l’Axos.</p>",
@@ -114,7 +114,7 @@
   {
     "name": "Fléchettes",
     "type": "item",
-    "img": "/systems/hi-fvtt/ui/icons/thrown.webp",
+    "img": "systems/hi-fvtt/ui/icons/thrown.webp",
     "data": {
       "subtype": "weapon",
       "description": "<h1>Fléchettes</h1><p>de petits projectiles ressemblant à des flèches miniatures, destinés à être lancés à la main. En général, un personnage qui utilise des fléchettes en possède un petit stock.</p>",

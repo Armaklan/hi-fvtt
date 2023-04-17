@@ -95,19 +95,19 @@ export class BoLUtility {
     })
     game.settings.register("bol", "logoActorSheet", {
       name: "Chemin du logo des fiches de perso",
-      hint: "Vous pouvez changer le logo BoL des fiches de perso, pour jouer dans un autre univers (idéalement 346 x 200, défaut : /systems/hi-fvtt/ui/logo.webp)",
+      hint: "Vous pouvez changer le logo BoL des fiches de perso, pour jouer dans un autre univers (idéalement 346 x 200, défaut : systems/hi-fvtt/ui/logo.webp)",
       scope: "world",
       config: true,
-      default: "/systems/hi-fvtt/ui/logo-hi.gif",
+      default: "systems/hi-fvtt/ui/logo-hi.gif",
       type: String,
       onChange: lang => window.location.reload()
     })
     game.settings.register("bol", "logoTopLeft", {
       name: "Chemin du logo haut gauche",
-      hint: "Vous pouvez changer le logo BoL en haut à gauche de chaque écran (idéalement 718 x 416, défaut : /systems/hi-fvtt/ui/logo2.webp)",
+      hint: "Vous pouvez changer le logo BoL en haut à gauche de chaque écran (idéalement 718 x 416, défaut : systems/hi-fvtt/ui/logo2.webp)",
       scope: "world",
       config: true,
-      default: "/systems/hi-fvtt/ui/logo-hi.gif",
+      default: "systems/hi-fvtt/ui/logo-hi.gif",
       type: String,
       onChange: lang => window.location.reload()
     })
@@ -121,8 +121,8 @@ export class BoLUtility {
 
     this.rollArmor = game.settings.get("bol", "rollArmor") // Roll armor or not
     this.useBougette = game.settings.get("bol", "useBougette") // Use optionnal bougette rules
-    this.actorSheetLogo = game.settings.get("bol", "logoActorSheet") || "/systems/hi-fvtt/ui/logo.webp"
-    this.logoTopLeft = game.settings.get("bol", "logoTopLeft") || "/systems/hi-fvtt/ui/logo2.webp"
+    this.actorSheetLogo = game.settings.get("bol", "logoActorSheet") || "systems/hi-fvtt/ui/logo.webp"
+    this.logoTopLeft = game.settings.get("bol", "logoTopLeft") || "systems/hi-fvtt/ui/logo2.webp"
 
     this.diceFormula = game.settings.get("bol", "dice-formula")
     this.successValue = Number(game.settings.get("bol", "dice-success-value"))

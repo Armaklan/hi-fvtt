@@ -1,7 +1,7 @@
 [
   {
     "name": "Alchimiste (artificier/inventeur)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Assassin (agent/espion)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Barbare (berserk/primitif)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Bourreau (geôlier/esclavagiste)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Chasseur (éclaireur/pisteur)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Danseur (acrobate/saltimbanque)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Dresseur (maître des bêtes/montreur d’ours)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -64,7 +64,7 @@
   },
   {
     "name": "Esclave (serf/serviteur)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Fermier (paysan/berger)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -82,7 +82,7 @@
   },
   {
     "name": "Forgeron (armurier)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Gladiateur (champion, belluaire)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Marchand (colporteur/négociant)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -109,7 +109,7 @@
   },
   {
     "name": "Marin (matelot/pirate)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -118,7 +118,7 @@
   },
   {
     "name": "Médecin (guérisseur/rebouteux)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -127,7 +127,7 @@
   },
   {
     "name": "Mendiant (vagabond/clochard)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -136,7 +136,7 @@
   },
   {
     "name": "Ménestrel (barde/poète)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Mercenaire (brigand/guerrier)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -154,7 +154,7 @@
   },
   {
     "name": "Noble (aristocrate/courtisan)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -163,7 +163,7 @@
   },
   {
     "name": "Ouvrier (docker, manœuvre)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -172,7 +172,7 @@
   },
   {
     "name": "Pilote des airs",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Prêtre (druide/chaman)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -190,7 +190,7 @@
   },
   {
     "name": "Scribe (érudit/copiste)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -199,7 +199,7 @@
   },
   {
     "name": "Soldat (garde/milicien)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -208,7 +208,7 @@
   },
   {
     "name": "Sorcier (magicien/enchanteur)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Tentatrice (courtisane/serveuse)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",
@@ -226,7 +226,7 @@
   },
   {
     "name": "Voleur (filou/crapule)",
-    "img": "/systems/hi-fvtt/ui/icons/career.webp",
+    "img": "systems/hi-fvtt/ui/icons/career.webp",
     "type": "feature",
     "data": {
       "subtype": "career",

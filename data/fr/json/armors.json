@@ -1,7 +1,7 @@
 [
   {
     "name": "Amure légère",
-    "img": "/systems/hi-fvtt/ui/icons/armor.webp",
+    "img": "systems/hi-fvtt/ui/icons/armor.webp",
     "type": "item",
     "data": {
       "subtype": "armor",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Armure moyenne",
-    "img": "/systems/hi-fvtt/ui/icons/armor.webp",
+    "img": "systems/hi-fvtt/ui/icons/armor.webp",
     "type": "item",
     "data": {
       "subtype": "armor",
@@ -48,7 +48,7 @@
   },
   {
     "name": "Armure lourde",
-    "img": "/systems/hi-fvtt/ui/icons/armor.webp",
+    "img": "systems/hi-fvtt/ui/icons/armor.webp",
     "type": "item",
     "data": {
       "subtype": "armor",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Casque",
-    "img": "/systems/hi-fvtt/ui/icons/armor.webp",
+    "img": "systems/hi-fvtt/ui/icons/armor.webp",
     "type": "item",
     "data": {
       "subtype": "helm",
@@ -92,7 +92,7 @@
   },
   {
     "name": "Petit bouclier",
-    "img": "/systems/hi-fvtt/ui/icons/shield.webp",
+    "img": "systems/hi-fvtt/ui/icons/shield.webp",
     "type": "item",
     "data": {
       "subtype": "shield",
@@ -110,7 +110,7 @@
   },
   {
     "name": "Grand bouclier",
-    "img": "/systems/hi-fvtt/ui/icons/shield.webp",
+    "img": "systems/hi-fvtt/ui/icons/shield.webp",
     "type": "item",
     "data": {
       "subtype": "shield",
