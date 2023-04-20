@@ -70,7 +70,8 @@ export class BoLActor extends Actor {
 
   /* -------------------------------------------- */
   updateResourcesData() {
-    if (this.type == 'character') {
+    console.log(this.system.chartype);
+    if (this.type == 'character' || this.system.chartype == "adversary") {
       let newVitality = 10 + this.system.attributes.might.value + this.system.resources.hp.bonus
       if (this.system.resources.hp.max != newVitality) {
         this.update({ 'system.resources.hp.max': newVitality })
@@ -88,6 +89,24 @@ export class BoLActor extends Actor {
       let newHero = 3 + this.system.attributes.flair.value + this.system.resources.hero.bonus
       if (this.system.resources.hero.max != newHero) {
         this.update({ 'system.resources.hero.max': newHero })
+      }
+    } else if (this.system.chartype == 'tough') {
+      let newVitality = 8 + this.system.attributes.might.value + this.system.resources.hp.bonus
+      if (this.system.resources.hp.max != newVitality) {
+        this.update({ 'system.resources.hp.max': newVitality })
+      }
+      let newComposure = 3 + this.system.resources.composure.bonus
+      if (this.system.resources.composure.max != newComposure) {
+        this.update({ 'system.resources.composure.max': newComposure })
+      }
+    } else if (this.system.chartype == 'base') {
+      let newVitality = 1
+      if (this.system.resources.hp.max != newVitality) {
+        this.update({ 'system.resources.hp.max': newVitality })
+      }
+      let newComposure = 1
+      if (this.system.resources.composure.max != newComposure) {
+        this.update({ 'system.resources.composure.max': newComposure })
       }
     }
   }
