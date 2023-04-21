@@ -19,7 +19,7 @@
   ],
   "url": "https://github.com/Armaklan/hi-fvtt",
   "license": "LICENSE.txt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "compatibility": {
     "minimum": "10",
     "verified": "10"
