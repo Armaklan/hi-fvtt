@@ -62,7 +62,7 @@
   ],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/Armaklan/hi-fvtt/master/system.json",
-  "download": "https://github.com/Armaklan/hi-fvtt/archive/0.0.3.zip",
+  "download": "https://github.com/Armaklan/hi-fvtt/archive/0.0.4.zip",
   "background": "systems/hi/ui/page_accueil.webp",
   "gridDistance": 1.5,
   "gridUnits": "m",
