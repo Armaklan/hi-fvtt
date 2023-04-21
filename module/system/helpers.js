@@ -30,6 +30,7 @@ export const registerHandlebarsHelpers = function () {
   });
 
   Handlebars.registerHelper('equals', function (val1, val2) {
+    console.log('equals', val1, val2);
     return val1 == val2;
   });
 
@@ -67,6 +68,15 @@ export const registerHandlebarsHelpers = function () {
     var accum = '';
     for (var i = from; i < to; i += incr)
       accum += block.fn(i);
+    return accum;
+  })
+
+  Handlebars.registerHelper('forv', function (from, to, incr, block) {
+    var accum = '';
+    for (var i = from; i < to; i += incr) {
+      block.data.index = i;
+      accum += block.fn(this);
+    }
     return accum;
   })
 
@@ -160,6 +170,9 @@ export const registerHandlebarsHelpers = function () {
 
     return xp;
   });
-
+  Handlebars.registerHelper('json', function (context) {
+    console.log(context);
+    return JSON.stringify(context);
+  });
 
 }

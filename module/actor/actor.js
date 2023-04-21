@@ -132,6 +132,10 @@ export class BoLActor extends Actor {
   get aptitudes() {
     return Object.values(this.system.aptitudes)
   }
+  get advantage() {
+    debugger;
+    return this.system.resources.advantage.value;
+  }
 
   /* -------------------------------------------- */
   clearRoundModifiers() { // Process data/items that are finished at end of a round
@@ -901,6 +905,10 @@ export class BoLActor extends Actor {
   incDecResources(target, value) {
     let newValue = this.system.resources[target].value + value
     this.update({ [`system.resources.${target}.value`]: newValue })
+  }
+
+  updateAdvantage(targetValue) {
+    this.update({ [`system.resources.advantage.value`]: targetValue })
   }
   /*-------------------------------------------- */
   async sufferDamage(damage) {

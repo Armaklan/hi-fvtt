@@ -13,7 +13,7 @@ export class BoLActorSheet extends ActorSheet {
       classes: ["bol", "sheet", "actor"],
       template: "systems/hi-fvtt/templates/actor/actor-sheet.hbs",
       width: 860,
-      height: 600,
+      height: 870,
       dragDrop: [{ dragSelector: ".items-list .item", dropSelector: null }],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }]
     });
@@ -65,6 +65,11 @@ export class BoLActorSheet extends ActorSheet {
       const target = dataset.target
       const incr = parseInt(dataset.incr)
       this.actor.incDecResources(target, incr)
+    })
+    html.find(".advantage-btn").click((ev) => {
+      const dataset = ev.currentTarget.dataset
+      const targetValue = parseInt(dataset.val)
+      this.actor.updateAdvantage(targetValue)
     })
 
     // Incr./Decr. career ranks

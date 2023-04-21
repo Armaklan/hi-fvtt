@@ -137,3 +137,20 @@
     {{/if}}
   {{/each}}
 </div>
+<div class="advantages flexrow">
+  {{#forv 0 4 1}}
+    <a class="advantage-btn" data-val="{{sub 3 @index}}">
+      <div class="resource advantage flex1 flex-group-center 
+      {{#if (equals actor.system.resources.advantage.value (sub 3 @index))}}
+        active
+      {{/if}}">
+        <img
+          class="advantage-img"
+          src="systems/hi-fvtt/ui/advantage-{{sub 3 @index}}.png"
+        />
+        <label class="stat-label">
+          {{localize (concat "HI.ui.advantage-" (sub 3 @index))}}</label><br />
+      </div>
+    </a>
+  {{/forv}}
+</div>

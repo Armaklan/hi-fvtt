@@ -570,5 +570,10 @@
   "HI.ui.bioeyes": "Yeux",
   "HI.ui.biosigns": "Signes distinctifs",
   "HI.ui.biodescription": "Description",
-  "HI.ui.bionotes": "Notes"
+  "HI.ui.bionotes": "Notes",
+
+  "HI.ui.advantage-3": "En garde",
+  "HI.ui.advantage-2": "En retraite",
+  "HI.ui.advantage-1": "En difficulté",
+  "HI.ui.advantage-0": "Défait"
 }

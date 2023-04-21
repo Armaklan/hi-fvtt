@@ -143,6 +143,14 @@
             "value": 0,
             "bonus": 0,
             "max": 0
+          },
+          "advantage": {
+            "key": "advantage",
+            "label": "HI.resources.advantage",
+            "ismain": false,
+            "value": 3,
+            "bonus": 0,
+            "max": 3
           }
         }
       }

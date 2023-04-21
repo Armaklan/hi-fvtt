@@ -446,5 +446,10 @@
   "HI.ui.bioeyes": "Eyes",
   "HI.ui.biosigns": "Signs",
   "HI.ui.biodescription": "Description",
-  "HI.ui.bionotes": "Notes"
+  "HI.ui.bionotes": "Notes",
+
+  "HI.ui.advantage-3": "En Garde",
+  "HI.ui.advantage-2": "Retreating",
+  "HI.ui.advantage-1": "Scrambling",
+  "HI.ui.advantage-0": "Defeated"
 }
