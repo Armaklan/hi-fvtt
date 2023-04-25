@@ -82,9 +82,11 @@
     {{> "systems/hi-fvtt/templates/chat/rolls/selected-horoscope-roll-card.hbs"}}
     {{/if}}
 
-    {{#if reroll}}
+    {{#if false }}
       <button class="chat-button button hero-reroll bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "HI.chat.reroll"}}</button>
     {{/if}}
+
+    <button class="chat-button button hero-addOne bol-margin-tb-2" data-roll-id=="{{rollId}}" data-actor-id="{{actor.id}}">{{localize "HI.chat.addOne"}}</button>
 
     <br>
   </div>

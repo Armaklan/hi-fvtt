@@ -475,6 +475,7 @@
   "HI.chat.applydamagetotarget": "Appliquer les dommages à la cible",
   "HI.chat.fightoption": "Option de combat",
   "HI.chat.reroll": "Relancer (1 P. Heroisme)",
+  "HI.chat.addOne": "+1 (1 P. Heroisme)",
   "HI.chat.toheroic": "Transformer en succés Héroïque (1 P. Héroisme)",
   "HI.chat.tolegend": "Transformer en succes Légendaire (1 P. Heroisme)",
   "HI.chat.hurttitle": "{name} va encaisser {damageTotal} dégats !",

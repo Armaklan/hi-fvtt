@@ -397,6 +397,7 @@
   "HI.chat.applydamagetotarget": "Apply damages to the target",
   "HI.chat.fightoption": "Combat options",
   "HI.chat.reroll": "Reroll (1 HP)",
+  "HI.chat.addOne": "Add one (1 HP)",
   "HI.chat.toheroic": "Convert to Mighty success (1 HP)",
   "HI.chat.tolegend": "Convert to Legendary succes (1 HP)",
   "HI.chat.hurttitle": "{name} is going to receive {damageTotal} damages !",

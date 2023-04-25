@@ -885,7 +885,7 @@ body.system-bol img#logo {
   margin-top: 20px;
 }
 .bol.sheet.actor .advantage.active label {
-  color: #44191A;
+  color: darkred;
 }
 .bol.sheet.actor .advantage-img {
   border: 0px;

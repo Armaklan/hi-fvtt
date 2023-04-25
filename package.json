@@ -1,6 +1,6 @@
 {
   "name": "hi-fvtt",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Honor & Intrigue system",
   "scripts": {
     "css": "gulp css",

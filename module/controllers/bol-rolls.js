@@ -721,6 +721,23 @@ export class BoLDefaultRoll {
     this.sendChatMessage()
   }
 
+  addOne() {
+    // Add one
+    let diceData = BoLUtility.getDiceData()
+    const diceTotal = this.rollData.roll._total - this.rollData.modifiers + 1;
+    this.rollData.roll._total += 1;
+    this.rollData.isSuccess = (this.rollData.roll._total >= diceData.successValue)
+    this.rollData.isCritical = (diceTotal >= diceData.criticalSuccessValue)
+    this.rollData.isRealCritical = (diceTotal >= diceData.criticalSuccessValue)
+    this.rollData.isHeroic = (diceTotal >= diceData.criticalSuccessValue)
+    this.rollData.isLegendary = false
+    this.rollData.isFumble = (diceTotal <= diceData.criticalFailureValue)
+    this.rollData.isFailure = !this.rollData.isSuccess
+    this.rollData.roll = new Roll(diceTotal + "+" + this.rollData.modifiers)
+
+    this.sendChatMessage()
+  }
+
   /* -------------------------------------------- */
   setSuccess(flag) {
     this.rollData.isSuccess = flag

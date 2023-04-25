@@ -381,6 +381,17 @@ export class BoLUtility {
       r.roll();
     });
 
+
+    html.on("click", '.hero-addOne', event => {
+      event.preventDefault();
+      let rollData = BoLUtility.getRollDataFromMessage(event)
+      let actor = game.actors.get(rollData.actorId)
+      actor.subHeroPoints(1)
+      rollData.reroll = false // Disable reroll option for second roll
+      let r = new BoLDefaultRoll(rollData)
+      r.addOne();
+    });
+
     html.on("click", '.damage-handling', event => {
       event.preventDefault()
       let attackId = event.currentTarget.attributes['data-attack-id'].value
