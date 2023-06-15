@@ -1,10 +1,11 @@
 {
-  "ACTOR.TypeCharacter": "Character",
-  "ACTOR.TypeEncounter": "Encounter",
-  "ITEM.TypeItem": "Item",
-  "ITEM.TypeFeature": "Feature",
-  "ITEM.TypeWeapon": "Weapon",
-  "ITEM.TypeArmor": "Armor",
+  "TYPES.Actor.character": "Character",
+  "TYPES.Actor.encounter": "Encounter",
+  "TYPES.Actor.vehicle": "Vehicle",
+  "TYPES.Item.item": "Item",
+  "TYPES.Item.feature": "Feature",
+  "TYPES.Item.weapon": "Weapon",
+  "TYPES.Item.armor": "Armor",
 
   "HI.attributes.might": "Might",
   "HI.attributes.halfmight": "Half-Might",

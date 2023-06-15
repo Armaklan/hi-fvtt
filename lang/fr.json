@@ -1,11 +1,11 @@
 {
-  "ACTOR.TypeCharacter": "Personnage",
-  "ACTOR.TypeEncounter": "Rencontre",
-  "ACTOR.TypeVehicle": "Véhicule",
-  "ITEM.TypeItem": "Objet",
-  "ITEM.TypeFeature": "Trait",
-  "ITEM.TypeWeapon": "Arme",
-  "ITEM.TypeArmor": "Armure",
+  "TYPES.Actor.character": "Personnage",
+  "TYPES.Actor.encounter": "Rencontre",
+  "TYPES.Actor.vehicle": "Véhicule",
+  "TYPES.Item.item": "Objet",
+  "TYPES.Item.feature": "Trait",
+  "TYPES.Item.weapon": "Arme",
+  "TYPES.Item.armor": "Armure",
 
   "HI.attributes.might": "Puissance",
   "HI.attributes.halfmight": "Demi-vigueur",

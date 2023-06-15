@@ -30,7 +30,6 @@ export const registerHandlebarsHelpers = function () {
   });
 
   Handlebars.registerHelper('equals', function (val1, val2) {
-    console.log('equals', val1, val2);
     return val1 == val2;
   });
 
