@@ -386,6 +386,10 @@ export class BoLActor extends Actor {
     return duplicate(this.items.filter(i => i.type === "feature" && i.system.subtype === "flaw" && i.system.properties.ismalusdice) || []);
   }
 
+  get composureMalus() {
+    return this.system.resources.composure.value - this.system.resources.composure.max;
+  }
+
   isSorcerer() {
     if (this.careers.find(item => item.system.properties.sorcerer == true))
       return true

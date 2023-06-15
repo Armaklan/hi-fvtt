@@ -57,6 +57,7 @@ export class BoLRoll {
       careerBonus: 0,
       horoscopeBonus: 0,
       horoscopeMalus: 0,
+      composureMalus: actor.composureMalus,
       selectedHoroscope: [],
       armorAgiMalus: actor.getArmorAgiMalus(),
       armorInitMalus: actor.getArmorInitMalus(),
@@ -316,7 +317,7 @@ export class BoLRoll {
     if (this.rollData.weapon && this.rollData.weapon.system.properties.onlymodifier) {
       rollbase = ""
     }
-    $('#roll-modifier').val(rollbase + "+" + this.rollData.careerBonus + "+" + this.rollData.mod + "+" +
+    $('#roll-modifier').val(rollbase + "+" + this.rollData.careerBonus + "+" + this.rollData.composureMalus + "+" + this.rollData.mod + "+" +
       this.rollData.modRanged + "+" + this.rollData.weaponModifier + "-" + this.rollData.defence + "-" + this.rollData.modArmorMalus + "-" +
       this.rollData.shieldMalus + "+" + this.rollData.attackModifier + "+" + this.rollData.appliedArmorMalus + "+" + effectModifier)
 
@@ -523,6 +524,7 @@ export class BoLRoll {
     rollData.nbBoons = 0
     rollData.nbFlaws = 0
     rollData.nbDice = 0
+    rollData.composureMalus = actor.composureMalus
     if (rollData.shieldBlock == 'blockall') {
       rollData.shieldMalus = rollData.shieldAttackMalus;
     } else {
@@ -579,7 +581,7 @@ export class BoLRoll {
             }
 
             let diceData = BoLUtility.getDiceData()
-            const modifiers = rollbase + rollData.careerBonus + rollData.mod + rollData.weaponModifier - rollData.defence - rollData.modArmorMalus + rollData.shieldMalus + rollData.attackModifier + rollData.appliedArmorMalus + rollData.effectModifier
+            const modifiers = rollbase + rollData.careerBonus + rollData.mod + rollData.weaponModifier - rollData.defence - rollData.modArmorMalus + rollData.shieldMalus + rollData.attackModifier + rollData.appliedArmorMalus + rollData.effectModifier + rollData.composureMalus
             const formula = (isMalus) ? rollData.nbDice + "d" + diceData.diceFormula + "kl2 + " + modifiers : rollData.nbDice + "d" + diceData.diceFormula + "kh2 + " + modifiers
             rollData.formula = formula
             rollData.modifiers = modifiers
