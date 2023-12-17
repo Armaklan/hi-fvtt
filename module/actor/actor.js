@@ -74,39 +74,39 @@ export class BoLActor extends Actor {
     if (this.type == 'character' || this.system.chartype == "adversary") {
       let newVitality = 10 + this.system.attributes.might.value + this.system.resources.hp.bonus
       if (this.system.resources.hp.max != newVitality) {
-        this.update({ 'system.resources.hp.max': newVitality })
+        this.update({actorData: { 'system.resources.hp.max': newVitality }})
       }
       let newPower = 10 + this.system.attributes.savvy.value + this.system.resources.power.bonus
       if (this.system.resources.power.max != newPower) {
-        this.update({ 'system.resources.power.max': newPower })
+        this.update({actorData: { 'system.resources.power.max': newPower }})
       }
 
       let newComposure = 3 + this.system.resources.composure.bonus
       if (this.system.resources.composure.max != newComposure) {
-        this.update({ 'system.resources.composure.max': newComposure })
+        this.update({actorData: { 'system.resources.composure.max': newComposure }})
       }
 
       let newHero = 3 + this.system.attributes.flair.value + this.system.resources.hero.bonus
       if (this.system.resources.hero.max != newHero) {
-        this.update({ 'system.resources.hero.max': newHero })
+        this.update({actorData: { 'system.resources.hero.max': newHero }})
       }
     } else if (this.system.chartype == 'tough') {
       let newVitality = 8 + this.system.attributes.might.value + this.system.resources.hp.bonus
       if (this.system.resources.hp.max != newVitality) {
-        this.update({ 'system.resources.hp.max': newVitality })
+        this.update({actorData: { 'system.resources.hp.max': newVitality }})
       }
       let newComposure = 3 + this.system.resources.composure.bonus
       if (this.system.resources.composure.max != newComposure) {
-        this.update({ 'system.resources.composure.max': newComposure })
+        this.update({actorData: { 'system.resources.composure.max': newComposure }})
       }
     } else if (this.system.chartype == 'base') {
       let newVitality = 1
       if (this.system.resources.hp.max != newVitality) {
-        this.update({ 'system.resources.hp.max': newVitality })
+        this.update({actorData: { 'system.resources.hp.max': newVitality }})
       }
       let newComposure = 1
       if (this.system.resources.composure.max != newComposure) {
-        this.update({ 'system.resources.composure.max': newComposure })
+        this.update({actorData: { 'system.resources.composure.max': newComposure }})
       }
     }
   }
@@ -202,7 +202,7 @@ export class BoLActor extends Actor {
       if (xp.total - xp.spent >= nextXP) {
         attr.value += 1
         xp.spent += nextXP
-        this.update({ [`system.attributes.${key}`]: attr, [`system.xp`]: xp })
+        this.update({actorData: { [`system.attributes.${key}`]: attr, [`system.xp`]: xp }})
       } else {
         ui.notifications.warn("Pas assez de points d'expérience !")
       }
@@ -218,7 +218,7 @@ export class BoLActor extends Actor {
       if (xp.total - xp.spent >= nextXP) {
         apt.value += 1
         xp.spent += nextXP
-        this.update({ [`system.aptitudes.${key}`]: apt, [`system.xp`]: xp })
+        this.update({actorData: { [`system.aptitudes.${key}`]: apt, [`system.xp`]: xp }})
       } else {
         ui.notifications.warn("Pas assez de points d'expérience !")
       }
@@ -233,7 +233,7 @@ export class BoLActor extends Actor {
       let xp = duplicate(this.system.xp)
       if (xp.total - xp.spent >= nextXP) {
         xp.spent += nextXP
-        this.update({ [`system.xp`]: xp })
+        this.update({actorData: { [`system.xp`]: xp }})
         this.updateEmbeddedDocuments('Item', [{ _id: career._id, 'system.rank': career.system.rank + 1 }])
       } else {
         ui.notifications.warn("Pas assez de points d'expérience !")

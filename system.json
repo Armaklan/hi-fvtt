@@ -19,10 +19,10 @@
   ],
   "url": "https://github.com/Armaklan/hi-fvtt",
   "license": "LICENSE.txt",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "compatibility": {
-    "minimum": "10",
-    "verified": "11"
+    "minimum": "11",
+    "verified": "12"
   },
   "esmodules": ["module/hi.js"],
   "styles": ["css/hi.css"],
@@ -45,7 +45,7 @@
       "name": "careers",
       "label": "Carrières héroïques",
       "system": "hi-fvtt",
-      "path": "packs/careers.db",
+      "path": "packs/careers",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -54,7 +54,7 @@
       "name": "equipment",
       "label": "Equipement",
       "system": "hi-fvtt",
-      "path": "packs/equipment.db",
+      "path": "packs/equipment",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -62,7 +62,7 @@
   ],
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/Armaklan/hi-fvtt/master/system.json",
-  "download": "https://github.com/Armaklan/hi-fvtt/archive/0.0.8.zip",
+  "download": "https://github.com/Armaklan/hi-fvtt/archive/0.0.9.zip",
   "background": "systems/hi/ui/page_accueil.webp",
   "gridDistance": 1.5,
   "gridUnits": "m",
